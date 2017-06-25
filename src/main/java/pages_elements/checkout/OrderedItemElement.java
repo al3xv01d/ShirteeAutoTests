@@ -2,11 +2,14 @@ package pages_elements.checkout;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import pages_elements.AbstractPageElement;
 
 
 
-public class OrderedItem extends AbstractPageElement{
+public class OrderedItemElement extends AbstractPageElement {
+
+    //******************* LOCATORS ********************//
 
     private final String deleteButton_lo = ".//div[@class=\"light-chechout-remove-td\"]";
     private final String price_lo = ".//span[@class=\"price\"]";
@@ -18,11 +21,12 @@ public class OrderedItem extends AbstractPageElement{
     private final String productName_lo = ".//h3[@class=\"product-name\"]/a";
     private final String productSize_lo = ".//dl[@class=\"item-options\"]/dd[1]";
 
-    private WebElement item;
+    //******************* INITIALIZATION. CONSTRUCTOR ********************//
 
     private int itemNumber;
+    private WebElement item;
 
-    public OrderedItem(int itemNumber) {
+    public OrderedItemElement(int itemNumber) {
         this.itemNumber = itemNumber;
         this.init();
     }
@@ -31,11 +35,20 @@ public class OrderedItem extends AbstractPageElement{
         this.item = driver.findElement(By.xpath("//table[@id=\"checkout-review-table\"]/tbody/tr[" + this.itemNumber + "]//div[@class=\"checkout-product\"]"));
     }
 
-    //GETTERS
+    //******************* ACTIONS - Get ordered item's price, quantity, total price, etc ********************//
+
     public String getProductName() {
         return this.item.findElement(By.xpath(this.productName_lo)).getText();
     }
 
+    public String getProductSize() {
+        return this.item.findElement(By.xpath(this.productSize_lo)).getText();
+    }
+
+    /**
+     * @return Ordered Item's price.
+     * all price has the same css style so here I look for all price elements (there are only 2 price elements) and get first
+     */
     public String getPrice() {
         return this.item.findElements(By.xpath(this.price_lo)).get(0).getText();
     }
@@ -48,10 +61,10 @@ public class OrderedItem extends AbstractPageElement{
        return this.item.findElement(By.xpath(this.qty_lo)).getText();
     }
 
-    //ACTIONS
+    //******************* ACTIONS ********************//
 
     public void deleteItemFromCart() {
-        this.item.findElement(By.xpath(this.deleteButton_lo)).click();
+        this.item.findElement(By.xpath(deleteButton_lo)).click();
     }
 
     public void increaseQty() {

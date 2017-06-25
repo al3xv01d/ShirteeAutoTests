@@ -2,40 +2,56 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import tools.Config;
 import tools.Wait;
 
 import java.util.concurrent.TimeUnit;
 
 public abstract class AbstractShirteePage extends AbstractPage {
 
-    @FindBy(xpath="//a[@class='logo']")
+    //*******************  LOCATORS ********************//
+
+    private final String shirteeLogo_lo = "//a[@class='logo']";
+    private final String openLocaleButton_lo = "//div[@class=\"lang-dd-link\"]";
+    private final String engLocaleBtn_lo = "//a[@class=\"en-us\"]";
+    private final String germanLocaleBtn_lo = "//a[@class=\"de-de\"]";
+    private final String openloginFormBtn_lo = "//div[@class=\"bhi-link-right\"]";
+    private final String loginInputField_lo = "header-login-form-email";
+    private final String passwordInputField_lo = "header-login-form-password";
+    private final String loginBtn_lo = "//div[@class=\"youama-login-window\"]//button";
+    private final String logOutBtn_lo = "//a[contains(@href,\"/account/logout/\")]";
+    private final String cartBtn_lo = "//div[@class=\"header-cart\"]";
+
+    //******************* WEBDRIVER ELEMENTS ********************//
+
+    @FindBy(xpath= shirteeLogo_lo)
     private WebElement shirteeLogo;
 
-    @FindBy(xpath = "//div[@class=\"lang-dd-link\"]")
+    @FindBy(xpath = openLocaleButton_lo)
     public WebElement openLocaleButton;
 
-    @FindBy(xpath = "//a[@class=\"en-us\"]")
+    @FindBy(xpath = engLocaleBtn_lo)
     public WebElement engLocaleBtn;
 
-    @FindBy(xpath = "//a[@class=\"de-de\"]")
+    @FindBy(xpath = germanLocaleBtn_lo)
     public WebElement germanLocaleBtn;
 
-    @FindBy(xpath = "//div[@class=\"bhi-link-right\"]")
+    @FindBy(xpath = openloginFormBtn_lo)
     public WebElement openloginFormBtn;
 
-    @FindBy(id = "header-login-form-email")
+    @FindBy(id = loginInputField_lo)
     public WebElement loginInputField;
 
-    @FindBy(id = "header-login-form-password")
+    @FindBy(id = passwordInputField_lo)
     public WebElement passwordInputField;
 
-    @FindBy(xpath = "//div[@class=\"youama-login-window\"]//button")
+    @FindBy(xpath = loginBtn_lo)
     public WebElement loginBtn;
 
-    @FindBy(xpath = "//a[contains(@href,\"/account/logout/\")]")
+    @FindBy(xpath = logOutBtn_lo)
     public WebElement logOutBtn;
 
-    @FindBy(xpath = "//div[@class=\"header-cart\"]")
+    @FindBy(xpath = cartBtn_lo)
     public WebElement cartBtn;
 
 //    @FindBy(xpath = "//nav[@id=\"nav\"]/ul/li/a[contains(@href,\"/designer/\")]")
@@ -44,6 +60,7 @@ public abstract class AbstractShirteePage extends AbstractPage {
 //    @FindBy(xpath = "//nav[@id=\"nav\"]/ul/li/a[contains(@href,\"/shop\")]")
 //    public WebElement shopLink;
 
+    //*******************  ACTIONS ********************//
 
     /**
      * @param locale String - "de" or "eng"
@@ -54,33 +71,37 @@ public abstract class AbstractShirteePage extends AbstractPage {
             case "eng":
                 if(this.driver.getCurrentUrl().contains("shirtee.de") ) {
                     System.out.println(this.driver.getCurrentUrl());
-                    this.openLocaleButton.click();
-                    this.engLocaleBtn.click();
+                    openLocaleButton.click();
+                    engLocaleBtn.click();
                 }
                 break;
 
             case "de":
                 if(this.driver.getCurrentUrl().contains("shirtee.com") ) {
                     System.out.println(this.driver.getCurrentUrl());
-                    this.openLocaleButton.click();
-                    this.germanLocaleBtn.click();
+                    openLocaleButton.click();
+                    germanLocaleBtn.click();
                 }
                 break;
         }
     }
 
-    public void logIn() {
+    public void logIn(boolean returnToShirtee) {
         this.openloginFormBtn.click();
 
         Wait.visible(loginInputField);
 
-        this.loginInputField.clear();
-        this.loginInputField.sendKeys("akh@gomage.com");
+        loginInputField.clear();
+        loginInputField.sendKeys("akh@gomage.com");
 
-        this.passwordInputField.clear();
-        this.passwordInputField.sendKeys("Testusa1");
+        passwordInputField.clear();
+        passwordInputField.sendKeys("gomage777");
 
-        this.loginBtn.click();
+        loginBtn.click();
+
+        if(returnToShirtee) {
+            driver.get(Config.indexShirteeUrl);
+        }
     }
 
     public void logOut() {

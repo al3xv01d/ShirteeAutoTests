@@ -3,7 +3,7 @@ package tools;
 import pages.IndexPage;
 import pages.ProductPage;
 import pages.ShopPage;
-import pages.CheckoutFacade;
+import pages.CheckoutPage;
 
 /**
  * Created by User on 20.06.2017.
@@ -19,6 +19,6 @@ public class StaticPageFactory {
     public static ProductPage createProductPage() {
         return new ProductPage();
     }
-    public static CheckoutFacade createCheckoutPage() { return new CheckoutFacade();}
+    public static CheckoutPage createCheckoutPage() { return new CheckoutPage();}
 
 }

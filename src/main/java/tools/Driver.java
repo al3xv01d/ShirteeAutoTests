@@ -34,4 +34,9 @@ public class Driver {
         return Driver.driver;
     }
 
+    public static void destroy() {
+        Driver.driver.close();
+        Driver.driver = null;
+    }
+
 }

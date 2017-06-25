@@ -1,6 +1,7 @@
 package tools;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,10 +17,23 @@ public class Wait {
 
     public static void visible(WebElement element) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 35);
+            WebDriverWait wait = new WebDriverWait(driver, 15);
             wait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
             System.out.println("Element not found, not visible!");
         }
+    }
+
+    public static void invisible(String elementLocator) {
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 15);
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(elementLocator)));
+        } catch (TimeoutException e) {
+            System.out.println("Element doesn't disappear!");
+        }
+
+
+
     }
 }

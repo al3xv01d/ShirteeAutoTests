@@ -2,8 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -16,46 +14,67 @@ import java.util.List;
  */
 public class ShopPage extends AbstractShirteePage {
 
-    @FindAll({@FindBy(xpath="//li[@class=\"item last\"]")})
-    private List<WebElement> Items;
+    //*******************  LOCATORS ********************//
 
-    private Select itemsQtyOnPageSelect;
+    private final String item_lo = "//li[@class=\"item last\"]";
+
+    private final String itemTitle_lo = ".//h2[@class=\"product-name\"]";
+    private final String itemPrice_lo = "//div[@class=\"price-box\"]//span[@class=\"price\"]";
+    private final String itemsQtyOnPageSelect_lo = "//div[@class=\"toolbar-bottom\"]//div[@class=\"pager\"]//select";
+
+
+    //*******************  WEBDRIVER ELEMENTS ********************//
+
+    @FindAll({@FindBy(xpath = item_lo)})
+    private List<WebElement> allItems;
+
+    @FindBy(xpath = itemsQtyOnPageSelect_lo)
+    private WebElement itemsQtyOnPageSelect;
+
+    //*******************  ACTIONS - SOME GETTERS ********************//
 
     public int getItemsOnPageQty() {
-        return Items.size();
+        return allItems.size();
     }
 
     public void openProduct(int itemNumber) {
-        if(!Items.isEmpty()) {
-            Items.get(itemNumber).click();
+        if(!allItems.isEmpty()) {
+            allItems.get(itemNumber).click();
         }
     }
 
+    /**
+     * @param itemNumber
+     */
     public void getItemTitle(int itemNumber) {
-       Items.get(itemNumber).findElement(By.xpath(".//h2[@class=\"product-name\"]"));
-    }
-
-    public void getItemPrice(int itemNumber) {
-        Items.get(itemNumber).findElement(By.xpath("//div[@class=\"price-box\"]//span[@class=\"price\"]"));
+       allItems.get(itemNumber).findElement(By.xpath(itemTitle_lo));
     }
 
     /**
-     *
+     * @param itemNumber
+     */
+    public void getItemPrice(int itemNumber) {
+        allItems.get(itemNumber).findElement(By.xpath(itemPrice_lo));
+    }
+
+    //*******************  ACTIONS ********************//
+
+    /**
      * @param QtyOnPage - only 24 or 32 or 48
      */
     public void setItemsQtyOnPage(int QtyOnPage) {
 
-        itemsQtyOnPageSelect = new Select(driver.findElement(By.xpath("//div[@class=\"toolbar-bottom\"]//div[@class=\"pager\"]//select")));
+        Select itemsQtySelector = new Select(itemsQtyOnPageSelect);
 
         switch(QtyOnPage) {
             case 24:
-                itemsQtyOnPageSelect.selectByIndex(0);
+                itemsQtySelector.selectByIndex(0);
                 break;
             case 32:
-                itemsQtyOnPageSelect.selectByIndex(1);
+                itemsQtySelector.selectByIndex(1);
                 break;
             case 48:
-                itemsQtyOnPageSelect.selectByIndex(2);
+                itemsQtySelector.selectByIndex(2);
                 break;
         }
 

@@ -6,13 +6,23 @@ public class Config {
 
     private static boolean isLogged = false;
     private static String server = "dev.";
-    private static String locale = "de";
+    private static String domain = "de";
 
-    public final String indexUrl = "http://" + Config.server + "shirtee." + Config.locale;
-    public final String shopUrl = "http://" + Config.server + "shirtee." + Config.locale + "/shop";
-    public final String designerUrl = "http://" + Config.server + "shirtee." + Config.locale + "/shop/designer/?id=1140/";
+    public final static String indexShirteeUrl = "http://" + Config.server + "shirtee." + Config.domain;
+    public final static String shopUrl = "http://" + Config.server + "shirtee." + Config.domain + "/shop";
+    public final static String designerUrl = "http://" + Config.server + "shirtee." + Config.domain + "/shop/designer/?id=1140/";
 
-    public static void init() {
+    /**
+     * @param browser
+     * @param locale - de or com
+     * @param server
+     * @param isLogged
+     */
+    public static void init(String browser, String locale, String server, boolean isLogged) {
+        Config.browser = browser;
+        Config.domain = locale;
+        Config.server = server;
+        Config.isLogged = isLogged;
 
     }
 }

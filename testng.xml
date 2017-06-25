@@ -1,0 +1,11 @@
+<suite name="live" verbose="1" >
+    <test name="Tests for live" >
+        <classes>
+            <class name="ProductPageTest">
+                <methods>
+                    <include name="testSize"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
