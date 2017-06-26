@@ -20,7 +20,7 @@ public class TestSikuli extends AbstractTest {
     public void saveIMG() {
         IndexPage pp = new IndexPage();
         pp.open("https://www.shirtee.com/designer/?id=4528");
-        DesignerPage dp = new DesignerPage();
+
 
         WebElement element = Driver.getDriver().findElement(By.xpath("//*[@id='pd_container']"));
 
@@ -40,7 +40,7 @@ public class TestSikuli extends AbstractTest {
 
         IndexPage pp = new IndexPage();
         pp.open("https://www.shirtee.com/designer/?id=4528");
-        DesignerPage dp = new DesignerPage();
+      //  DesignerPage dp = new DesignerPage();
 
         WebElement element = Driver.getDriver().findElement(By.xpath("//*[@id='pd_container']"));
 

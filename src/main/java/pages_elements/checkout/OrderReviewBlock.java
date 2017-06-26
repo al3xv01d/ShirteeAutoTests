@@ -13,7 +13,7 @@ public class OrderReviewBlock extends AbstractPageElement {
 
     //******************* PAGE ELEMENTS ********************//
 
-    private List<OrderedItemElement> allOrderedItems = new ArrayList<OrderedItemElement>();
+    private List<OrderedItem> allOrderedItems = new ArrayList<OrderedItem>();
 
     //******************* LOCATORS ********************//
 
@@ -40,14 +40,14 @@ public class OrderReviewBlock extends AbstractPageElement {
 
     //******************* ACTIONS ********************//
 
-    public List<OrderedItemElement> getAllOrderedItems() {
+    public List<OrderedItem> getAllOrderedItems() {
 
         int itemsInCart = driver.findElements(By.xpath(this.orderedItem_lo)).size();
 
         if(null == allOrderedItems || itemsInCart != allOrderedItems.size() ) {
 
             for(int i=0; i < itemsInCart ;i++) {
-                this.allOrderedItems.add(new OrderedItemElement(i+1));
+                this.allOrderedItems.add(new OrderedItem(i+1));
             }
         }
         return allOrderedItems;

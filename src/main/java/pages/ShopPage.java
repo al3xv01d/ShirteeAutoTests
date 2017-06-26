@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class ShopPage extends AbstractShirteePage {
 
+    public final int[] itemsOnPageSettings = {24, 32, 48};
+
     //*******************  LOCATORS ********************//
 
     private final String item_lo = "//li[@class=\"item last\"]";

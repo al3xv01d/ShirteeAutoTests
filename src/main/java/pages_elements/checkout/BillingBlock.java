@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import pages_elements.AbstractPageElement;
-import tools.RandomDataGenerator;
+import tools.RandomData;
 import tools.Wait;
 
 public class BillingBlock extends AbstractPageElement{
@@ -99,13 +99,13 @@ public class BillingBlock extends AbstractPageElement{
     //******************* ACTIONS ********************//
 
     public void toggleShippingAdressForm() {
-        Wait.visible(shippingAdressCheckbox);
+        Wait.visibility(shippingAdressCheckbox);
         shippingAdressCheckbox.click();
     }
 
     public void fillBillingForm() {
         fillInputField(billingEmailField, "dfdgfd@dsggf.com");
-        fillInputField(billingFirstNameField, RandomDataGenerator.getRandomName());
+        fillInputField(billingFirstNameField, RandomData.getRandomName());
 
     }
 

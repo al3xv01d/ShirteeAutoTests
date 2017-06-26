@@ -12,16 +12,14 @@ public class AbstractTest {
     @BeforeClass
     public static void setUp(){
         Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+        Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        Config.init("chrome","de", "", false );
     }
 
     @BeforeTest
     public void setEnv(){
-//        driver.get(System.getProperty("mainPageURL"));
-//        MainPage mainPage = new MainPage(driver);
-//        driver.manage().window().maximize();
-//
-//        mainPage.switchToDELocale();
+
     }
 
     @AfterTest
@@ -31,6 +29,6 @@ public class AbstractTest {
 
     @AfterClass
     public static void tearDown(){
-       // Driver.destroy();
+        //Driver.destroy();
     }
 }

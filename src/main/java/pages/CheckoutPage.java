@@ -13,10 +13,10 @@ public class CheckoutPage extends AbstractPage{
 
     //******************* PAGE ELEMENTS ********************//
 
-    public BillingBlock billingBlock = new BillingBlock();
-    public PaymentBlock paymentBlock = new PaymentBlock();
-    public OrderReviewBlock orderReviewBlock = new OrderReviewBlock();
-    public ValidationElements validationElements = new ValidationElements();
+    public BillingBlock billingBlock;
+    public PaymentBlock paymentBlock;
+    public OrderReviewBlock orderReviewBlock;
+    public ValidationElements validationElements;
 
     //******************* LOCATORS ********************//
 
@@ -26,6 +26,20 @@ public class CheckoutPage extends AbstractPage{
 
     @FindBy(id = submitOrderFormBtn_lo)
     private WebElement submitOrderFormBtn;
+
+    //******************* CONSTRUCTOR ********************//
+
+    public CheckoutPage(BillingBlock billingBlock,
+                        PaymentBlock paymentBlock,
+                        OrderReviewBlock orderReviewBlock,
+                        ValidationElements validationElements )
+    {
+        this.billingBlock = billingBlock;
+        this.paymentBlock = paymentBlock;
+        this.orderReviewBlock = orderReviewBlock;
+        this.validationElements = validationElements;
+    }
+
 
     //******************* ACTIONS ********************//
 

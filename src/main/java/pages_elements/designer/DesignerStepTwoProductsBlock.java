@@ -1,13 +1,12 @@
 package pages_elements.designer;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages_elements.AbstractPageElement;
 import tools.Wait;
 
 
-public class ProductsBlock extends AbstractPageElement {
+public class DesignerStepTwoProductsBlock extends AbstractPageElement {
 
     //*******************  LOCATORS ********************//
 
@@ -22,11 +21,11 @@ public class ProductsBlock extends AbstractPageElement {
     //*******************  ACTIONS ********************//
 
     public void addAnotherProduct() {
-        Wait.visible(addProductSelector);
+        Wait.visibility(addProductSelector);
         addProductSelector.click();
     }
 
-    public Product getProduct(int productNumber) {
-        return new Product(productNumber);
+    public DesignerStepTwoProduct getProduct(int productNumber) {
+        return new DesignerStepTwoProduct(productNumber);
     }
 }

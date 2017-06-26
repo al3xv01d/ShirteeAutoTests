@@ -8,23 +8,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by User on 20.06.2017.
- */
 public class Wait {
 
     private static WebDriver driver = Driver.getDriver();
 
-    public static void visible(WebElement element) {
+    public static void visibility(WebElement element) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, 15);
             wait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
-            System.out.println("Element not found, not visible!");
+            System.out.println("Element not found, not visibility!");
         }
     }
 
-    public static void invisible(String elementLocator) {
+    public static void invisibility(String elementLocator) {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, 15);
@@ -33,7 +30,16 @@ public class Wait {
             System.out.println("Element doesn't disappear!");
         }
 
-
-
     }
+
+    public static void clickable(WebElement element) {
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 15);
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+        } catch (TimeoutException e) {
+            System.out.println("Element is ot clickable");
+        }
+    }
+
 }

@@ -8,9 +8,16 @@ public class Config {
     private static String server = "dev.";
     private static String domain = "de";
 
+
+    public static String user_email = "akh@gomage.com";
+    public static String user_pass = "gomage777";
+
     public final static String indexShirteeUrl = "http://" + Config.server + "shirtee." + Config.domain;
     public final static String shopUrl = "http://" + Config.server + "shirtee." + Config.domain + "/shop";
     public final static String designerUrl = "http://" + Config.server + "shirtee." + Config.domain + "/shop/designer/?id=1140/";
+
+
+    public static String testProduct1 = "https://www.shirtee." + Config.domain + "/vatersohn";
 
     /**
      * @param browser
@@ -23,6 +30,5 @@ public class Config {
         Config.domain = locale;
         Config.server = server;
         Config.isLogged = isLogged;
-
     }
 }

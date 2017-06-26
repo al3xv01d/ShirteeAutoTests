@@ -1,20 +1,22 @@
 import org.testng.annotations.Test;
 import pages.DesignerPage;
 import pages.IndexPage;
-import pages_elements.designer.Product;
+import pages_elements.designer.DesignerStepTwoProduct;
+import tools.PageBuilder;
 
 public class DesignerTest extends AbstractTest {
 
     @Test
     public void step1() {
-        IndexPage pp = new IndexPage();
-        pp.open("https://www.shirtee.com/designer/?id=4528");
-        DesignerPage dp = new DesignerPage();
 
-        dp.step1.fillProductText("FUCK");
+        DesignerPage dp = PageBuilder.buildDesignerPage();
+        dp.open("http://dev.shirtee.com/designer/?id=1140/");
+        dp.step1.fillProductText("TEST");
         dp.gotoNextStep();
-        dp.step2.products.addAnotherProduct();
-
-        Product dp1 = dp.step2.products.getProduct(1);
+        dp.gotoNextStep();
+        dp.step3.setCampaignName("javatest");
+        dp.step3.setCampaignUrl("javatest222");
+        dp.step3.publishCampaign();
+        dp.step3.loginForm.login();
     }
 }

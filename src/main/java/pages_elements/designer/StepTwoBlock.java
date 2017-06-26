@@ -4,21 +4,27 @@ package pages_elements.designer;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages_elements.AbstractPageElement;
-import tools.Wait;
 
 public class StepTwoBlock extends AbstractPageElement{
 
-    public ProductsBlock products = new ProductsBlock();
+    //*******************  BLOCK ELEMENTS ********************//
+
+    public DesignerStepTwoProductsBlock allProducts;
 
     //*******************  LOCATORS ********************//
 
     private final String itemsQty_lo = "keypress_input";
 
-    //*******************  ELEMENTS ********************//
+    //*******************  WEBDRIVER ELEMENTS ********************//
 
     @FindBy(id = itemsQty_lo)
     private WebElement itemsQty;
 
+    //*******************  CONSTRUCTOR ********************//
+
+    public StepTwoBlock(DesignerStepTwoProductsBlock allProducts) {
+        this.allProducts = allProducts;
+    }
 
     //*******************  ACTIONS ********************//
 

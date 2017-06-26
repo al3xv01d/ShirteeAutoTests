@@ -1,19 +1,24 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+import pages.IndexPage;
+import pages.dashboard.DashboardCampaignsPage;
+import tools.Config;
 
 public class TestFuck extends AbstractTest{
 
     @Test
     public void firstTest() {
 
-        SoftAssert sf = new SoftAssert();
+        IndexPage pp = new IndexPage();
+        pp.open(Config.indexShirteeUrl);
+        pp.login(false);
 
-        sf.assertEquals(1,3,"fuck1111111");
-        sf.assertEquals(2,2 );
-        sf.assertEquals(5,3,"ebati");
+        DashboardCampaignsPage dpc = new DashboardCampaignsPage();
 
-        sf.assertAll();
+        dpc.closePopUp();
+
+        dpc.setLocale("eng");
+        dpc.logout();
 
     }
 

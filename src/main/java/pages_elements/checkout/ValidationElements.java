@@ -1,6 +1,5 @@
 package pages_elements.checkout;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages_elements.AbstractPageElement;
@@ -64,30 +63,30 @@ public class ValidationElements extends AbstractPageElement{
     // ***************** BILLING FORM ACTIONS ******************** //
 
     public boolean isEmptyEmailMsgVisible() {
-        return isElementExistAndIsElementVisible(emptyEmailMsg);
+        return isExistsAndVisible(emptyEmailMsg);
     }
 
     public boolean isIncorrectEmailMsgVisible() {
-        return isElementExistAndIsElementVisible(incorrectEmailMsg);
+        return isExistsAndVisible(incorrectEmailMsg);
     }
 
     public boolean isEmptyBillingFirstNameMsgVisible() {
-        return isElementExistAndIsElementVisible(emptyBillingFirstNameMsg);
+        return isExistsAndVisible(emptyBillingFirstNameMsg);
     }
 
     public boolean isEmptyBillingLastNameMsgVisible() {
-        return isElementExistAndIsElementVisible(emptyBillingLastNameMsg);
+        return isExistsAndVisible(emptyBillingLastNameMsg);
     }
 
     public boolean isEmptyBillingAdressMsgVisible() {
-        return isElementExistAndIsElementVisible(emptyBillingAdressMsg);
+        return isExistsAndVisible(emptyBillingAdressMsg);
     }
 
     public boolean isEmptyBillingZipCodeMsgVisible() {
-        return isElementExistAndIsElementVisible(emptyBillingZipCodeMsg);
+        return isExistsAndVisible(emptyBillingZipCodeMsg);
     }
 
     public boolean isEmptyBillingCityMsgVisible() {
-        return isElementExistAndIsElementVisible(emptyBillingCityMsg);
+        return isExistsAndVisible(emptyBillingCityMsg);
     }
 }

@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import tools.Config;
 import tools.Wait;
 
-import java.util.concurrent.TimeUnit;
-
 public abstract class AbstractShirteePage extends AbstractPage {
 
     //*******************  LOCATORS ********************//
@@ -86,10 +84,10 @@ public abstract class AbstractShirteePage extends AbstractPage {
         }
     }
 
-    public void logIn(boolean returnToShirtee) {
+    public void login(boolean returnToShirtee) {
         this.openloginFormBtn.click();
 
-        Wait.visible(loginInputField);
+        Wait.visibility(loginInputField);
 
         loginInputField.clear();
         loginInputField.sendKeys("akh@gomage.com");
@@ -104,7 +102,7 @@ public abstract class AbstractShirteePage extends AbstractPage {
         }
     }
 
-    public void logOut() {
+    public void logout() {
         logOutBtn.click();
     }
 

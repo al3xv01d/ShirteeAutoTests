@@ -5,13 +5,19 @@ import java.util.Random;
 /**
  * Created by User on 25.06.2017.
  */
-public class RandomDataGenerator {
+public class RandomData {
 
     private static String letters = "abcdefghijklmnopqrstuvwxyz";
 
     public static String getRandomName() {
-        return "AutoJT_name_" + RandomDataGenerator.generateRandomString(10) ;
+        return "AutoJT_name_" + RandomData.generateRandomString(10) ;
     }
+
+    public static int getRandomInt(int a, int b) {
+        //from a to b
+        return a + (int) (Math.random() * b);
+    }
+
 
     private static String generateRandomString(int length)
     {
@@ -23,5 +29,7 @@ public class RandomDataGenerator {
         }
         return new String(text);
     }
+
+
 
 }

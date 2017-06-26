@@ -7,13 +7,16 @@ import pages_elements.AbstractPageElement;
 
 
 
-public class OrderedItemElement extends AbstractPageElement {
+public class OrderedItem extends AbstractPageElement {
 
     //******************* LOCATORS ********************//
 
     private final String deleteButton_lo = ".//div[@class=\"light-chechout-remove-td\"]";
     private final String price_lo = ".//span[@class=\"price\"]";
     private final String qty_lo = ".//span[@class=\"gcheckout-qty\"]";
+    private final String color_lo =  ".//dl[@class=\"item-options\"]/dd[1]";
+    private final String size_lo =  ".//dl[@class=\"item-options\"]/dd[2]";
+
 
     private final String increaseQtyButton_lo = "//strong[@class=\"glc-qtybtn glc-minus\"]";
     private final String decreaseQtyButton_lo = "//strong[@class=\"glc-qtybtn glc-plus\"]";
@@ -26,7 +29,7 @@ public class OrderedItemElement extends AbstractPageElement {
     private int itemNumber;
     private WebElement item;
 
-    public OrderedItemElement(int itemNumber) {
+    public OrderedItem(int itemNumber) {
         this.itemNumber = itemNumber;
         this.init();
     }
@@ -59,6 +62,14 @@ public class OrderedItemElement extends AbstractPageElement {
 
     public String getQty() {
        return this.item.findElement(By.xpath(this.qty_lo)).getText();
+    }
+
+    public String getColor() {
+        return this.item.findElement(By.xpath(this.color_lo)).getText();
+    }
+
+    public String getSize() {
+        return this.item.findElement(By.xpath(this.size_lo)).getText();
     }
 
     //******************* ACTIONS ********************//

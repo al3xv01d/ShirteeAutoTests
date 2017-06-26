@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import tools.Driver;
+import tools.Wait;
 
 public abstract class AbstractPageElement {
 
@@ -21,12 +22,13 @@ public abstract class AbstractPageElement {
 //        }
     }
 
-    public void fillInputField(WebElement inputField, String data) {
+    protected void fillInputField(WebElement inputField, String data) {
+        Wait.visibility(inputField);
         inputField.clear();
         inputField.sendKeys(data);
     }
 
-    protected boolean isElementExistAndIsElementVisible(WebElement element) {
+    public boolean isExistsAndVisible(WebElement element) {
 
         boolean result;
 
@@ -37,6 +39,10 @@ public abstract class AbstractPageElement {
         }
 
         return result;
+    }
+
+    public boolean isExist(WebElement element) {
+        return null != element;
     }
 
 }

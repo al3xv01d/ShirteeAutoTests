@@ -4,10 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import tools.RandomData;
 import tools.Wait;
 
 import java.util.List;
-
 
 
 public class ProductPage extends AbstractShirteePage {
@@ -16,10 +16,11 @@ public class ProductPage extends AbstractShirteePage {
 
     private final String sizeSelect_lo = "addition_size";
     private final String color_lo = "//*[@id=\"color-swatches\"]//span";
+    private final String selectedColor_lo = "color-label";
     private final String price_lo = "//span[@class='regular-price']/span";
     private final String addToCartBtn_lo = "//form//div[@class=\"add-to-cart-buttons\"]";
     private final String gotoCheckoutBtn_lo = "go_to_checkout";
-    private final String sizeValidationMessage_lo = "size-validation-error";
+    private final String sizeValidationMsg_lo = "size-validation-error";
 
     //*******************  WEBDRIVER ELEMENTS ********************//
 
@@ -28,6 +29,9 @@ public class ProductPage extends AbstractShirteePage {
 
     @FindAll({@FindBy(xpath= color_lo)})
     private List<WebElement> allColors;
+
+    @FindBy(id = selectedColor_lo )
+    private WebElement selectedColor;
 
     @FindBy(xpath = price_lo) // there is 6 elements, but actual price is always first
     public WebElement price;
@@ -38,36 +42,53 @@ public class ProductPage extends AbstractShirteePage {
     @FindBy(id = gotoCheckoutBtn_lo)
     private WebElement gotoCheckoutBtn;
 
-    @FindBy(id = sizeValidationMessage_lo)
-    public WebElement sizeValidationMessage;
+    @FindBy(id = sizeValidationMsg_lo)
+    public WebElement sizeValidationMsg;
 
-    //*******************  ACTIONS ********************//
+    //*******************  ACTIONS - GETTERS ********************//
 
     public String getPrice() {
         return price.getText();
     }
 
+    public String getSelectedColor() {
+        return selectedColor.getText();
+    }
+
+    public boolean isSizeValidationMsgVisible () {
+        return isExistsAndVisible(sizeValidationMsg);
+    }
+
+    //*******************  ACTIONS  ********************//
+
     public void addToCart() {
-        this.setRandomSize();
-        this.setRandomColor();
-
         addToCartBtn.click();
+    }
 
-        Wait.visible(gotoCheckoutBtn);
+    public void addToCartAndGoToCheckout() {
+        addToCartBtn.click();
+        Wait.visibility(gotoCheckoutBtn);
         gotoCheckoutBtn.click();
     }
 
-    public void setRandomSize() {
-        sizeSelect.isDisplayed();
-        Select sizeSelector = new Select(sizeSelect);
-        List<WebElement> sizeOptions = sizeSelector.getOptions();
+    public String setRandomSizeAndGetSelected() {
 
-        int sizeIndex = 0 + (int)(Math.random() * ((sizeOptions.size() - 1) + 1));
-        if(sizeIndex == 0) {sizeIndex++;}
-        sizeSelector.selectByIndex(sizeIndex);
+        Wait.visibility(sizeSelect);
+
+        Select sizeSelector = new Select(sizeSelect);
+
+        int sizeOptionsNumber = sizeSelector.getOptions().size();
+        int selectedSizeIndex = RandomData.getRandomInt(1, sizeOptionsNumber - 1);
+
+        sizeSelector.selectByIndex(selectedSizeIndex);
+
+        return sizeSelector.getOptions().get(selectedSizeIndex).getText();
+
     }
 
     public void setRandomColor() {
-        allColors.get(0 + (int)(Math.random() * ((allColors.size() - 1) + 1))).click();
+        allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
     }
+
+
 }

@@ -19,6 +19,5 @@ public class StaticPageFactory {
     public static ProductPage createProductPage() {
         return new ProductPage();
     }
-    public static CheckoutPage createCheckoutPage() { return new CheckoutPage();}
 
 }

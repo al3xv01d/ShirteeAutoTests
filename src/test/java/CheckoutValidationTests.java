@@ -1,7 +1,7 @@
 import org.testng.annotations.Test;
 
 
-public class CheckoutFieldsValidationTests {
+public class CheckoutValidationTests {
 
     @Test
     public void emptyEmailField() {
