@@ -1,5 +1,6 @@
 package pages;
 
+import abstraction.AbstractShirteePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages_elements.designer.StepOneBlock;

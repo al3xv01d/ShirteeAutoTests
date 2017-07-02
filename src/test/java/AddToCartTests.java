@@ -6,16 +6,18 @@ import tools.Config;
 import tools.PageBuilder;
 import tools.StaticPageFactory;
 
+// Test 1 - add one product to cart and assert that in cart is only one product
+// test 2 - add one product in cart and assert that product's color, price and size are the same on checkout page
 
 public class AddToCartTests extends AbstractTest {
 
     @Test
     public void addToCart() {
 
-        ProductPage productPage = StaticPageFactory.createProductPage();
+        ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProduct1);
+        productPage.open(Config.testProductUrl_1);
 
         productPage.setRandomColor();
         productPage.setRandomSizeAndGetSelected();
@@ -31,10 +33,10 @@ public class AddToCartTests extends AbstractTest {
     @Test
     public void checkPriceSizeAndColor() {
 
-        ProductPage productPage = StaticPageFactory.createProductPage();
+        ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProduct1);
+        productPage.open(Config.testProductUrl_1);
 
         String productPrice = productPage.getPrice(); // Saved product price from Product page
         String productSize = productPage.setRandomSizeAndGetSelected();

@@ -3,10 +3,9 @@ package pages_elements.checkout;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages_elements.AbstractPageElement;
-import tools.Wait;
+import abstraction.AbstractPageElement;
 
-public class PaymentBlock extends AbstractPageElement{
+public class PaymentBlock extends AbstractPageElement {
 
     protected final String creditCardMethod_lo = "//label[@for=\"p_method_payone_creditcard\"]";
     protected final String payPalMethod_lo = "//label[@for=\"p_method_paypal_express\"]";
@@ -50,6 +49,7 @@ public class PaymentBlock extends AbstractPageElement{
 
     public void selectBankMethod() {
         this.bankMethod.click();
+        waitLoadingPopUp();
     }
 
 

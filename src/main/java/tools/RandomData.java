@@ -9,7 +9,7 @@ public class RandomData {
 
     private static String letters = "abcdefghijklmnopqrstuvwxyz";
 
-    public static String getRandomName() {
+    public static String getRandomString_dontuse() {
         return "AutoJT_name_" + RandomData.generateRandomString(10) ;
     }
 
@@ -19,7 +19,7 @@ public class RandomData {
     }
 
 
-    private static String generateRandomString(int length)
+    public static String generateRandomString(int length)
     {
         Random random = new Random();
         char[] text = new char[length];
@@ -28,6 +28,10 @@ public class RandomData {
             text[i] = letters.charAt(random.nextInt(letters.length()));
         }
         return new String(text);
+    }
+
+    public static String getRandomEmail() {
+        return "JAT_" + generateRandomString(5) + "@" + generateRandomString(5) + ".com";
     }
 
 

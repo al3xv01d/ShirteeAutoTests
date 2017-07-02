@@ -1,6 +1,6 @@
 package pages_elements.checkout;
 
-import pages_elements.AbstractPageElement;
+import abstraction.AbstractPageElement;
 
 public class CreditCardBlock extends AbstractPageElement {
 }

@@ -3,7 +3,7 @@ package pages.dashboard;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.AbstractPage;
+import abstraction.AbstractPage;
 import tools.Wait;
 
 public class AbstractDashboardPage extends AbstractPage {

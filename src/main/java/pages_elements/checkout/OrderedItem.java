@@ -2,9 +2,8 @@ package pages_elements.checkout;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import pages_elements.AbstractPageElement;
-
+import abstraction.AbstractPageElement;
+import tools.PriceHelper;
 
 
 public class OrderedItem extends AbstractPageElement {
@@ -54,6 +53,10 @@ public class OrderedItem extends AbstractPageElement {
      */
     public String getPrice() {
         return this.item.findElements(By.xpath(this.price_lo)).get(0).getText();
+    }
+
+    public double getRealPrice() {
+        return PriceHelper.getRealPrice(this.getPrice());
     }
 
     public String getTotalPrice() {

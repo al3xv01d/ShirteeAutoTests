@@ -1,8 +1,10 @@
 package tools;
 
 
-import pages.CheckoutPage;
-import pages.DesignerPage;
+import pages.*;
+import pages.magento_admin.AdminFacade;
+import pages.magento_admin.AdminLoginPage;
+import pages.magento_admin.AdminOrdersPage;
 import pages_elements.checkout.BillingBlock;
 import pages_elements.checkout.OrderReviewBlock;
 import pages_elements.checkout.PaymentBlock;
@@ -10,6 +12,36 @@ import pages_elements.checkout.ValidationElements;
 import pages_elements.designer.*;
 
 public class PageBuilder {
+
+    public static IndexPage buildIndexPage() {
+        return new IndexPage();
+    }
+
+    public static ShopPage buildShopPage() {
+        return new ShopPage();
+    }
+
+    public static ProductPage buildProductPage() {
+        return new ProductPage();
+    }
+
+    public static OrderSuccessPage buildOrderSuccessPage() {
+        return new OrderSuccessPage();
+    }
+
+
+
+
+
+
+
+    public static AdminFacade buildAdminFacade() {
+
+        AdminLoginPage loginPage = new AdminLoginPage();
+        AdminOrdersPage ordersPage = new AdminOrdersPage();
+
+        return new AdminFacade(loginPage, ordersPage);
+    }
 
     public static DesignerPage buildDesignerPage() {
 

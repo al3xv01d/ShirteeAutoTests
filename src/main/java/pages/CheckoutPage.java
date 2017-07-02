@@ -1,15 +1,12 @@
 package pages;
 
 
-import org.openqa.selenium.By;
+import abstraction.AbstractPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages_elements.checkout.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class CheckoutPage extends AbstractPage{
+public class CheckoutPage extends AbstractPage {
 
     //******************* PAGE ELEMENTS ********************//
 
@@ -22,10 +19,16 @@ public class CheckoutPage extends AbstractPage{
 
     private final String submitOrderFormBtn_lo = "submit-btn";
 
+    private final String billingBlockTitle_lo = "//*[@id=\"gcheckout-billing-address\"]/h2";
+
     //******************* WEBDRIVER ELEMENTS ********************//
 
     @FindBy(id = submitOrderFormBtn_lo)
     private WebElement submitOrderFormBtn;
+
+    @FindBy(xpath = billingBlockTitle_lo)
+    private WebElement billingBlockTitle;
+
 
     //******************* CONSTRUCTOR ********************//
 
@@ -43,8 +46,13 @@ public class CheckoutPage extends AbstractPage{
 
     //******************* ACTIONS ********************//
 
+    public void clickOnEmptyPlace() {
+        billingBlockTitle.click();
+    }
+
     public void order() {
         submitOrderFormBtn.click();
+        waitLoadingPopUp();
     }
 
 }

@@ -3,8 +3,7 @@ package pages_elements.dashboard_campaigns;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import pages_elements.AbstractPageElement;
+import abstraction.AbstractPageElement;
 
 public class CampaignLine extends AbstractPageElement {
 

@@ -1,10 +1,12 @@
 package pages;
 
+import abstraction.AbstractShirteePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import tools.PriceHelper;
 
 
 import java.util.List;
@@ -18,11 +20,15 @@ public class ShopPage extends AbstractShirteePage {
 
     //*******************  LOCATORS ********************//
 
+    private final String leftSidebarSearchField_lo = "//div[@class=\"col-left sidebar col-left-first\"]//input";
+
     private final String item_lo = "//li[@class=\"item last\"]";
 
     private final String itemTitle_lo = ".//h2[@class=\"product-name\"]";
     private final String itemPrice_lo = "//div[@class=\"price-box\"]//span[@class=\"price\"]";
     private final String itemsQtyOnPageSelect_lo = "//div[@class=\"toolbar-bottom\"]//div[@class=\"pager\"]//select";
+
+    private String pagination_lo = "//div[@class=\"toolbar-bottom\"]//div[@class=\"pages\"]/ol/li[%d]";
 
 
     //*******************  WEBDRIVER ELEMENTS ********************//
@@ -32,6 +38,9 @@ public class ShopPage extends AbstractShirteePage {
 
     @FindBy(xpath = itemsQtyOnPageSelect_lo)
     private WebElement itemsQtyOnPageSelect;
+
+    @FindBy(xpath = leftSidebarSearchField_lo)
+    private WebElement leftSidebarSearchField;
 
     //*******************  ACTIONS - SOME GETTERS ********************//
 
@@ -48,18 +57,23 @@ public class ShopPage extends AbstractShirteePage {
     /**
      * @param itemNumber
      */
-    public void getItemTitle(int itemNumber) {
-       allItems.get(itemNumber).findElement(By.xpath(itemTitle_lo));
+    public String getItemTitle(int itemNumber) {
+      return allItems.get(itemNumber).findElement(By.xpath(itemTitle_lo)).getText();
     }
 
     /**
      * @param itemNumber
      */
-    public void getItemPrice(int itemNumber) {
-        allItems.get(itemNumber).findElement(By.xpath(itemPrice_lo));
+    public double getItemRealPrice(int itemNumber) {
+        return PriceHelper.getRealPrice(allItems.get(itemNumber).findElement(By.xpath(itemPrice_lo)).getText());
     }
 
     //*******************  ACTIONS ********************//
+
+    public void leftSidebarSearch(String query) {
+        fillInputField(leftSidebarSearchField, query);
+        leftSidebarSearchField.submit();
+    }
 
     /**
      * @param QtyOnPage - only 24 or 32 or 48
@@ -79,8 +93,10 @@ public class ShopPage extends AbstractShirteePage {
                 itemsQtySelector.selectByIndex(2);
                 break;
         }
-
     }
 
+    public void gotoPage(int page) {
+        driver.findElement(By.xpath(String.format(pagination_lo, page))).click();
+    }
 
 }

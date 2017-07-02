@@ -3,14 +3,14 @@ import pages.ProductPage;
 import tools.Config;
 import tools.StaticPageFactory;
 
-public class ProductPageValidationTests extends AbstractTest {
+public class ValidationProductPageTests extends AbstractTest {
 
     @Test
-    public void productSizeValidation() {
+    public void missingProductSizeValidation() {
 
         ProductPage productPage = StaticPageFactory.createProductPage();
 
-        productPage.open(Config.testProduct1);
+        productPage.open(Config.testProductUrl_1);
 
         productPage.addToCart();
 

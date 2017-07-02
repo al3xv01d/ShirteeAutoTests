@@ -4,7 +4,7 @@ package pages_elements.checkout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages_elements.AbstractPageElement;
+import abstraction.AbstractPageElement;
 
 import java.util.ArrayList;
 import java.util.List;

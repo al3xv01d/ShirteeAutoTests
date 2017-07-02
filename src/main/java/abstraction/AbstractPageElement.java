@@ -1,5 +1,6 @@
-package pages_elements;
+package abstraction;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,8 @@ import tools.Wait;
 public abstract class AbstractPageElement {
 
     protected WebDriver driver;
+
+
 
     public AbstractPageElement(){
         this.driver = Driver.getDriver();
@@ -45,4 +48,18 @@ public abstract class AbstractPageElement {
         return null != element;
     }
 
+    // UNIVERSAL POPUP WAIT
+
+    private final String orderPageUpdateDataPopUp_lo = "//div[@class=\"loadinfo\"]";
+    public void waitLoadingPopUp() {
+
+        WebElement updatePopUp2 = driver.findElement(By.xpath(orderPageUpdateDataPopUp_lo));
+
+        //TimeUnit.SECONDS.sleep(1);
+
+        Wait.stalenessOf(updatePopUp2);
+
+        System.out.println("POPUP HIDES");
+
+    }
 }

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
-import pages_elements.AbstractPageElement;
+import abstraction.AbstractPageElement;
 
 public class StepOneBlock extends AbstractPageElement{
 

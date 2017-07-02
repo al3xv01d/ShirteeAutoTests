@@ -2,10 +2,10 @@ package pages_elements.checkout;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages_elements.AbstractPageElement;
+import abstraction.AbstractPageElement;
 
 
-public class ValidationElements extends AbstractPageElement{
+public class ValidationElements extends AbstractPageElement {
 
     // ***************** BILLING FORM LOCATORS ******************** //
 
@@ -29,13 +29,13 @@ public class ValidationElements extends AbstractPageElement{
     private WebElement incorrectEmailMsg;
 
     @FindBy(xpath = emptyBillingFirstNameMsg_lo)
-    public WebElement emptyBillingFirstNameMsg;
+    private WebElement emptyBillingFirstNameMsg;
 
     @FindBy(xpath = emptyBillingLastNameMsg_lo)
     private WebElement emptyBillingLastNameMsg;
 
     @FindBy(xpath = emptyBillingAdressMsg_lo)
-    public WebElement emptyBillingAdressMsg;
+    private WebElement emptyBillingAdressMsg;
 
     @FindBy(xpath = emptyBillingZipCodeMsg_lo)
     private WebElement emptyBillingZipCodeMsg;

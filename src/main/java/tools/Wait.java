@@ -17,7 +17,7 @@ public class Wait {
             WebDriverWait wait = new WebDriverWait(driver, 15);
             wait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
-            System.out.println("Element not found, not visibility!");
+            System.out.println("Element not visible - " + element.getTagName());
         }
     }
 
@@ -38,8 +38,19 @@ public class Wait {
             WebDriverWait wait = new WebDriverWait(driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (TimeoutException e) {
-            System.out.println("Element is ot clickable");
+            System.out.println("Element is not clickable");
         }
+    }
+
+    public static void stalenessOf(WebElement element) {
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 15);
+            wait.until(ExpectedConditions.stalenessOf((element)));
+        } catch (TimeoutException e) {
+            System.out.println("Element doesn't destroy!");
+        }
+
     }
 
 }

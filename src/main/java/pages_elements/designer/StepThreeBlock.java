@@ -3,7 +3,7 @@ package pages_elements.designer;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages_elements.AbstractPageElement;
+import abstraction.AbstractPageElement;
 import tools.Wait;
 
 public class StepThreeBlock extends AbstractPageElement{
