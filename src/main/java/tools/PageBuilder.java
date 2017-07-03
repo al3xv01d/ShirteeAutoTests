@@ -47,10 +47,8 @@ public class PageBuilder {
 
         DesignerStepThreeLoginForm loginForm = new DesignerStepThreeLoginForm();
 
-        DesignerStepTwoProductsBlock allProducts = new DesignerStepTwoProductsBlock();
-
         StepOneBlock step1 = new StepOneBlock();
-        StepTwoBlock step2 = new StepTwoBlock(allProducts);
+        StepTwoBlock step2 = new StepTwoBlock();
         StepThreeBlock step3 = new StepThreeBlock(loginForm);
 
 

@@ -1,9 +1,6 @@
 package abstraction;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import tools.Driver;
 import tools.Wait;
@@ -31,7 +28,7 @@ public abstract class AbstractPageElement {
         inputField.sendKeys(data);
     }
 
-    public boolean isExistsAndVisible(WebElement element) {
+    protected boolean isExistsAndVisible(WebElement element) {
 
         boolean result;
 
@@ -44,7 +41,7 @@ public abstract class AbstractPageElement {
         return result;
     }
 
-    public boolean isExist(WebElement element) {
+    protected boolean isExist(WebElement element) {
         return null != element;
     }
 
@@ -61,5 +58,11 @@ public abstract class AbstractPageElement {
 
         System.out.println("POPUP HIDES");
 
+    }
+
+    protected void scrollToElement(WebElement element) {
+        if (driver instanceof JavascriptExecutor) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        }
     }
 }
