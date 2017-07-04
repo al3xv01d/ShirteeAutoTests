@@ -3,8 +3,8 @@ package pages_elements.designer;
 
 import abstraction.AbstractPageElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import tools.Wait;
 
 import java.util.Iterator;
@@ -29,12 +29,18 @@ public class StepTwoAddedProduct extends AbstractPageElement {
     //*******************  CONSTRUCTOR ********************//
 
     public StepTwoAddedProduct(int productNumber) {
-        System.out.println((String.format(product_lo, productNumber)));
-        productPriceBlock = driver.findElement(By.xpath(String.format(product_lo, productNumber)));
+
+        try {
+            productPriceBlock = driver.findElement(By.xpath(String.format(product_lo, productNumber)));
+            productColorBlock = driver.findElement(By.xpath(String.format(product_lo, (productNumber + 1) )));
+        } catch (Exception e) {
+
+        }
+
 
         // productNumber + 1 because one product is located in two <tr> tags without any unique id or style
-        System.out.println((String.format(product_lo, productNumber+1)));
-        productColorBlock = driver.findElement(By.xpath(String.format(product_lo, (productNumber + 1) )));
+       // System.out.println((String.format(product_lo, productNumber+1)));
+
     }
 
     //*******************  ACTIONS ********************//
@@ -48,17 +54,17 @@ public class StepTwoAddedProduct extends AbstractPageElement {
     }
 
     public void openColorsSelector() {
-        scrollToElement(productColorBlock.findElement(By.xpath(colorsSelector_lo)));
+
         productColorBlock.findElement(By.xpath(colorsSelector_lo)).click();
+
         //Wait.visibility(productColorBlock.findElement(By.xpath(".//div[@class=\"colors-container\"] ")));
     }
 
     public void selectAllColors() {
-        System.out.println("StartColor selection");
 
         openColorsSelector();
         List<WebElement> allColors = productColorBlock.findElements(By.xpath(color_lo));
-        System.out.println(allColors.size());
+
         Iterator<WebElement> iterator = allColors.iterator();
 
         while(iterator.hasNext()) {
@@ -66,10 +72,15 @@ public class StepTwoAddedProduct extends AbstractPageElement {
 
             if(currentColor.isDisplayed()) {
                 Wait.clickable(currentColor);
-                currentColor.click();
+
+                try {
+                    currentColor.click();
+                } catch (WebDriverException e) { }
+
+
             }
         }
-
+        openColorsSelector();
     }
 
 }

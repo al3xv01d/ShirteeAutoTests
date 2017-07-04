@@ -60,9 +60,8 @@ public abstract class AbstractPageElement {
 
     }
 
-    protected void scrollToElement(WebElement element) {
-        if (driver instanceof JavascriptExecutor) {
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        }
+    protected void scrollToTop() {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("scroll(0,0);");
     }
 }

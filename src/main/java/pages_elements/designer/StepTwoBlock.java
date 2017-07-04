@@ -61,18 +61,31 @@ public class StepTwoBlock extends AbstractPageElement{
 
         allAddedProducts.clear();
 
-        for (int i = 1; i <= 26; i++ ) {
+       int size =  driver.findElements(By.xpath(".//*[@id='calculation-items']/tr")).size() / 2;
+        System.out.println("SIZE = " + size);
+       int n;
 
-            if(i % 2 == 0) {
-                ++i;
-            }
+        for (int i = 1; i <= size; i++ ) {
 
-            allAddedProducts.add(new StepTwoAddedProduct(i));
+            n = i*2 - 1;
+            System.out.println(n);
+
+            allAddedProducts.add(new StepTwoAddedProduct(n));
         }
 
         return allAddedProducts;
-
     }
 
+    public void addAllColorsToEachProduct() {
+        scrollToTop();
+        Iterator<StepTwoAddedProduct> iterator = allAddedProducts.iterator();
+
+        while(iterator.hasNext()) {
+
+            StepTwoAddedProduct currentProduct = iterator.next();
+            currentProduct.selectAllColors();
+        }
+
+    }
 
 }

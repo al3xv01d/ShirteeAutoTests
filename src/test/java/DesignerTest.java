@@ -15,7 +15,9 @@ public class DesignerTest extends AbstractTest {
     public void step1() {
 
         DesignerPage dp = PageBuilder.buildDesignerPage();
-        dp.open("http://dev.shirtee.com/designer/?id=1140/");
+        dp.open("https://www.shirtee.de/designer/?id=1140");
+
+
         dp.step1.fillProductText("TEST");
         dp.gotoNextStep();
 
@@ -23,8 +25,10 @@ public class DesignerTest extends AbstractTest {
         List<StepTwoAddedProduct> allProducts = dp.step2.getAllAddedProducts();
 
         System.out.println(allProducts.size());
+        dp.step2.addAllColorsToEachProduct();
 
-        allProducts.get(13).selectAllColors();
+
+//        allProducts.get(0).selectAllColors();
 
 
 
