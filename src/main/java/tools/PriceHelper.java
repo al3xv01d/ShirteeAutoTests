@@ -17,6 +17,7 @@ public class PriceHelper {
             String doubleFormatPrice = m.group(0).replace(",", ".");
             return  Double.parseDouble(doubleFormatPrice);
         } else {
+            System.out.println("PH ELSE");
             return 0.0;
         }
     }

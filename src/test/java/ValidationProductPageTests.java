@@ -12,7 +12,7 @@ public class ValidationProductPageTests extends AbstractTest {
 
         productPage.open(Config.testProductUrl_1);
 
-        productPage.addToCart();
+        productPage.pressAddToCartBtn();
 
         softAssert.assertTrue(productPage.isSizeValidationMsgVisible());
 

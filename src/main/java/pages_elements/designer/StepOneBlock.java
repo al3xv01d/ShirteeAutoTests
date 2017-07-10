@@ -1,5 +1,6 @@
 package pages_elements.designer;
 
+import org.jboss.netty.util.Timeout;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,9 @@ import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 import abstraction.AbstractPageElement;
+import tools.PriceHelper;
+
+import java.util.concurrent.TimeUnit;
 
 public class StepOneBlock extends AbstractPageElement{
 
@@ -24,8 +28,10 @@ public class StepOneBlock extends AbstractPageElement{
 
     private final String colorItem_lo = "//div[@id=\"right-color-group\"]/span";
 
-    private final String pricePerPiece_lo = "//span[@id=\"base_price\"]/span";
+    private final String pricePerPiece_lo = "//*[(@id=\"front_price\" or @id=\"back_price\" or @id=\"front_back_price\") and not(contains(@style,'display: none'))]/span";
 
+    private final String frontSide_lo = "//ul[@class=\"pd_sides_list\"]/li[1]";
+    private final String backSide_lo = "//ul[@class=\"pd_sides_list\"]/li[2]";
 
     //*******************  ELEMENTS ********************//
 
@@ -50,32 +56,46 @@ public class StepOneBlock extends AbstractPageElement{
     @FindBy(xpath = pricePerPiece_lo)
     private WebElement pricePerPiece;
 
+    @FindBy(xpath = frontSide_lo)
+    private WebElement frontSide;
+
+    @FindBy(xpath = backSide_lo)
+    private WebElement backSide;
+
 
     //*******************  ACTIONS ********************//
 
+    public double getPricePerPiece() {
+        return PriceHelper.getRealPrice( pricePerPiece.getText() );
+    }
 
     public void fillProductText(String text) {
         fillInputField(productTextTextarea, text);
     }
 
-    public void uploadImage() {
-        addImgTab.click();
-        uploadImageBtn.click();
-
-        Screen s = new Screen();
-
-        try {
-
-            Pattern imgFolder = new Pattern(getClass().getResource("/img_folder_2.jpg"));
-            Pattern image = new Pattern(getClass().getResource("/20001x2001px.jpg"));
-
-
-            s.wait(imgFolder.similar( (float) 0.90), 2).click();
-            s.wait(image.similar( (float) 0.90), 2).doubleClick();
-        } catch (FindFailed e){
-            e.printStackTrace();
-        }
+    public void clearProductText() {
+        productTextTextarea.click();
+        productTextTextarea.clear();
     }
+
+//    public void uploadImage() {
+//        addImgTab.click();
+//        uploadImageBtn.click();
+//
+//        Screen s = new Screen();
+//
+//        try {
+//
+//            Pattern imgFolder = new Pattern(getClass().getResource("/img_folder_2.jpg"));
+//            Pattern image = new Pattern(getClass().getResource("/20001x2001px.jpg"));
+//
+//
+//            s.wait(imgFolder.similar( (float) 0.90), 2).click();
+//            s.wait(image.similar( (float) 0.90), 2).doubleClick();
+//        } catch (FindFailed e){
+//            e.printStackTrace();
+//        }
+//    }
 
     public void selectFont(String font) {
         Select fontSelect = new Select(fontSelector);
@@ -125,6 +145,14 @@ public class StepOneBlock extends AbstractPageElement{
                 break;
         }
 
+    }
+
+    public void showFrontSide() {
+        frontSide.click();
+    }
+
+    public void showBackSide() {
+        backSide.click();
     }
 
 }

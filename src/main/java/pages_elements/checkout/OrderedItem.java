@@ -13,8 +13,8 @@ public class OrderedItem extends AbstractPageElement {
     private final String deleteButton_lo = ".//div[@class=\"light-chechout-remove-td\"]";
     private final String price_lo = ".//span[@class=\"price\"]";
     private final String qty_lo = ".//span[@class=\"gcheckout-qty\"]";
-    private final String color_lo =  ".//dl[@class=\"item-options\"]/dd[1]";
-    private final String size_lo =  ".//dl[@class=\"item-options\"]/dd[2]";
+    private final String color_lo =  ".//dl[@class=\"item-options\"]/dd[2]";
+    private final String size_lo =  ".//dl[@class=\"item-options\"]/dd[1]";
 
 
     private final String increaseQtyButton_lo = "//strong[@class=\"glc-qtybtn glc-minus\"]";
@@ -51,20 +51,17 @@ public class OrderedItem extends AbstractPageElement {
      * @return Ordered Item's price.
      * all price has the same css style so here I look for all price elements (there are only 2 price elements) and get first
      */
-    public String getPrice() {
-        return this.item.findElements(By.xpath(this.price_lo)).get(0).getText();
+
+    public double getPrice() {
+        return PriceHelper.getRealPrice(this.item.findElements(By.xpath(this.price_lo)).get(0).getText());
     }
 
-    public double getRealPrice() {
-        return PriceHelper.getRealPrice(this.getPrice());
+    public double getTotalPrice() {
+        return PriceHelper.getRealPrice(this.item.findElements(By.xpath(this.price_lo)).get(1).getText());
     }
 
-    public String getTotalPrice() {
-        return this.item.findElements(By.xpath(this.price_lo)).get(1).getText();
-    }
-
-    public String getQty() {
-       return this.item.findElement(By.xpath(this.qty_lo)).getText();
+    public int getQty() {
+       return Integer.parseInt( this.item.findElement(By.xpath(this.qty_lo)).getText() );
     }
 
     public String getColor() {

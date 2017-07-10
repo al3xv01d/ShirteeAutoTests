@@ -24,8 +24,11 @@ public class ProductPage extends AbstractShirteePage {
     private final String color_lo = "//*[@id=\"color-swatches\"]//span";
     private final String selectedColor_lo = "color-label";
     private final String price_lo = "//span[@class='regular-price']/span";
+
     private final String addToCartBtn_lo = "//form//div[@class=\"add-to-cart-buttons\"]";
     private final String gotoCheckoutBtn_lo = "go_to_checkout";
+    private final String continueShoppingBtn_lo ="continue_shopping";
+
     private final String sizeValidationMsg_lo = "size-validation-error";
 
     //*******************  WEBDRIVER ELEMENTS ********************//
@@ -43,16 +46,19 @@ public class ProductPage extends AbstractShirteePage {
     private WebElement selectedColor;
 
     @FindBy(xpath = price_lo) // there is 6 elements, but actual price is always first
-    public WebElement price;
+    private WebElement price;
 
     @FindBy(xpath = addToCartBtn_lo)
-    public WebElement addToCartBtn;
+    private WebElement addToCartBtn;
 
     @FindBy(id = gotoCheckoutBtn_lo)
     private WebElement gotoCheckoutBtn;
 
+    @FindBy(id = continueShoppingBtn_lo)
+    private WebElement continueShoppingBtn;
+
     @FindBy(id = sizeValidationMsg_lo)
-    public WebElement sizeValidationMsg;
+    private WebElement sizeValidationMsg;
 
     //*******************  ACTIONS - GETTERS ********************//
 
@@ -60,12 +66,8 @@ public class ProductPage extends AbstractShirteePage {
         return productName.getText();
     }
 
-    public String getPrice() {
-        return price.getText();
-    }
-
-    public double getRealPrice() {
-        return PriceHelper.getRealPrice(this.getPrice());
+    public double getPrice() {
+        return PriceHelper.getRealPrice(price.getText());
     }
 
 
@@ -79,7 +81,7 @@ public class ProductPage extends AbstractShirteePage {
 
     //*******************  ACTIONS  ********************//
 
-    public void addToCart() {
+    public void pressAddToCartBtn() {
         addToCartBtn.click();
     }
 
@@ -88,6 +90,14 @@ public class ProductPage extends AbstractShirteePage {
         Wait.visibility(gotoCheckoutBtn);
         Wait.clickable(gotoCheckoutBtn);
         gotoCheckoutBtn.click();
+    }
+
+    public void addToCartAndStay() {
+        addToCartBtn.click();
+        Wait.visibility(continueShoppingBtn);
+        Wait.clickable(continueShoppingBtn);
+        continueShoppingBtn.click();
+        Wait.invisibility(continueShoppingBtn_lo);
     }
 
     public String setRandomSizeAndGetSelected() {
@@ -107,7 +117,18 @@ public class ProductPage extends AbstractShirteePage {
         return "This product doesn't have size option";
     }
 
-    public void setSize() {
+    public void setSize(String size) {
+
+        if(isExistsAndVisible(sizeSelect)) {
+
+            Select sizeSelector = new Select(sizeSelect);
+
+            int sizeOptionsNumber = sizeSelector.getOptions().size();
+            int selectedSizeIndex = RandomData.getRandomInt(1, sizeOptionsNumber - 1);
+
+            sizeSelector.selectByVisibleText(size);
+
+        }
 
     }
 
@@ -116,5 +137,15 @@ public class ProductPage extends AbstractShirteePage {
         allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
     }
 
+    public void setColor(int colorNumber) {
+
+        try {
+            allColors.get(colorNumber).click();
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println();
+            allColors.get(0).click();
+        }
+
+    }
 
 }

@@ -11,6 +11,11 @@ import tools.PageBuilder;
 import java.io.File;
 import java.io.IOException;
 
+// Test 1 - login and return to index page
+// Test 2 - login and redirect to dashboard
+// Test 3 - logout from index page
+// test 4 - search from index page
+
 public class IndexPageTests extends AbstractTest {
 
     @Test

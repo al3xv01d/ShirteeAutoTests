@@ -9,7 +9,7 @@ import pages_elements.admin.OrderLine;
 import tools.Config;
 import tools.PageBuilder;
 
-public class TestFuck extends AbstractTest{
+public class TestForTest extends AbstractTest{
 
     @Test
     public void firstTest() {

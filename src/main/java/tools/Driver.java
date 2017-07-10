@@ -1,5 +1,8 @@
 package tools;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
@@ -37,6 +40,18 @@ public class Driver {
     public static void destroy() {
         Driver.driver.close();
         Driver.driver = null;
+    }
+
+    public static boolean isExistOnPage(String xpathLocator) {
+
+        try {
+            driver.findElement(By.xpath(xpathLocator));
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+
+
     }
 
 }

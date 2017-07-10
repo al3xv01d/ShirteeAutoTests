@@ -1,11 +1,8 @@
-<suite name="live" verbose="1" >
-    <test name="Tests for live" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="1" >
+    <test name="Method Test Cases" >
         <classes>
-            <class name="ProductPageTest">
-                <methods>
-                    <include name="testSize"/>
-                </methods>
-            </class>
+            <class name="AddToCartTests"></class>
         </classes>
     </test>
 </suite>

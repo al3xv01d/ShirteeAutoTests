@@ -8,9 +8,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class Wait {
 
     private static WebDriver driver = Driver.getDriver();
+
+    public static void seconds(int seconds) {
+
+        try {
+            TimeUnit.SECONDS.sleep(seconds);
+        } catch (InterruptedException e) {}
+
+    }
 
     public static void visibility(WebElement element) {
         try {
@@ -23,12 +33,19 @@ public class Wait {
 
     public static void invisibility(String elementLocator) {
 
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, 15);
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(elementLocator)));
-        } catch (TimeoutException e) {
-            System.out.println("Element doesn't disappear!");
-        }
+            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+            if( Driver.isExistOnPage(elementLocator) ) {
+                System.out.println(Driver.isExistOnPage(elementLocator));
+                try {
+                    WebDriverWait wait = new WebDriverWait(driver, 2);
+                    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(elementLocator)));
+                } catch (TimeoutException e) {
+                    System.out.println("Element doesn't disappear!");
+                }
+            } else {
+                System.out.println(Driver.isExistOnPage(elementLocator));
+            }
 
     }
 

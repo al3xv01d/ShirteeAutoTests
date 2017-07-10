@@ -71,7 +71,8 @@ public class Config {
 
             Config.indexShirteeUrl = "http://shirtee." + Config.domain;
             Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "http://shirtee." + Config.domain + "/shop/designer/?id=1140/";
+            Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
+
 
             Config.testProductUrl_1 = "http://shirtee." + Config.domain + "/vatersohn";
 
@@ -84,7 +85,7 @@ public class Config {
 
             Config.indexShirteeUrl = "http://stage.shirtee." + Config.domain;
             Config.shopUrl = "http://stage.shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "http://shirtee." + Config.domain + "/shop/designer/?id=1140/";
+            Config.designerUrl = "http://stage.shirtee." + Config.domain + "/shop/designer/?id=1140/";
 
             Config.testProductUrl_1 = "http://stage.shirtee." + Config.domain + "/test-download1/";
 

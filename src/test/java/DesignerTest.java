@@ -15,7 +15,8 @@ public class DesignerTest extends AbstractTest {
     public void step1() {
 
         DesignerPage dp = PageBuilder.buildDesignerPage();
-        dp.open("https://www.shirtee.de/designer/?id=1140");
+        dp.open("https://www.shirtee.de/designer/?id=1140/");
+
 
 
         dp.step1.fillProductText("TEST");

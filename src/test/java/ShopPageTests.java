@@ -75,7 +75,7 @@ public class ShopPageTests extends AbstractTest {
         shopPage.openProduct(1);
 
         softAssert.assertEquals(titleOnShopPage, productPage.getProductName() );
-        softAssert.assertEquals(priceOnShopPage, productPage.getRealPrice() );
+        softAssert.assertEquals(priceOnShopPage, productPage.getPrice() );
     }
 
     @Test

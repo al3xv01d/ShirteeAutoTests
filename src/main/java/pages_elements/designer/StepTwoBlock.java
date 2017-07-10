@@ -68,7 +68,7 @@ public class StepTwoBlock extends AbstractPageElement{
         for (int i = 1; i <= size; i++ ) {
 
             n = i*2 - 1;
-            System.out.println(n);
+            //System.out.println(n);
 
             allAddedProducts.add(new StepTwoAddedProduct(n));
         }
