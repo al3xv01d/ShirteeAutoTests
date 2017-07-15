@@ -1,15 +1,12 @@
-import com.gargoylesoftware.htmlunit.Page;
-import org.testng.Assert;
+package test;
+
+import abstraction.AbstractTest;
 import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.dashboard.DashboardCampaignsPage;
-import pages.magento_admin.AdminFacade;
-import pages.magento_admin.AdminLoginPage;
-import pages_elements.admin.OrderLine;
 import tools.Config;
-import tools.PageBuilder;
 
-public class TestForTest extends AbstractTest{
+public class TestForTest extends AbstractTest {
 
     @Test
     public void firstTest() {
@@ -25,6 +22,7 @@ public class TestForTest extends AbstractTest{
         dpc.setLocale("eng");
         dpc.logout();
 
+
     }
 
     @Test
@@ -37,9 +35,9 @@ public class TestForTest extends AbstractTest{
 //        alp.login();
 //
 //        af.openOrdersPage();
-//        OrderLine order = af.ordersPage.findAndGetOrder("12");
+//        OrderLine pushOrderBtn = af.ordersPage.findAndGetOrder("12");
 //
-//        System.out.println(order.getOrderId());
+//        System.out.println(pushOrderBtn.getOrderId());
 
 
     }

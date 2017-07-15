@@ -4,7 +4,6 @@ import pages.ProductPage;
 import pages.ShopPage;
 import tools.Config;
 import tools.PageBuilder;
-import tools.StaticPageFactory;
 
 // Test 1 - sort by qty. After sorting on page must be 24 products
 // Test 2 - sort by qty. After sorting on page must be 32 products
@@ -12,8 +11,8 @@ import tools.StaticPageFactory;
 
 // Test 4 - product's price and title are the same on shop pfge and on product page
 
-// Test 5 - check header search form
-// Test 6 - check left sidebar search form
+// Test 5 - check header's search form
+// Test 6 - check left sidebar's search form
 
 // Test 7 - check pagination
 

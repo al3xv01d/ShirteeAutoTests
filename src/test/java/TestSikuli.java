@@ -2,9 +2,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import org.testng.asserts.SoftAssert;
 import org.testng.annotations.Test;
-import pages.DesignerPage;
 import pages.IndexPage;
 import tools.Driver;
 import tools.ImageComparer;

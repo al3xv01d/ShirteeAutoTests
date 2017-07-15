@@ -16,7 +16,7 @@ public class AbstractTest {
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-        Config.init("chrome","de", "live", false );
+        Config.init("chrome","com", "dev", false );
     }
 
     @BeforeMethod
@@ -24,13 +24,13 @@ public class AbstractTest {
         Driver.getDriver().manage().deleteAllCookies();
     }
 
-    @AfterTest
-    public void cleanUp(){
-       //Driver.getDriver().manage().deleteAllCookies();
-    }
+//    @AfterTest
+//    public void cleanUp(){
+//       //Driver.getDriver().manage().deleteAllCookies();
+//    }
 
     @AfterClass
     public static void tearDown(){
-        //Driver.destroy();
+       // Driver.destroy();
     }
 }

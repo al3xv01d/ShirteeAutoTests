@@ -1,11 +1,8 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.DesignerPage;
 import pages_elements.designer.StepTwoAddedProduct;
+import tools.Config;
 import tools.PageBuilder;
-import tools.Wait;
 
 import java.util.List;
 
@@ -15,6 +12,8 @@ public class DesignerTest extends AbstractTest {
     public void step1() {
 
         DesignerPage dp = PageBuilder.buildDesignerPage();
+        dp.open(Config.indexShirteeUrl);
+        dp.login(true);
         dp.open("https://www.shirtee.de/designer/?id=1140/");
 
 

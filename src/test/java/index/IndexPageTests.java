@@ -1,15 +1,12 @@
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+package index;
+
+import abstraction.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.ShopPage;
 import tools.Config;
 import tools.PageBuilder;
-
-import java.io.File;
-import java.io.IOException;
 
 // Test 1 - login and return to index page
 // Test 2 - login and redirect to dashboard

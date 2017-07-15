@@ -27,7 +27,7 @@ public class AdminOrdersPage extends AbstractPage {
     //*******************  ACTIONS ********************//
 
     /**
-     * Always returns first order
+     * Always returns first pushOrderBtn
      * @param orderId
      */
     public OrderLine findAndGetOrder(String orderId) {

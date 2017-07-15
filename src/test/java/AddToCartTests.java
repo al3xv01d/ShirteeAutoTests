@@ -4,7 +4,6 @@ import pages.ProductPage;
 import pages_elements.checkout.OrderedItem;
 import tools.Config;
 import tools.PageBuilder;
-import tools.StaticPageFactory;
 
 // Test 1 - add one product to cart and assert that in cart is only one product
 // test 2 - add one product in cart and assert that product's color, price and size are the same on checkout page
@@ -131,6 +130,14 @@ public class AddToCartTests extends AbstractTest {
         softAssert.assertEquals(checkoutPage.orderReviewBlock.getAllOrderedItems().size(), 2);
         softAssert.assertAll();
 
+    }
+
+    @Test
+    public void addTwoDifferentProductsWithSameSizeAndColor() {
+        ProductPage productPage = PageBuilder.buildProductPage();
+        CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
+
+        productPage.open(Config.testProductUrl_1);
     }
 
 }

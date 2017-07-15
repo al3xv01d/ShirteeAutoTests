@@ -5,8 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import abstraction.AbstractPageElement;
+import tools.PriceHelper;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class OrderReviewBlock extends AbstractPageElement {
@@ -22,7 +24,8 @@ public class OrderReviewBlock extends AbstractPageElement {
     private final String grandTotalPrice_lo = "//tr[@class=\"last\"]//span[@class=\"price\"]";
     private final String couponField_lo =  "coupon_code";
     private final String applyCouponButton_lo =  "//div[@class=\"discount-btn-wrap\"]/button";
-    private final String shippingPrice_lo =  "//*[@id=\"checkout-review-table\"]/tfoot/tr[2]/td[2]/span";
+    private final String shippingPrice_lo =  "//*[@id=\"checkout-review-table\"]/tfoot/tr[2]//span";
+
 
     //******************* WEBDRIVER ELEMENTS ********************//
 
@@ -53,12 +56,26 @@ public class OrderReviewBlock extends AbstractPageElement {
         return allOrderedItems;
     }
 
-    public String getShippingPrice() {
-        return this.shippingPrice.getText();
+    public double getShippingPrice() {
+        return PriceHelper.getRealPrice(this.shippingPrice.getText());
     }
 
-    public String getGrandTotalPrice() {
-        return this.grandTotalPrice.getText();
+    public double getGrandTotalPrice() {
+        return PriceHelper.getRealPrice( this.grandTotalPrice.getText() );
+    }
+
+    public double getTotalItemsQty() {
+
+        Iterator<OrderedItem> iterator = this.getAllOrderedItems().iterator();
+
+        double totalQty = 0;
+
+        while(iterator.hasNext()) {
+            OrderedItem currentItem = iterator.next();
+            totalQty = totalQty + currentItem.getQty();
+        }
+
+        return totalQty;
     }
 
     public void applyCouponCode(String coupon) {

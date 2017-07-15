@@ -21,6 +21,8 @@ public class CheckoutPage extends AbstractPage {
 
     private final String billingBlockTitle_lo = "//*[@id=\"gcheckout-billing-address\"]/h2";
 
+    private final String backToStoreLink_lo = "//div[@class=\"breadcrumbs-checkout-back\"]//a";
+
     //******************* WEBDRIVER ELEMENTS ********************//
 
     @FindBy(id = submitOrderFormBtn_lo)
@@ -28,6 +30,9 @@ public class CheckoutPage extends AbstractPage {
 
     @FindBy(xpath = billingBlockTitle_lo)
     private WebElement billingBlockTitle;
+
+    @FindBy(xpath = backToStoreLink_lo)
+    private WebElement backToStoreLink;
 
 
     //******************* CONSTRUCTOR ********************//
@@ -50,7 +55,11 @@ public class CheckoutPage extends AbstractPage {
         billingBlockTitle.click();
     }
 
-    public void order() {
+    public void returnToStore() {
+        backToStoreLink.click();
+    }
+
+    public void pushOrderBtn() {
         submitOrderFormBtn.click();
         waitLoadingPopUp();
     }

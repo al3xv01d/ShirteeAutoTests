@@ -11,9 +11,11 @@ public class Config {
 
     //************* ACCOUNTS AND PASSWORDS ***************** //
 
-    public static String user_email = "akh@gomage.com";
-    public static String user_pass = "gomage777";
+        // AUTO TESTER 1 //
+    public static String user_email = "auto_tester_1@gomage.com";
+    public static String user_pass = "test777";
 
+    // ADMIN ACCOUNT //
     public static String admin_user = "";
     public static String admin_password = "";
 
@@ -24,8 +26,8 @@ public class Config {
     public static String designerUrl;
 
     public static String testProductUrl_1;
-    public static String testProductUrl_2;
-    public static String testProductUrl_3;
+
+    public static String dashboardOrdersPage;
 
     //************* ADMIN PAGES ***************** //
 
@@ -50,35 +52,38 @@ public class Config {
         Config.isLogged = isLogged;
 
 
-        if(Config.server == "dev") {
+        if(Config.server == "live") {
+
+            Config.indexShirteeUrl = "http://shirtee." + Config.domain;
+            Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
+            Config.designerUrl = "https://www.shirtee.\" + Config.domain + \"/designer/?id=1140/";
+
+            Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/vatersohn/";
+
+            Config.dashboardOrdersPage = "https://www.shirtee.de/customdashboard/order/history/";
+
+            Config.adminLoginPage = "http://shirtee.de/index.php/ffadmin";
+            Config.adminOrdersPageUrl = "http://shirtee.de/index.php/ffadmin/sales_order/";
+
+
+
+        } else if(Config.server == "dev") {
 
             Config.server = "dev.";
 
             Config.indexShirteeUrl = "http://dev.shirtee." + Config.domain;
             Config.shopUrl = "http://dev.shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "http://dev.shirtee." + Config.domain + "/shop/designer/?id=1140/";
+            Config.designerUrl = "https://dev.shirtee." + Config.domain + "/shop/designer/?id=1140/";
 
-            Config.testProductUrl_1 = "http://dev.shirtee." + Config.domain + "/testdoenload";
+            Config.testProductUrl_1 = "http://dev.shirtee." + Config.domain + "/auto-test-company-1/";
+
+            Config.dashboardOrdersPage = "https://dev.shirtee.de/customdashboard/order/history/";
 
 
             Config.adminLoginPage = "http://dev.shirtee.de/index.php/ffadmin";
             Config.adminOrdersPageUrl = "http://dev.shirtee.de/index.php/ffadmin/sales_order/";
 
-            Config.dashboardIndexPage = "http://www.shirtee.de/dashboard/index/index/";
 
-
-        } else if(Config.server == "live") {
-
-            Config.indexShirteeUrl = "http://shirtee." + Config.domain;
-            Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
-
-
-            Config.testProductUrl_1 = "http://shirtee." + Config.domain + "/vatersohn";
-
-
-            Config.adminLoginPage = "http://shirtee.de/index.php/ffadmin";
-            Config.adminOrdersPageUrl = "http://shirtee.de/index.php/ffadmin/sales_order/";
 
 
         } else if(Config.server == "stage") {
