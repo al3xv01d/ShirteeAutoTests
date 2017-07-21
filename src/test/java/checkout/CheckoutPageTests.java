@@ -1,3 +1,6 @@
+package checkout;
+
+import abstraction.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
@@ -37,7 +40,5 @@ public class CheckoutPageTests extends AbstractTest {
         checkoutPage.returnToStore();
 
         Assert.assertEquals(  driver.getCurrentUrl(), Config.testProductUrl_1 );
-
-
     }
 }

@@ -1,3 +1,6 @@
+package checkout;
+
+import abstraction.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
@@ -6,7 +9,7 @@ import tools.Config;
 import tools.PageBuilder;
 
 
-public class ValidationCheckoutPageTests extends AbstractTest {
+public class ValidationTests extends AbstractTest {
 
     @Test
     public void emptyEmailField() {

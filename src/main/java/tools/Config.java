@@ -27,7 +27,9 @@ public class Config {
 
     public static String testProductUrl_1;
 
+    public static String dashboardPromoPageUrl;
     public static String dashboardOrdersPage;
+
 
     //************* ADMIN PAGES ***************** //
 
@@ -61,6 +63,7 @@ public class Config {
             Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/vatersohn/";
 
             Config.dashboardOrdersPage = "https://www.shirtee.de/customdashboard/order/history/";
+            Config.dashboardPromoPageUrl = "https://www.shirtee.de/promotion/dashboard/index/";
 
             Config.adminLoginPage = "http://shirtee.de/index.php/ffadmin";
             Config.adminOrdersPageUrl = "http://shirtee.de/index.php/ffadmin/sales_order/";

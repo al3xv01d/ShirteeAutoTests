@@ -1,3 +1,6 @@
+package checkout;
+
+import abstraction.AbstractTest;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
 import pages.OrderSuccessPage;
@@ -13,7 +16,7 @@ import tools.StaticPageFactory;
 // Test 1 - order as a guest and check order's total price, items and ID in admin panel
 // Test 2 - order as a authorized user and check order's total price, items and ID in dashboard
 
-public class OrderTests extends AbstractTestNoConfig {
+public class OrderTests extends AbstractTest {
 
     @Test
     public void guestOrder() {

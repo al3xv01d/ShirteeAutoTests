@@ -1,3 +1,6 @@
+package designer;
+
+import abstraction.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DesignerPage;
@@ -7,7 +10,7 @@ import tools.PageBuilder;
 // Test 1 - check minimum price for product with one side
 // Test 2 - check minimum price for product with two sides
 
-public class DesignerStepOneMinimalPriceTests extends AbstractTest {
+public class StepOneMinimalPriceTests extends AbstractTest {
 
     private double ONE_SIDE_MINIMAL_PRICE = 9.00;
     private double TWO_SIDES_MINIMAL_PRICE = 15.50;

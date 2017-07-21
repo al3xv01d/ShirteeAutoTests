@@ -1,3 +1,6 @@
+package designer;
+
+import abstraction.AbstractTest;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,9 +12,7 @@ import tools.ImageComparer;
 
 import java.io.File;
 
-/**
- * Created by User on 19.06.2017.
- */
+
 public class TestSikuli extends AbstractTest {
 
     @Test

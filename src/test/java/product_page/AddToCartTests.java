@@ -1,3 +1,6 @@
+package product_page;
+
+import abstraction.AbstractTest;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
 import pages.ProductPage;

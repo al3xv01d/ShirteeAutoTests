@@ -1,3 +1,6 @@
+package shop;
+
+import abstraction.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.ProductPage;
@@ -15,6 +18,7 @@ import tools.PageBuilder;
 // Test 6 - check left sidebar's search form
 
 // Test 7 - check pagination
+// Test 8 - qty sorting saves on others pages
 
 public class ShopPageTests extends AbstractTest {
 
@@ -114,6 +118,31 @@ public class ShopPageTests extends AbstractTest {
 
         softAssert.assertTrue(driver.getCurrentUrl().contains("p=3"));
         softAssert.assertTrue(shopPage.getItemsOnPageQty() > 20);
+
+        softAssert.assertAll();
+    }
+
+    @Test
+    public void qtySortingSavesOnOthersPages() {
+        ShopPage shopPage = PageBuilder.buildShopPage();
+
+        shopPage.open(Config.shopUrl);
+
+        shopPage.setItemsQtyOnPage(shopPage.itemsOnPageSettings[2]); // 48
+
+        int totalItemsOnPage = shopPage.getItemsOnPageQty();
+
+        Assert.assertEquals(shopPage.itemsOnPageSettings[2], totalItemsOnPage);
+
+        shopPage.gotoPage(2);
+
+        softAssert.assertTrue(driver.getCurrentUrl().contains("p=2"));
+        softAssert.assertTrue(shopPage.getItemsOnPageQty() == totalItemsOnPage);
+
+        shopPage.gotoPage(4);
+
+        softAssert.assertTrue(driver.getCurrentUrl().contains("p=3"));
+        softAssert.assertTrue(shopPage.getItemsOnPageQty() == totalItemsOnPage);
 
         softAssert.assertAll();
     }

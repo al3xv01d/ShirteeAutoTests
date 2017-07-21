@@ -8,23 +8,11 @@ import pages.ShopPage;
 import tools.Config;
 import tools.PageBuilder;
 
-// Test 1 - login and return to index page
-// Test 2 - login and redirect to dashboard
-// Test 3 - logout from index page
-// test 4 - search from index page
+// Test 1 - login and redirect to dashboard
+// Test 2 - logout from index page
+// test 3 - search from index page
 
 public class IndexPageTests extends AbstractTest {
-
-    @Test
-    public void loginAndReturnToLoginPage() {
-        IndexPage indexPage = PageBuilder.buildIndexPage();
-
-        indexPage.open(Config.indexShirteeUrl);
-        String loginUrl = driver.getCurrentUrl();
-        indexPage.login(true);
-
-        Assert.assertEquals(loginUrl, driver.getCurrentUrl());
-    }
 
     @Test
     public void loginAndRedirectToDashboardPage() {

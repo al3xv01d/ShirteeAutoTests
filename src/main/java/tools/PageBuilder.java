@@ -4,6 +4,7 @@ package tools;
 import pages.*;
 import pages.dashboard.DashboardFacade;
 import pages.dashboard.DashboardOrdersPage;
+import pages.dashboard.DashboardPromotionPage;
 import pages.magento_admin.AdminFacade;
 import pages.magento_admin.AdminLoginPage;
 import pages.magento_admin.AdminOrdersPage;
@@ -48,8 +49,9 @@ public class PageBuilder {
     public static DashboardFacade buildDashboardFacade() {
 
         DashboardOrdersPage ordersPage = new DashboardOrdersPage();
+        DashboardPromotionPage promoPage = new DashboardPromotionPage();
 
-        return new DashboardFacade(ordersPage);
+        return new DashboardFacade(ordersPage, promoPage);
     }
 
     public static DesignerPage buildDesignerPage() {

@@ -23,6 +23,7 @@ public abstract class AbstractShirteePage extends AbstractPage {
     private final String logOutBtn_lo = "//a[contains(@href,\"/account/logout/\")]";
 
     private final String cartBtn_lo = "//div[@class=\"header-cart\"]";
+    private final String cartCounter_lo = "//span[@class=\"cart-item-info-header\"]";
 
     private final String searchField_lo = "//div[@class=\"header-search\"]//input";
 
@@ -57,6 +58,10 @@ public abstract class AbstractShirteePage extends AbstractPage {
 
     @FindBy(xpath = cartBtn_lo)
     protected WebElement cartBtn;
+
+    @FindBy(xpath = cartCounter_lo)
+    protected WebElement cartCounter;
+
 
     @FindBy(xpath = searchField_lo)
     protected WebElement searchField;
@@ -116,6 +121,10 @@ public abstract class AbstractShirteePage extends AbstractPage {
 
     public void gotoCart() {
         cartBtn.click();
+    }
+
+    public int getCartItemsCount() {
+        return Integer.parseInt(cartCounter.getText());
     }
 
     public void search(String query) {

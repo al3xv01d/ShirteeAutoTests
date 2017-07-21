@@ -12,15 +12,15 @@ import java.util.concurrent.TimeUnit;
 
 public class AbstractTestNoConfig {
 
-    WebDriver driver = Driver.getDriver();
-    SoftAssert softAssert = new SoftAssert();
+    protected WebDriver driver = Driver.getDriver();
+    protected SoftAssert softAssert = new SoftAssert();
 
     @BeforeClass
     public static void setUp(){
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-        Config.init("chrome","de", "dev", false );
+        Config.init("chrome","de", "live", false );
     }
 
     @BeforeMethod
