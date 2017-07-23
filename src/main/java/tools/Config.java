@@ -4,9 +4,9 @@ public class Config {
 
     public static String browser = "chrome";
 
-    private static boolean isLogged = false;
+    public static boolean isLogged = false;
     private static String server; // dev, live
-    private static String domain = "de";
+    public static String domain = "de";
 
 
     //************* ACCOUNTS AND PASSWORDS ***************** //
@@ -43,14 +43,14 @@ public class Config {
 
     /**
      * @param browser
-     * @param locale - de or com
+     * @param domain - de or com
      * @param server
      * @param isLogged
      */
-    public static void init(String browser, String locale, String server, boolean isLogged) {
+    public static void init(String browser, String domain, String server, boolean isLogged) {
         Config.browser = browser;
         Config.server = server;
-        Config.domain = locale;
+        Config.domain = domain;
         Config.isLogged = isLogged;
 
 
@@ -60,7 +60,7 @@ public class Config {
             Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
             Config.designerUrl = "https://www.shirtee.\" + Config.domain + \"/designer/?id=1140/";
 
-            Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/vatersohn/";
+            Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1//";
 
             Config.dashboardOrdersPage = "https://www.shirtee.de/customdashboard/order/history/";
             Config.dashboardPromoPageUrl = "https://www.shirtee.de/promotion/dashboard/index/";

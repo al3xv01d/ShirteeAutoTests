@@ -31,6 +31,8 @@ public class ProductPage extends AbstractShirteePage {
 
     private final String sizeValidationMsg_lo = "size-validation-error";
 
+    private final String discountFromPromoPopUp_lo = "//div[@class=\"event-popup-in\"]//strong";
+
     //*******************  WEBDRIVER ELEMENTS ********************//
 
     @FindBy(xpath = productName_lo)
@@ -59,6 +61,10 @@ public class ProductPage extends AbstractShirteePage {
 
     @FindBy(id = sizeValidationMsg_lo)
     private WebElement sizeValidationMsg;
+
+    @FindBy(xpath = discountFromPromoPopUp_lo)
+    private WebElement discountFromPromoPopUp;
+
 
     //*******************  ACTIONS - GETTERS ********************//
 
@@ -132,7 +138,6 @@ public class ProductPage extends AbstractShirteePage {
 
     }
 
-
     public void setRandomColor() {
         allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
     }
@@ -145,7 +150,14 @@ public class ProductPage extends AbstractShirteePage {
             System.out.println();
             allColors.get(0).click();
         }
+    }
 
+    public double getDiscountFromPopUp() {
+        return PriceHelper.getRealPrice(discountFromPromoPopUp.getText());
+    }
+
+    public boolean isPromoPopUpVisible() {
+        return isExistsAndVisible(discountFromPromoPopUp);
     }
 
 }
