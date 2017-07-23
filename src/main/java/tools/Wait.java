@@ -24,7 +24,7 @@ public class Wait {
 
     public static void visibility(WebElement element) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 15);
+            WebDriverWait wait = new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
             System.out.println("Element not visible - " + element.getTagName());
@@ -35,10 +35,9 @@ public class Wait {
 
             driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
-            if( Driver.isExistOnPage(elementLocator) ) {
-                System.out.println(Driver.isExistOnPage(elementLocator));
+            if( Driver.isExistOnPage(elementLocator))  {
                 try {
-                    WebDriverWait wait = new WebDriverWait(driver, 2);
+                    WebDriverWait wait = new WebDriverWait(driver, 5);
                     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(elementLocator)));
                 } catch (TimeoutException e) {
                     System.out.println("Element doesn't disappear!");

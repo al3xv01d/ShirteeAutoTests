@@ -18,7 +18,7 @@ public class IndexPageTests extends AbstractTest {
     public void loginAndRedirectToDashboardPage() {
         IndexPage indexPage = PageBuilder.buildIndexPage();
 
-        indexPage.open(Config.indexShirteeUrl);
+        indexPage.openUrl(Config.indexShirteeUrl);
         indexPage.login(false);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("dashboard/index/"));
@@ -28,7 +28,7 @@ public class IndexPageTests extends AbstractTest {
     public void logout() {
         IndexPage indexPage = PageBuilder.buildIndexPage();
 
-        indexPage.open(Config.indexShirteeUrl);
+        indexPage.openUrl(Config.indexShirteeUrl);
 
         indexPage.login(true);
         indexPage.logout();
@@ -39,7 +39,7 @@ public class IndexPageTests extends AbstractTest {
         IndexPage indexPage = PageBuilder.buildIndexPage();
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        indexPage.open(Config.indexShirteeUrl);
+        indexPage.openUrl(Config.indexShirteeUrl);
 
         indexPage.search("test");
         Assert.assertTrue(shopPage.getItemsOnPageQty() > 0);

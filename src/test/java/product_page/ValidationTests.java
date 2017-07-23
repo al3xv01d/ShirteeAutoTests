@@ -13,7 +13,7 @@ public class ValidationTests extends AbstractTest {
 
         ProductPage productPage = StaticPageFactory.createProductPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.pressAddToCartBtn();
 

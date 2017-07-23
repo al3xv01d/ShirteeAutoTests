@@ -4,7 +4,6 @@ import abstraction.AbstractTest;
 import org.testng.annotations.Test;
 import pages.DesignerPage;
 import pages_elements.designer.StepTwoAddedProduct;
-import tools.Config;
 import tools.PageBuilder;
 
 import java.util.List;
@@ -15,9 +14,9 @@ public class DesignerTest extends AbstractTest {
     public void step1() {
 
         DesignerPage dp = PageBuilder.buildDesignerPage();
-//        dp.open(Config.indexShirteeUrl);
+//        dp.openUrl(Config.indexShirteeUrl);
 //        dp.login(true);
-        dp.open("https://dev.shirtee.de/designer/?id=1140/");
+        dp.openUrl("https://dev.shirtee.de/designer/?id=1140/");
 
 //https://dev.shirtee.de/designer/?id=1140/
  //https://stage.shirtee.de/designer/?id=1140/

@@ -23,7 +23,10 @@ public class ProductPage extends AbstractShirteePage {
     private final String sizeSelect_lo = "addition_size";
     private final String color_lo = "//*[@id=\"color-swatches\"]//span";
     private final String selectedColor_lo = "color-label";
+
     private final String price_lo = "//span[@class='regular-price']/span";
+    private final String specialPrice_lo = "//span[@class=\"special-price\"]/span";
+    private final String oldPrice_lo = "//span[@class=\"old-price\"]/span";
 
     private final String addToCartBtn_lo = "//form//div[@class=\"add-to-cart-buttons\"]";
     private final String gotoCheckoutBtn_lo = "go_to_checkout";
@@ -32,6 +35,7 @@ public class ProductPage extends AbstractShirteePage {
     private final String sizeValidationMsg_lo = "size-validation-error";
 
     private final String discountFromPromoPopUp_lo = "//div[@class=\"event-popup-in\"]//strong";
+    private final String promoPopUpCloseBtn_lo = "//div[@class=\"event-popup-in\"]//button";
 
     //*******************  WEBDRIVER ELEMENTS ********************//
 
@@ -50,6 +54,12 @@ public class ProductPage extends AbstractShirteePage {
     @FindBy(xpath = price_lo) // there is 6 elements, but actual price is always first
     private WebElement price;
 
+    @FindBy(xpath = specialPrice_lo)
+    private WebElement specialPrice;
+
+    @FindBy(xpath = oldPrice_lo)
+    private WebElement oldPrice;
+
     @FindBy(xpath = addToCartBtn_lo)
     private WebElement addToCartBtn;
 
@@ -65,6 +75,9 @@ public class ProductPage extends AbstractShirteePage {
     @FindBy(xpath = discountFromPromoPopUp_lo)
     private WebElement discountFromPromoPopUp;
 
+    @FindBy(xpath = promoPopUpCloseBtn_lo)
+    private WebElement promoPopUpCloseBtn;
+
 
     //*******************  ACTIONS - GETTERS ********************//
 
@@ -76,6 +89,13 @@ public class ProductPage extends AbstractShirteePage {
         return PriceHelper.getRealPrice(price.getText());
     }
 
+    public double getSpecialPrice() {
+        return PriceHelper.getRealPrice(specialPrice.getText());
+    }
+
+    public double getOldPrice() {
+        return PriceHelper.getRealPrice(oldPrice.getText());
+    }
 
     public String getSelectedColor() {
         return selectedColor.getText();
@@ -156,7 +176,21 @@ public class ProductPage extends AbstractShirteePage {
         return PriceHelper.getRealPrice(discountFromPromoPopUp.getText());
     }
 
+    public void closePromoPopUp() {
+        promoPopUpCloseBtn.click();
+        if(isExistsAndVisible(discountFromPromoPopUp)) {
+            Wait.seconds(1);
+        }
+    }
+
     public boolean isPromoPopUpVisible() {
+        return isExistsAndVisible(discountFromPromoPopUp);
+    }
+
+
+    public boolean isPromoPopUpAppeared() {
+
+        Wait.visibility(discountFromPromoPopUp);
         return isExistsAndVisible(discountFromPromoPopUp);
     }
 

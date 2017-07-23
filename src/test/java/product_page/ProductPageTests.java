@@ -14,7 +14,7 @@ public class ProductPageTests extends AbstractTest{
     public void addToCartAndContinueShopping() {
         ProductPage productPage = PageBuilder.buildProductPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         String currentUrl = driver.getCurrentUrl();
 
@@ -28,7 +28,7 @@ public class ProductPageTests extends AbstractTest{
     public void addToCartAndCheckCartCounter() {
         ProductPage productPage = PageBuilder.buildProductPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setRandomSizeAndGetSelected();
         productPage.addToCartAndStay();

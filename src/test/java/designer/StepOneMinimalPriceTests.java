@@ -19,7 +19,7 @@ public class StepOneMinimalPriceTests extends AbstractTest {
     public void oneSideMinimalPrice() {
         DesignerPage designer = PageBuilder.buildDesignerPage();
 
-        designer.open(Config.designerUrl);
+        designer.openUrl(Config.designerUrl);
 
         designer.step1.fillProductText("TEST");
 
@@ -32,7 +32,7 @@ public class StepOneMinimalPriceTests extends AbstractTest {
     public void twoSidesMinimalPrice() {
         DesignerPage designer = PageBuilder.buildDesignerPage();
 
-        designer.open(Config.designerUrl);
+        designer.openUrl(Config.designerUrl);
 
         designer.step1.fillProductText("FRONT");
         designer.step1.showBackSide();

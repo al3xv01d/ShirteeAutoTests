@@ -28,7 +28,7 @@ public class ShopPageTests extends AbstractTest {
     public void checkFirstQtyOnPageSetting() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.setItemsQtyOnPage(shopPage.itemsOnPageSettings[0]);
 
@@ -41,7 +41,7 @@ public class ShopPageTests extends AbstractTest {
     public void checkSecondQtyOnPageSetting() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.setItemsQtyOnPage(shopPage.itemsOnPageSettings[1]);
 
@@ -54,7 +54,7 @@ public class ShopPageTests extends AbstractTest {
     public void checkThirdQtyOnPageSetting() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.setItemsQtyOnPage(shopPage.itemsOnPageSettings[2]);
 
@@ -70,7 +70,7 @@ public class ShopPageTests extends AbstractTest {
         ShopPage shopPage = PageBuilder.buildShopPage();
         ProductPage productPage = PageBuilder.buildProductPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         String titleOnShopPage = shopPage.getItemTitle(1);
         double priceOnShopPage = shopPage.getItemRealPrice(1);
@@ -85,7 +85,7 @@ public class ShopPageTests extends AbstractTest {
     public void topSearch() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.search("test");
 
@@ -96,7 +96,7 @@ public class ShopPageTests extends AbstractTest {
     public void leftSidebarSearch() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.leftSidebarSearch("test");
 
@@ -107,7 +107,7 @@ public class ShopPageTests extends AbstractTest {
     public void checkPagination() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.gotoPage(2);
 
@@ -126,7 +126,7 @@ public class ShopPageTests extends AbstractTest {
     public void qtySortingSavesOnOthersPages() {
         ShopPage shopPage = PageBuilder.buildShopPage();
 
-        shopPage.open(Config.shopUrl);
+        shopPage.openUrl(Config.shopUrl);
 
         shopPage.setItemsQtyOnPage(shopPage.itemsOnPageSettings[2]); // 48
 

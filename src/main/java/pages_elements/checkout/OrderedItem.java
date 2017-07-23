@@ -1,6 +1,7 @@
 package pages_elements.checkout;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import abstraction.AbstractPageElement;
 import tools.PriceHelper;
@@ -10,6 +11,8 @@ public class OrderedItem extends AbstractPageElement {
 
     //******************* LOCATORS ********************//
 
+    private String item_lo = "//table[@id=\"checkout-review-table\"]/tbody/tr[%d]//div[@class=\"checkout-product\"]";
+
     private final String deleteButton_lo = ".//div[@class=\"light-chechout-remove-td\"]";
     private final String price_lo = ".//span[@class=\"price\"]";
     private final String qty_lo = ".//span[@class=\"gcheckout-qty\"]";
@@ -17,8 +20,8 @@ public class OrderedItem extends AbstractPageElement {
     private final String size_lo =  ".//dl[@class=\"item-options\"]/dd[1]";
 
 
-    private final String increaseQtyButton_lo = "//strong[@class=\"glc-qtybtn glc-minus\"]";
-    private final String decreaseQtyButton_lo = "//strong[@class=\"glc-qtybtn glc-plus\"]";
+    private final String decreaseQtyButton_lo = ".//strong[@class=\"glc-qtybtn glc-minus\"]";
+    private final String increaseQtyButton_lo = ".//strong[@class=\"glc-qtybtn glc-plus\"]";
 
     private final String productName_lo = ".//h3[@class=\"product-name\"]/a";
     private final String productSize_lo = ".//dl[@class=\"item-options\"]/dd[1]";
@@ -34,7 +37,7 @@ public class OrderedItem extends AbstractPageElement {
     }
 
     private void init() {
-        this.item = driver.findElement(By.xpath("//table[@id=\"checkout-review-table\"]/tbody/tr[" + this.itemNumber + "]//div[@class=\"checkout-product\"]"));
+        this.item = driver.findElement(By.xpath( String.format(item_lo, this.itemNumber)) );
     }
 
     //******************* ACTIONS - Get ordered item's price, quantity, total price, etc ********************//
@@ -79,7 +82,10 @@ public class OrderedItem extends AbstractPageElement {
     }
 
     public void increaseQty() {
-        this.item.findElement(By.xpath(this.increaseQtyButton_lo)).click();
+        init();
+        WebElement increaseButton = this.item.findElement(By.xpath(this.increaseQtyButton_lo));
+        increaseButton.click();
+        waitLoadingPopUp();
     }
 
     public void decreaseQty() {

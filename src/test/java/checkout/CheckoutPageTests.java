@@ -10,20 +10,20 @@ import tools.PageBuilder;
 
 public class CheckoutPageTests extends AbstractTest {
 
-    private double SHIPPING_PRICE = 4.50;
+
 
     @Test
     public void checkShippingPrice() {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setRandomColor();
         productPage.setRandomSizeAndGetSelected();
         productPage.addToCartAndGoToCheckout();
 
-        Assert.assertEquals(checkoutPage.orderReviewBlock.getShippingPrice(),SHIPPING_PRICE);
+        Assert.assertEquals(checkoutPage.orderReviewBlock.getShippingPrice(), Config.shippingPrice);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class CheckoutPageTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
         productPage.setRandomColor();
         productPage.setRandomSizeAndGetSelected();
 

@@ -26,7 +26,7 @@ public class OrderTests extends AbstractTest {
         OrderSuccessPage orderSuccessPage = PageBuilder.buildOrderSuccessPage();
         AdminFacade adminFacade = PageBuilder.buildAdminFacade();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setRandomColor();
         productPage.setRandomSizeAndGetSelected();
@@ -48,7 +48,7 @@ public class OrderTests extends AbstractTest {
 
         String savedOrderIdFromCheckoutPage = orderSuccessPage.getOrderId();
 
-        adminFacade.open(Config.adminLoginPage);
+        adminFacade.openUrl(Config.adminLoginPage);
         adminFacade.loginPage.login();
         adminFacade.openOrdersPage();
 
@@ -70,7 +70,7 @@ public class OrderTests extends AbstractTest {
         DashboardFacade dashboard = PageBuilder.buildDashboardFacade();
         AdminFacade adminFacade = PageBuilder.buildAdminFacade();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.login(true);
 

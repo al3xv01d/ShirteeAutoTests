@@ -24,7 +24,9 @@ public class OrderReviewBlock extends AbstractPageElement {
     private final String grandTotalPrice_lo = "//tr[@class=\"last\"]//span[@class=\"price\"]";
     private final String couponField_lo =  "coupon_code";
     private final String applyCouponButton_lo =  "//div[@class=\"discount-btn-wrap\"]/button";
+
     private final String shippingPrice_lo =  "//*[@id=\"checkout-review-table\"]/tfoot/tr[2]//span";
+    private final String discountValue_lo = "//span[@class=\"discount-value\"]/span";
 
 
     //******************* WEBDRIVER ELEMENTS ********************//
@@ -41,16 +43,18 @@ public class OrderReviewBlock extends AbstractPageElement {
     @FindBy(xpath = shippingPrice_lo)
     private WebElement shippingPrice;
 
+    @FindBy(xpath = discountValue_lo)
+    private WebElement discountValue;
+
     //******************* ACTIONS ********************//
 
     public List<OrderedItem> getAllOrderedItems() {
 
         int itemsInCart = driver.findElements(By.xpath(this.orderedItem_lo)).size();
 
-        if(null == allOrderedItems || itemsInCart != allOrderedItems.size() ) {
-
-            for(int i=0; i < itemsInCart ;i++) {
-                this.allOrderedItems.add(new OrderedItem(i+1));
+        if(itemsInCart != allOrderedItems.size() ) {
+            for(int i=1; i <= itemsInCart ;i++) {
+                this.allOrderedItems.add(new OrderedItem(i));
             }
         }
         return allOrderedItems;
@@ -76,6 +80,10 @@ public class OrderReviewBlock extends AbstractPageElement {
         }
 
         return totalQty;
+    }
+
+    public double getDiscountValue() {
+        return PriceHelper.getRealPrice(discountValue.getText());
     }
 
     public void applyCouponCode(String coupon) {

@@ -17,7 +17,7 @@ public class ValidationTests extends AbstractTest {
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
         System.out.println(Config.testProductUrl_1);
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setRandomColor();
         productPage.setRandomSizeAndGetSelected();

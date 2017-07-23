@@ -8,6 +8,15 @@ public class Config {
     private static String server; // dev, live
     public static String domain = "de";
 
+    // ************ SOME DATA *************************//
+
+    public static String amountPromoCode = "?gs=11amount";
+    public static String percentPromoCode = "?gs=2percent";
+
+    public static double amountPromoValue = 7;
+    public static double percentPromoValue = 30;
+
+    public static double shippingPrice = 4.50;
 
     //************* ACCOUNTS AND PASSWORDS ***************** //
 
@@ -58,7 +67,7 @@ public class Config {
 
             Config.indexShirteeUrl = "http://shirtee." + Config.domain;
             Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "https://www.shirtee.\" + Config.domain + \"/designer/?id=1140/";
+            Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
 
             Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1//";
 

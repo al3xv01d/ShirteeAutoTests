@@ -17,6 +17,6 @@ public class AdminFacade extends AbstractPage {
     }
 
     public void openOrdersPage() {
-        open(Config.adminOrdersPageUrl);
+        openUrl(Config.adminOrdersPageUrl);
     }
 }

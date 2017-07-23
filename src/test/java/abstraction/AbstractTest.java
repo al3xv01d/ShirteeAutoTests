@@ -17,31 +17,30 @@ public class AbstractTest {
 
     protected WebDriver driver = Driver.getDriver();
     protected SoftAssert softAssert = new SoftAssert();
+    protected IndexPage index = PageBuilder.buildIndexPage();
 
     @BeforeClass
     public static void setUp(){
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        Config.init("chrome","com", "live", false );
     }
 
     @BeforeMethod
     public void setEnv(){
 
-        IndexPage index = PageBuilder.buildIndexPage();
-
-        Config.init("chrome","com", "live", false );
-
-        index.open(Config.indexShirteeUrl);
-
-        if(Config.domain == "de") {
-            index.setLocale("de");
-        } else if(Config.domain == "com") {
-            index.setLocale("eng");
-        }
-
-        if(Config.isLogged) {
-            index.login(true);
-        }
+//        index.openUrl(Config.indexShirteeUrl);
+//
+//        if(Config.domain == "de") {
+//            index.setLocale("de");
+//        } else if(Config.domain == "com") {
+//            index.setLocale("eng");
+//        }
+//
+//        if(Config.isLogged) {
+//            index.login(true);
+//        }
 
     }
 

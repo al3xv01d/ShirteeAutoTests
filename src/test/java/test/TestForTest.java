@@ -12,7 +12,7 @@ public class TestForTest extends AbstractTest {
     public void firstTest() {
 
         IndexPage pp = new IndexPage();
-        pp.open(Config.indexShirteeUrl);
+        pp.openUrl(Config.indexShirteeUrl);
         pp.login(false);
 
         DashboardCampaignsPage dpc = new DashboardCampaignsPage();
@@ -31,7 +31,7 @@ public class TestForTest extends AbstractTest {
 //        AdminLoginPage alp = PageBuilder.buildAdminLoginPage();
 //        AdminFacade af = PageBuilder.buildAdminFacade();
 //
-//        alp.open("https://dev.shirtee.de/index.php/ffadmin");
+//        alp.openUrl("https://dev.shirtee.de/index.php/ffadmin");
 //        alp.login();
 //
 //        af.openOrdersPage();

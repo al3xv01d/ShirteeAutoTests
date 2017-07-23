@@ -22,7 +22,7 @@ public class AddToCartTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setRandomColor();
         productPage.setRandomSizeAndGetSelected();
@@ -41,7 +41,7 @@ public class AddToCartTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         double productPrice = productPage.getPrice(); // Saved product price from Product page
         String productSize = productPage.setRandomSizeAndGetSelected();
@@ -67,7 +67,7 @@ public class AddToCartTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         double price = productPage.getPrice();
 
@@ -97,7 +97,7 @@ public class AddToCartTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setSize("XL");
 
@@ -118,7 +118,7 @@ public class AddToCartTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
 
         productPage.setSize("XL");
         productPage.setColor(0);
@@ -140,7 +140,7 @@ public class AddToCartTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
 
-        productPage.open(Config.testProductUrl_1);
+        productPage.openUrl(Config.testProductUrl_1);
     }
 
 }

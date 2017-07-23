@@ -65,7 +65,7 @@ public class BillingBlock extends AbstractPageElement{
 
     protected Select countrySelect;
 
-    //******************* Click on this checkbox to open SHIPPING FORM ********************//
+    //******************* Click on this checkbox to openUrl SHIPPING FORM ********************//
 
     @FindBy(xpath = shippingAdressCheckbox_lo)
     protected WebElement shippingAdressCheckbox;

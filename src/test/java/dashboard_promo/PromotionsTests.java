@@ -16,12 +16,12 @@ public class PromotionsTests extends AbstractTestNoConfig{
        IndexPage index = PageBuilder.buildIndexPage();
        DashboardFacade dashboard = PageBuilder.buildDashboardFacade();
 
-       index.open(Config.indexShirteeUrl);
+       index.openUrl(Config.indexShirteeUrl);
        index.setLocale("de");
        index.login(false);
 
 
-       dashboard.open(Config.dashboardPromoPageUrl);
+       dashboard.openUrl(Config.dashboardPromoPageUrl);
 
        dashboard.promoPage.generateRandomPromoCodeId();
        dashboard.promoPage.selectPromoCodeType("percent");
@@ -38,12 +38,12 @@ public class PromotionsTests extends AbstractTestNoConfig{
       IndexPage index = PageBuilder.buildIndexPage();
       DashboardFacade dashboard = PageBuilder.buildDashboardFacade();
 
-      index.open(Config.indexShirteeUrl);
+      index.openUrl(Config.indexShirteeUrl);
       index.setLocale("de");
       index.login(false);
 
 
-      dashboard.open(Config.dashboardPromoPageUrl);
+      dashboard.openUrl(Config.dashboardPromoPageUrl);
 
       dashboard.promoPage.generateRandomPromoCodeId();
       dashboard.promoPage.selectPromoCodeType("percent");
