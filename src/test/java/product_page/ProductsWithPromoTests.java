@@ -75,7 +75,8 @@ public class ProductsWithPromoTests extends AbstractTest {
         ProductPage productPage = PageBuilder.buildProductPage();
         productPage.openUrl(Config.testProductUrl_1 + Config.percentPromoCode);
 
-        Assert.assertEquals(Config.percentPromoValue, productPage.getDiscountFromPopUp(), "Wrong percent discount in Promo PopUp");
+        Assert.assertEquals(productPage.getDiscountFromPopUp(), Config.percentPromoValue, "Wrong percent discount in Promo PopUp");
+
     }
 
 }

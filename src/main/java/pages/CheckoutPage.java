@@ -5,8 +5,11 @@ import abstraction.AbstractPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages_elements.checkout.*;
+import tools.Config;
 
 public class CheckoutPage extends AbstractPage {
+
+    protected String pageUrl = Config.checkoutUrl;
 
     //******************* PAGE ELEMENTS ********************//
 

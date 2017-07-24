@@ -60,6 +60,15 @@ public class OrderReviewBlock extends AbstractPageElement {
         return allOrderedItems;
     }
 
+    public void deleteAllItems() {
+        Iterator<OrderedItem> iterator = this.getAllOrderedItems().iterator();
+
+        while(iterator.hasNext()) {
+            OrderedItem currentItem = iterator.next();
+            currentItem.deleteItemFromCart();
+        }
+    }
+
     public double getShippingPrice() {
         return PriceHelper.getRealPrice(this.shippingPrice.getText());
     }

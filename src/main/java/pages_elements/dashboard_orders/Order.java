@@ -4,6 +4,7 @@ package pages_elements.dashboard_orders;
 import abstraction.AbstractPageElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import tools.Config;
 import tools.PriceHelper;
 
 public class Order extends AbstractPageElement{
@@ -28,7 +29,10 @@ public class Order extends AbstractPageElement{
     }
 
     public String getOrderId() {
-        return orderLine.findElement(By.xpath(orderId_lo)).getText().substring(7); // get only ID without "Order" and "#"
+        if(Config.domain == "com") {
+            return orderLine.findElement(By.xpath(orderId_lo)).getText().substring(7); // get only ID without "Order" and "#"
+        }
+        return orderLine.findElement(By.xpath(orderId_lo)).getText().substring(12); // get only ID without "Order" and "#"
     }
 
     public double getItemsQty() {

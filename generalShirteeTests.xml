@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="1" >
+    <test name="Method Test Cases" >
+        <classes>
+            <class name="index.IndexPageTests"/>
+            <class name="shop.ShopPageTests"/>
+            <class name="shop.ShopPageTests"/>
+        </classes>
+    </test>
+</suite>

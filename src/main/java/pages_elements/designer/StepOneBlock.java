@@ -1,13 +1,13 @@
 package pages_elements.designer;
-
+//import org.sikuli.script.Sikulix;
 import org.jboss.netty.util.Timeout;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Screen;
+//import org.sikuli.script.FindFailed;
+//import org.sikuli.script.Pattern;
+//import org.sikuli.script.Screen;
 import abstraction.AbstractPageElement;
 import tools.PriceHelper;
 

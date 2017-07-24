@@ -2,6 +2,7 @@ D:\ShirteeAutoTests\src\main\java\abstraction\AbstractShirteePage.java
 D:\ShirteeAutoTests\src\main\java\tools\ImageComparer.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\checkout\ValidationElements.java
 D:\ShirteeAutoTests\src\main\java\tools\Config.java
+D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardOrdersPage.java
 D:\ShirteeAutoTests\src\main\java\tools\PriceHelper.java
 D:\ShirteeAutoTests\src\main\java\pages\CheckoutPage.java
 D:\ShirteeAutoTests\src\main\java\pages\DesignerPage.java
@@ -12,7 +13,6 @@ D:\ShirteeAutoTests\src\main\java\tools\PageBuilder.java
 D:\ShirteeAutoTests\src\main\java\pages\magento_admin\AdminOrdersPage.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\designer\StepTwoAddedProduct.java
 D:\ShirteeAutoTests\src\main\java\tools\StaticPageFactory.java
-D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardOrderPage.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\designer\StepTwoBlock.java
 D:\ShirteeAutoTests\src\main\java\pages\magento_admin\AdminLoginPage.java
 D:\ShirteeAutoTests\src\main\java\pages\ProductPage.java
@@ -23,7 +23,9 @@ D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardSettingsPage.java
 D:\ShirteeAutoTests\src\main\java\tools\Wait.java
 D:\ShirteeAutoTests\src\main\java\pages\ShopPage.java
 D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardFinancePage.java
+D:\ShirteeAutoTests\src\main\java\pages_elements\dashboard_orders\Order.java
 D:\ShirteeAutoTests\src\main\java\pages\magento_admin\AdminFacade.java
+D:\ShirteeAutoTests\src\main\java\pages_elements\dashboard_promo\PromoCode.java
 D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardShopsPage.java
 D:\ShirteeAutoTests\src\main\java\abstraction\AbstractPage.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\designer\StepOneBlock.java

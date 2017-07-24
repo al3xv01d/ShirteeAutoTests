@@ -1,6 +1,7 @@
 package pages;
 
 import abstraction.AbstractShirteePage;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -159,7 +160,13 @@ public class ProductPage extends AbstractShirteePage {
     }
 
     public void setRandomColor() {
-        allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
+        try {
+            allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
+        } catch (WebDriverException e) {
+            Wait.seconds(2);
+            allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
+        }
+
     }
 
     public void setColor(int colorNumber) {
@@ -173,14 +180,24 @@ public class ProductPage extends AbstractShirteePage {
     }
 
     public double getDiscountFromPopUp() {
+        Wait.visibility(discountFromPromoPopUp);
         return PriceHelper.getRealPrice(discountFromPromoPopUp.getText());
     }
 
     public void closePromoPopUp() {
-        promoPopUpCloseBtn.click();
+
+        try {
+            Wait.visibility(promoPopUpCloseBtn);
+            promoPopUpCloseBtn.click();
+        } catch (WebDriverException e) {
+            Wait.seconds(1);
+            promoPopUpCloseBtn.click();
+        }
+
         if(isExistsAndVisible(discountFromPromoPopUp)) {
             Wait.seconds(1);
         }
+
     }
 
     public boolean isPromoPopUpVisible() {

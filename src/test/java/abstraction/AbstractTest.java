@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
+import pages.CheckoutPage;
 import pages.IndexPage;
 import tools.Config;
 import tools.Driver;
@@ -18,6 +19,7 @@ public class AbstractTest {
     protected WebDriver driver = Driver.getDriver();
     protected SoftAssert softAssert = new SoftAssert();
     protected IndexPage index = PageBuilder.buildIndexPage();
+    protected CheckoutPage ckp = PageBuilder.buildCheckoutPage();
 
     @BeforeClass
     public static void setUp(){
@@ -30,23 +32,26 @@ public class AbstractTest {
     @BeforeMethod
     public void setEnv(){
 
-//        index.openUrl(Config.indexShirteeUrl);
-//
-//        if(Config.domain == "de") {
-//            index.setLocale("de");
-//        } else if(Config.domain == "com") {
-//            index.setLocale("eng");
-//        }
-//
-//        if(Config.isLogged) {
-//            index.login(true);
-//        }
+        index.openUrl(Config.indexShirteeUrl);
+
+        if(Config.domain == "de") {
+            index.setLocale("de");
+        } else if(Config.domain == "com") {
+            index.setLocale("eng");
+        }
+
+        if(Config.isLogged) {
+            index.login(true);
+            ckp.openSelf();
+            ckp.orderReviewBlock.getAllOrderedItems();
+        }
 
     }
 
     @AfterMethod
     public void cleanUp(){
        Driver.getDriver().manage().deleteAllCookies();
+        System.out.println("AFTER");
     }
 
     @AfterClass

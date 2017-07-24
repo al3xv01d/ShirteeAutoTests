@@ -78,7 +78,10 @@ public class OrderedItem extends AbstractPageElement {
     //******************* ACTIONS ********************//
 
     public void deleteItemFromCart() {
-        this.item.findElement(By.xpath(deleteButton_lo)).click();
+        init();
+        WebElement deleteBtn = this.item.findElement(By.xpath(deleteButton_lo));
+        deleteBtn.click();
+        waitLoadingPopUp();
     }
 
     public void increaseQty() {

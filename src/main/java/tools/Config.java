@@ -25,7 +25,7 @@ public class Config {
     public static String user_pass = "test777";
 
     // ADMIN ACCOUNT //
-    public static String admin_user = "";
+    public static String admin_user = "gomage";
     public static String admin_password = "";
 
     //************* SHIRTEE SHOP'S PAGES ***************** //
@@ -33,6 +33,7 @@ public class Config {
     public static String indexShirteeUrl;
     public static String shopUrl;
     public static String designerUrl;
+    public static String checkoutUrl;
 
     public static String testProductUrl_1;
 
@@ -68,6 +69,7 @@ public class Config {
             Config.indexShirteeUrl = "http://shirtee." + Config.domain;
             Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
             Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
+            Config.checkoutUrl = "https://www.shirtee." + Config.domain + "/checkout/onepage/";
 
             Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1//";
 
