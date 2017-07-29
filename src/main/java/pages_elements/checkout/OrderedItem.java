@@ -43,10 +43,12 @@ public class OrderedItem extends AbstractPageElement {
     //******************* ACTIONS - Get ordered item's price, quantity, total price, etc ********************//
 
     public String getProductName() {
+        this.init();
         return this.item.findElement(By.xpath(this.productName_lo)).getText();
     }
 
     public String getProductSize() {
+        this.init();
         return this.item.findElement(By.xpath(this.productSize_lo)).getText();
     }
 
@@ -56,22 +58,27 @@ public class OrderedItem extends AbstractPageElement {
      */
 
     public double getPrice() {
+        this.init();
         return PriceHelper.getRealPrice(this.item.findElements(By.xpath(this.price_lo)).get(0).getText());
     }
 
     public double getTotalPrice() {
+        this.init();
         return PriceHelper.getRealPrice(this.item.findElements(By.xpath(this.price_lo)).get(1).getText());
     }
 
     public int getQty() {
+        this.init();
        return Integer.parseInt( this.item.findElement(By.xpath(this.qty_lo)).getText() );
     }
 
     public String getColor() {
+        this.init();
         return this.item.findElement(By.xpath(this.color_lo)).getText();
     }
 
     public String getSize() {
+        this.init();
         return this.item.findElement(By.xpath(this.size_lo)).getText();
     }
 
@@ -92,6 +99,8 @@ public class OrderedItem extends AbstractPageElement {
     }
 
     public void decreaseQty() {
+        this.init();
         this.item.findElement(By.xpath(this.decreaseQtyButton_lo)).click();
+        waitLoadingPopUp();
     }
 }

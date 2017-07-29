@@ -19,18 +19,17 @@ public class Driver {
 
         if(null == Driver.driver ) {
 
-            switch(Config.browser) {
-                case "firefox":
-                    Driver.driver = new FirefoxDriver();
-                    break;
-                case "chrome":
-                    System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-                    Driver.driver = new ChromeDriver();
-                    break;
-                default:
-                    Driver.driver = new FirefoxDriver();
-                    break;
+            System.out.println("---------" + Config.browser);
+
+            if(null == Config.browser) {
+                Driver.driver = new ChromeDriver();
+            } else if(Config.browser.equals("firefox")) {
+                Driver.driver = new FirefoxDriver();
+            } else if(Config.browser.equals("chrome")) {
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+                Driver.driver = new ChromeDriver();
             }
+
             return Driver.driver;
         }
 
@@ -38,8 +37,19 @@ public class Driver {
     }
 
     public static void destroy() {
-        Driver.driver.close();
-        Driver.driver = null;
+
+        try
+        {
+            driver.close();
+            driver.quit();
+        }
+        catch (Exception anException)
+        {
+            Driver.driver = null;
+        }
+
+
+
     }
 
     public static boolean isExistOnPage(String xpathLocator) {

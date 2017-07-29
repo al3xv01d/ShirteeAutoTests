@@ -2,11 +2,15 @@ package tools;
 
 public class Config {
 
-    public static String browser = "chrome";
+    public static String browser = System.getProperty("browser");
+    public static String server = System.getProperty("server"); // dev, live
+    public static String domain = System.getProperty("domain");
+    public static String isLogged = System.getProperty("guest");
 
-    public static boolean isLogged = false;
-    private static String server; // dev, live
-    public static String domain = "de";
+//    public static String browser;
+//    public static String server;
+//    public static String domain;
+//    public static String isLogged;
 
     // ************ SOME DATA *************************//
 
@@ -50,21 +54,24 @@ public class Config {
 
     public static String dashboardIndexPage;
 
+    static {
+        if(null == Config.browser) {
+            System.out.println("OOOOOOOOOOOOO FUCK");
+            Config.browser = "chrome";
+            Config.server = "dev";
+            Config.domain = "de";
+            Config.isLogged = "no";
+        }
+    }
 
-    /**
-     * @param browser
-     * @param domain - de or com
-     * @param server
-     * @param isLogged
-     */
-    public static void init(String browser, String domain, String server, boolean isLogged) {
-        Config.browser = browser;
+    public static void init(String server, String domain, String isLogged) {
+
         Config.server = server;
         Config.domain = domain;
         Config.isLogged = isLogged;
 
 
-        if(Config.server == "live") {
+        if( Config.server.equals("live") ) {
 
             Config.indexShirteeUrl = "http://shirtee." + Config.domain;
             Config.shopUrl = "http://shirtee." + Config.domain + "/shop";
@@ -81,15 +88,13 @@ public class Config {
 
 
 
-        } else if(Config.server == "dev") {
+        } else if( Config.server.equals("dev") ) {
 
-            Config.server = "dev.";
+            Config.indexShirteeUrl = "http://dev.shirtee.de";
+            Config.shopUrl = "http://dev.shirtee.de/shop";
+            Config.designerUrl = "https://dev.shirtee.de/shop/designer/?id=1140/";
 
-            Config.indexShirteeUrl = "http://dev.shirtee." + Config.domain;
-            Config.shopUrl = "http://dev.shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "https://dev.shirtee." + Config.domain + "/shop/designer/?id=1140/";
-
-            Config.testProductUrl_1 = "http://dev.shirtee." + Config.domain + "/auto-test-company-1/";
+            Config.testProductUrl_1 = "http://dev.shirtee.de/auto-test-company-1/";
 
             Config.dashboardOrdersPage = "https://dev.shirtee.de/customdashboard/order/history/";
 
@@ -100,7 +105,7 @@ public class Config {
 
 
 
-        } else if(Config.server == "stage") {
+        } else if( Config.server.equals("stage") ) {
 
             Config.indexShirteeUrl = "http://stage.shirtee." + Config.domain;
             Config.shopUrl = "http://stage.shirtee." + Config.domain + "/shop";

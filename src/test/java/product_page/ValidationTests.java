@@ -4,14 +4,15 @@ import abstraction.AbstractTest;
 import org.testng.annotations.Test;
 import pages.ProductPage;
 import tools.Config;
-import tools.StaticPageFactory;
+import tools.PageBuilder;
+
 
 public class ValidationTests extends AbstractTest {
 
     @Test
     public void missingProductSizeValidation() {
 
-        ProductPage productPage = StaticPageFactory.createProductPage();
+        ProductPage productPage = PageBuilder.buildProductPage();
 
         productPage.openUrl(Config.testProductUrl_1);
 

@@ -41,4 +41,6 @@ public class CheckoutPageTests extends AbstractTest {
 
         Assert.assertEquals(  driver.getCurrentUrl(), Config.testProductUrl_1 );
     }
+
+
 }

@@ -50,6 +50,8 @@ public class OrderReviewBlock extends AbstractPageElement {
 
     public List<OrderedItem> getAllOrderedItems() {
 
+        allOrderedItems.clear();
+
         int itemsInCart = driver.findElements(By.xpath(this.orderedItem_lo)).size();
 
         if(itemsInCart != allOrderedItems.size() ) {

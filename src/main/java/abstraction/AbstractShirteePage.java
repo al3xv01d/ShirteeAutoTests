@@ -83,7 +83,7 @@ public abstract class AbstractShirteePage extends AbstractPage {
                 break;
 
             case "de":
-                if(this.driver.getCurrentUrl().contains("shirtee.com") ) {
+                if(this.driver.getCurrentUrl().contains("shirtee.com") || Config.server == "dev" ) {
                     System.out.println(this.driver.getCurrentUrl());
                     openLocaleButton.click();
                     germanLocaleBtn.click();

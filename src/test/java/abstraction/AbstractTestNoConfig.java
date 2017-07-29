@@ -21,12 +21,12 @@ public class AbstractTestNoConfig {
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-        Config.init("chrome","de", "live", false );
+    //    Config.init("chrome","de", "dev", false );
     }
 
     @AfterMethod
     public void setEnv(){
-        Driver.getDriver().manage().deleteAllCookies();
+       // Driver.getDriver().manage().deleteAllCookies();
     }
 
 

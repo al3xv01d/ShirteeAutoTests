@@ -5,6 +5,7 @@ import abstraction.AbstractPageElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import tools.PriceHelper;
 import tools.Wait;
 
 import java.util.Iterator;
@@ -16,14 +17,16 @@ public class StepTwoAddedProduct extends AbstractPageElement {
     public WebElement productColorBlock;
 
     //*******************  LOCATORS ********************//
+    private String product_lo = "//table[@class=\"pd-items\"]/tbody/tr[%d]";
 
     private final String colorsSelector_lo = ".//div[@class=\"pd-items-color\"]//a";
     private final String color_lo = ".//div[@class=\"pd-items-color\"]//span[contains(@class, \"color-btn\")]";
 
+    private String productName_lo = ".//*[@class=\"pd-items-pname\"]";
+    private final String salesPrice_lo = "//*[@class=\"pd-items-price-filed\"]/input";
+    private final String profit_lo = ".//*[@class=\"pd-items-price\"]/span[1]";
 
-    private String product_lo = "//table[@class=\"pd-items\"]/tbody/tr[%d]";
-    private final String salesPrice_lo = ".//*[@id=\"sales_price\"]";
-    private final String profit_lo = ".//*[@id=\"profit\"]/span[1]";
+    //*[@id="profit"]/span[1]
 
 
     //*******************  CONSTRUCTOR ********************//
@@ -44,13 +47,20 @@ public class StepTwoAddedProduct extends AbstractPageElement {
     }
 
     //*******************  ACTIONS ********************//
-
-    public void setSalesPrice(String price) {
-        fillInputField(productPriceBlock.findElement(By.xpath(salesPrice_lo)), price);
+    public double getSalesPrice() {
+        return Double.parseDouble(productPriceBlock.findElement(By.xpath(salesPrice_lo)).getAttribute("value") );
     }
 
-    public String getProfit() {
-        return productPriceBlock.findElement(By.xpath(profit_lo)).getText();
+    public void setSalesPrice(String price) {
+        fillInputField(productColorBlock.findElement(By.xpath(salesPrice_lo)), price);
+    }
+
+    public String getProductName() {
+        return productColorBlock.findElement(By.xpath(productName_lo)).getText();
+    }
+
+    public double getProfit() {
+        return PriceHelper.getRealPrice( productPriceBlock.findElement(By.xpath(profit_lo)).getText() );
     }
 
     public void openColorsSelector() {

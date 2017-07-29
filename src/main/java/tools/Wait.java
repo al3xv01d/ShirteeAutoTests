@@ -33,11 +33,11 @@ public class Wait {
 
     public static void invisibility(String elementLocator) {
 
-            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
             if( Driver.isExistOnPage(elementLocator))  {
                 try {
-                    WebDriverWait wait = new WebDriverWait(driver, 5);
+                    WebDriverWait wait = new WebDriverWait(driver, 15);
                     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(elementLocator)));
                 } catch (TimeoutException e) {
                     System.out.println("Element doesn't disappear!");

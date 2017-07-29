@@ -1,5 +1,7 @@
 package abstraction;
 
+//mvn test -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser="chrome" -Dserver="live" -Ddomain="de" -Dguest="no"
+//mvn clean install -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser="chrome" -Dserver="dev" -Ddomain="de" -Dguest="no"
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -16,46 +18,48 @@ import java.util.concurrent.TimeUnit;
 
 public class AbstractTest {
 
+
     protected WebDriver driver = Driver.getDriver();
     protected SoftAssert softAssert = new SoftAssert();
     protected IndexPage index = PageBuilder.buildIndexPage();
     protected CheckoutPage ckp = PageBuilder.buildCheckoutPage();
 
     @BeforeClass
-    public static void setUp(){
-        Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    public void setUp(){
 
-        Config.init("chrome","com", "live", false );
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        Config.init("live", "de", "no" );
     }
 
-    @BeforeMethod
-    public void setEnv(){
-
-        index.openUrl(Config.indexShirteeUrl);
-
-        if(Config.domain == "de") {
-            index.setLocale("de");
-        } else if(Config.domain == "com") {
-            index.setLocale("eng");
-        }
-
-        if(Config.isLogged) {
-            index.login(true);
-            ckp.openSelf();
-            ckp.orderReviewBlock.getAllOrderedItems();
-        }
-
-    }
+//    @BeforeMethod
+//    public void setEnv(){
+//
+//        index.openUrl(Config.indexShirteeUrl);
+//
+//        if(Config.domain == "de") {
+//            index.setLocale("de");
+//        } else if(Config.domain == "com") {
+//            index.setLocale("eng");
+//        }
+//
+//        if(Config.isLogged == "yes") {
+//            index.login(true);
+//            ckp.openSelf();
+//            ckp.orderReviewBlock.getAllOrderedItems();
+//        }
+//
+//    }
 
     @AfterMethod
     public void cleanUp(){
-       Driver.getDriver().manage().deleteAllCookies();
+      // Driver.getDriver().manage().deleteAllCookies();
         System.out.println("AFTER");
     }
 
     @AfterClass
     public static void tearDown(){
-       // Driver.destroy();
+     //  Driver.destroy();
     }
 }

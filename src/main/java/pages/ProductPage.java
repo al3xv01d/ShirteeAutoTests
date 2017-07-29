@@ -1,6 +1,7 @@
 package pages;
 
 import abstraction.AbstractShirteePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -20,6 +21,7 @@ public class ProductPage extends AbstractShirteePage {
     //*******************  LOCATORS ********************//
 
     private final String productName_lo = "//div[@class=\"w-block-head\"]";
+    private final String otherProducts_lo = "//*[@id=\"campaign_icons\"]/li";
 
     private final String sizeSelect_lo = "addition_size";
     private final String color_lo = "//*[@id=\"color-swatches\"]//span";
@@ -107,6 +109,10 @@ public class ProductPage extends AbstractShirteePage {
     }
 
     //*******************  ACTIONS  ********************//
+
+    public List<WebElement> getOtherProducts() {
+        return driver.findElements(By.xpath(otherProducts_lo));
+    }
 
     public void pressAddToCartBtn() {
         addToCartBtn.click();

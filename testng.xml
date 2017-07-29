@@ -2,8 +2,11 @@
 <suite name="Test Suite" verbose="1" >
     <test name="Method Test Cases" >
         <classes>
-            <class name="checkout.CheckoutPageTests"></class>
-            <class name="product_page.AddToCartTests"></class>
+            <class name="product_page.AddToCartTests">
+                <methods>
+                    <include name="addToCart" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

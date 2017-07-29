@@ -3,8 +3,20 @@
     <test name="Method Test Cases" >
         <classes>
             <class name="index.IndexPageTests"/>
+
             <class name="shop.ShopPageTests"/>
-            <class name="shop.ShopPageTests"/>
+
+            <class name="product_page.ProductPageTests"/>
+            <class name="product_page.AddToCartTests"/>
+            <class name="product_page.ProductsWithPromoTests"/>
+            <class name="product_page.ValidationTests"/>
+
+            <class name="checkout.CheckoutPageTests"/>
+            <class name="checkout.PromoCodesTests"/>
+            <class name="checkout.OrderedItemsTests"/>
+            <class name="checkout.ValidationTests"/>
+
+            <class name="designer.StepOneMinimalPriceTests"/>
         </classes>
     </test>
 </suite>

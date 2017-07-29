@@ -1,6 +1,7 @@
 package checkout;
 
 import abstraction.AbstractTest;
+import com.gargoylesoftware.htmlunit.Page;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
 import pages.OrderSuccessPage;
@@ -11,7 +12,7 @@ import pages_elements.admin.OrderLine;
 import pages_elements.dashboard_orders.Order;
 import tools.Config;
 import tools.PageBuilder;
-import tools.StaticPageFactory;
+
 
 // Test 1 - order as a guest and check order's total price, items and ID in admin panel
 // Test 2 - order as a authorized user and check order's total price, items and ID in dashboard
@@ -21,7 +22,7 @@ public class OrderTests extends AbstractTest {
     @Test
     public void guestOrder() {
 
-        ProductPage productPage = StaticPageFactory.createProductPage();
+        ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
         OrderSuccessPage orderSuccessPage = PageBuilder.buildOrderSuccessPage();
         AdminFacade adminFacade = PageBuilder.buildAdminFacade();
@@ -64,7 +65,7 @@ public class OrderTests extends AbstractTest {
     @Test
     public void authorizedUserOrder(){
 
-        ProductPage productPage = StaticPageFactory.createProductPage();
+        ProductPage productPage = PageBuilder.buildProductPage();
         CheckoutPage checkoutPage = PageBuilder.buildCheckoutPage();
         OrderSuccessPage orderSuccessPage = PageBuilder.buildOrderSuccessPage();
         DashboardFacade dashboard = PageBuilder.buildDashboardFacade();
