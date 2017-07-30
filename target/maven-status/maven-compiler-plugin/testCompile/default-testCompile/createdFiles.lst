@@ -18,3 +18,4 @@ checkout\CheckoutPageTests.class
 checkout\PromoCodesTests.class
 checkout\ValidationTests.class
 designer\DesignerTest.class
+checkout\OrderedItemsTests.class

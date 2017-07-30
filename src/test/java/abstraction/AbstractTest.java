@@ -1,7 +1,7 @@
 package abstraction;
 
-//mvn test -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser="chrome" -Dserver="live" -Ddomain="de" -Dguest="no"
-//mvn clean install -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser="chrome" -Dserver="dev" -Ddomain="de" -Dguest="no"
+//mvn test -Dsurefire.suiteXmlFiles=general.xml -Dbrowser="chrome" -Dserver="live" -Ddomain="de" -DisLogged="no"
+//mvn clean install -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser="chrome" -Dserver="dev" -Ddomain="de" -DisLogged="no"
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -30,7 +30,7 @@ public class AbstractTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-        Config.init("live", "de", "no" );
+        Config.init();
     }
 
 //    @BeforeMethod
@@ -54,7 +54,7 @@ public class AbstractTest {
 
     @AfterMethod
     public void cleanUp(){
-      // Driver.getDriver().manage().deleteAllCookies();
+       Driver.getDriver().manage().deleteAllCookies();
         System.out.println("AFTER");
     }
 

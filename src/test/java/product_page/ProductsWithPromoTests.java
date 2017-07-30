@@ -17,7 +17,7 @@ public class ProductsWithPromoTests extends AbstractTest {
     public void promoPopupIsPossibleToClose() {
         ProductPage productPage = PageBuilder.buildProductPage();
         productPage.openUrl(Config.testProductUrl_1 + Config.amountPromoCode);
-
+        System.out.println(Config.testProductUrl_1 + Config.amountPromoCode);
         productPage.closePromoPopUp();
 
         Assert.assertFalse(productPage.isPromoPopUpVisible());

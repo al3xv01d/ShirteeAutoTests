@@ -114,9 +114,14 @@ public abstract class AbstractShirteePage extends AbstractPage {
     }
 
     public void logout() {
-        System.out.println("START LOGOUT");
-        logOutBtn.click();
-        System.out.println("STOP LOGOUT");
+        try {
+            logOutBtn.click();
+        } catch (Exception e) {
+            driver.navigate().refresh();
+            logOutBtn.click();
+        }
+
+
     }
 
     public void gotoCart() {

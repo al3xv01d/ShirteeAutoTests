@@ -23,7 +23,7 @@ public class StepTwoAddedProduct extends AbstractPageElement {
     private final String color_lo = ".//div[@class=\"pd-items-color\"]//span[contains(@class, \"color-btn\")]";
 
     private String productName_lo = ".//*[@class=\"pd-items-pname\"]";
-    private final String salesPrice_lo = "//*[@class=\"pd-items-price-filed\"]/input";
+    private final String salesPrice_lo = ".//*[@class=\"pd-items-price-filed\"]/input";
     private final String profit_lo = ".//*[@class=\"pd-items-price\"]/span[1]";
 
     //*[@id="profit"]/span[1]

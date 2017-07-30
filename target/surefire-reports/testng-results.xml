@@ -1,29 +1,391 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="35" passed="35">
   <reporter-output>
   </reporter-output>
-  <suite name="Test Suite" duration-ms="11130" started-at="2017-07-29T15:59:48Z" finished-at="2017-07-29T15:59:59Z">
+  <suite name="Test Suite" duration-ms="316947" started-at="2017-07-30T18:40:36Z" finished-at="2017-07-30T18:45:53Z">
     <groups>
     </groups>
-    <test name="Method Test Cases" duration-ms="11130" started-at="2017-07-29T15:59:48Z" finished-at="2017-07-29T15:59:59Z">
+    <test name="Method Test Cases" duration-ms="316947" started-at="2017-07-30T18:40:36Z" finished-at="2017-07-30T18:45:53Z">
       <class name="product_page.AddToCartTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.AddToCartTests@49dc7102]" name="setUp" is-config="true" duration-ms="167" started-at="2017-07-29T18:59:48Z" finished-at="2017-07-29T18:59:48Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="setUp" is-config="true" duration-ms="9" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addToCart()[pri:0, instance:product_page.AddToCartTests@49dc7102]" name="addToCart" duration-ms="10110" started-at="2017-07-29T18:59:48Z" finished-at="2017-07-29T18:59:58Z">
+        <test-method status="PASS" signature="addProductTwiceAndCheckQtyAndPrice()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceAndCheckQtyAndPrice" duration-ms="18583" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addToCart -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@49dc7102]" name="cleanUp" is-config="true" duration-ms="91" started-at="2017-07-29T18:59:58Z" finished-at="2017-07-29T18:59:58Z">
+        </test-method> <!-- addProductTwiceAndCheckQtyAndPrice -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="87" started-at="2017-07-30T21:42:45Z" finished-at="2017-07-30T21:42:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.AddToCartTests@49dc7102]" name="tearDown" is-config="true" duration-ms="747" started-at="2017-07-29T18:59:58Z" finished-at="2017-07-29T18:59:59Z">
+        <test-method status="PASS" signature="addProductTwiceWithDifferentColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceWithDifferentColor" duration-ms="17407" started-at="2017-07-30T21:42:45Z" finished-at="2017-07-30T21:43:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductTwiceWithDifferentColor -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="131" started-at="2017-07-30T21:43:03Z" finished-at="2017-07-30T21:43:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="addProductTwiceWithDifferentSize()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceWithDifferentSize" duration-ms="17927" started-at="2017-07-30T21:43:03Z" finished-at="2017-07-30T21:43:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductTwiceWithDifferentSize -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="167" started-at="2017-07-30T21:43:21Z" finished-at="2017-07-30T21:43:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="addToCart()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addToCart" duration-ms="6392" started-at="2017-07-30T21:43:21Z" finished-at="2017-07-30T21:43:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="375" started-at="2017-07-30T21:43:27Z" finished-at="2017-07-30T21:43:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="addTwoDifferentProductsWithSameSizeAndColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addTwoDifferentProductsWithSameSizeAndColor" duration-ms="2068" started-at="2017-07-30T21:43:28Z" finished-at="2017-07-30T21:43:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTwoDifferentProductsWithSameSizeAndColor -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="124" started-at="2017-07-30T21:43:30Z" finished-at="2017-07-30T21:43:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkPriceSizeAndColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="checkPriceSizeAndColor" duration-ms="6942" started-at="2017-07-30T21:43:30Z" finished-at="2017-07-30T21:43:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPriceSizeAndColor -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="111" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- product_page.AddToCartTests -->
+      <class name="product_page.ProductPageTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="setUp" is-config="true" duration-ms="8" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:41:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addToCartAndCheckCartCounter()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="addToCartAndCheckCartCounter" duration-ms="26288" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:42:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartAndCheckCartCounter -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="cleanUp" is-config="true" duration-ms="92" started-at="2017-07-30T21:42:13Z" finished-at="2017-07-30T21:42:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="addToCartAndContinueShopping()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="addToCartAndContinueShopping" duration-ms="13650" started-at="2017-07-30T21:42:13Z" finished-at="2017-07-30T21:42:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartAndContinueShopping -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="cleanUp" is-config="true" duration-ms="73" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- product_page.ProductPageTests -->
+      <class name="product_page.ProductsWithPromoTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="setUp" is-config="true" duration-ms="110" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="amountPromoPopupAppearsEveryTime()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="amountPromoPopupAppearsEveryTime" duration-ms="6664" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amountPromoPopupAppearsEveryTime -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="165" started-at="2017-07-30T21:43:44Z" finished-at="2017-07-30T21:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="amountPromoValueInPopup()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="amountPromoValueInPopup" duration-ms="2403" started-at="2017-07-30T21:43:44Z" finished-at="2017-07-30T21:43:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amountPromoValueInPopup -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="176" started-at="2017-07-30T21:43:46Z" finished-at="2017-07-30T21:43:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="percentPromoPopupAppearsEveryTime()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="percentPromoPopupAppearsEveryTime" duration-ms="6621" started-at="2017-07-30T21:43:47Z" finished-at="2017-07-30T21:43:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- percentPromoPopupAppearsEveryTime -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="150" started-at="2017-07-30T21:43:53Z" finished-at="2017-07-30T21:43:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="percentPromoValueInPopup()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="percentPromoValueInPopup" duration-ms="2108" started-at="2017-07-30T21:43:53Z" finished-at="2017-07-30T21:43:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- percentPromoValueInPopup -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="103" started-at="2017-07-30T21:43:56Z" finished-at="2017-07-30T21:43:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="promoPopupIsPossibleToClose()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="promoPopupIsPossibleToClose" duration-ms="3473" started-at="2017-07-30T21:43:56Z" finished-at="2017-07-30T21:43:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- promoPopupIsPossibleToClose -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="66" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:43:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:43:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- product_page.ProductsWithPromoTests -->
+      <class name="checkout.PromoCodesTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="setUp" is-config="true" duration-ms="10" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addToCartProductWithAmountDiscount()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="addToCartProductWithAmountDiscount" duration-ms="7742" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartProductWithAmountDiscount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="157" started-at="2017-07-30T21:44:24Z" finished-at="2017-07-30T21:44:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="addToCartProductWithPercentDiscount()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="addToCartProductWithPercentDiscount" duration-ms="7948" started-at="2017-07-30T21:44:25Z" finished-at="2017-07-30T21:44:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartProductWithPercentDiscount -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="138" started-at="2017-07-30T21:44:33Z" finished-at="2017-07-30T21:44:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="increaseProductsWithAmountDiscountQty()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="increaseProductsWithAmountDiscountQty" duration-ms="11769" started-at="2017-07-30T21:44:33Z" finished-at="2017-07-30T21:44:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- increaseProductsWithAmountDiscountQty -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="76" started-at="2017-07-30T21:44:44Z" finished-at="2017-07-30T21:44:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="increaseProductsWithPercentDiscountQty()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="increaseProductsWithPercentDiscountQty" duration-ms="12134" started-at="2017-07-30T21:44:45Z" finished-at="2017-07-30T21:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- increaseProductsWithPercentDiscountQty -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="70" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- checkout.PromoCodesTests -->
+      <class name="shop.ShopPageTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="setUp" is-config="true" duration-ms="11" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkFirstQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkFirstQtyOnPageSetting" duration-ms="4573" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:41:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFirstQtyOnPageSetting -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="93" started-at="2017-07-30T21:41:01Z" finished-at="2017-07-30T21:41:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkPagination()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkPagination" duration-ms="12563" started-at="2017-07-30T21:41:01Z" finished-at="2017-07-30T21:41:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPagination -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="89" started-at="2017-07-30T21:41:13Z" finished-at="2017-07-30T21:41:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkSecondQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkSecondQtyOnPageSetting" duration-ms="4164" started-at="2017-07-30T21:41:13Z" finished-at="2017-07-30T21:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSecondQtyOnPageSetting -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="168" started-at="2017-07-30T21:41:17Z" finished-at="2017-07-30T21:41:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkThirdQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkThirdQtyOnPageSetting" duration-ms="3701" started-at="2017-07-30T21:41:18Z" finished-at="2017-07-30T21:41:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkThirdQtyOnPageSetting -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="160" started-at="2017-07-30T21:41:21Z" finished-at="2017-07-30T21:41:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="leftSidebarSearch()[pri:0, instance:shop.ShopPageTests@59af0466]" name="leftSidebarSearch" duration-ms="3517" started-at="2017-07-30T21:41:21Z" finished-at="2017-07-30T21:41:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leftSidebarSearch -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="165" started-at="2017-07-30T21:41:25Z" finished-at="2017-07-30T21:41:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="priceAreEqualOnShopPageAndOnProductsPage()[pri:0, instance:shop.ShopPageTests@59af0466]" name="priceAreEqualOnShopPageAndOnProductsPage" duration-ms="5427" started-at="2017-07-30T21:41:25Z" finished-at="2017-07-30T21:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- priceAreEqualOnShopPageAndOnProductsPage -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="86" started-at="2017-07-30T21:41:31Z" finished-at="2017-07-30T21:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="qtySortingSavesOnOthersPages()[pri:0, instance:shop.ShopPageTests@59af0466]" name="qtySortingSavesOnOthersPages" duration-ms="12216" started-at="2017-07-30T21:41:31Z" finished-at="2017-07-30T21:41:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtySortingSavesOnOthersPages -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="84" started-at="2017-07-30T21:41:43Z" finished-at="2017-07-30T21:41:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="topSearch()[pri:0, instance:shop.ShopPageTests@59af0466]" name="topSearch" duration-ms="3647" started-at="2017-07-30T21:41:43Z" finished-at="2017-07-30T21:41:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- topSearch -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="88" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:41:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:shop.ShopPageTests@59af0466]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:41:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- shop.ShopPageTests -->
+      <class name="index.IndexPageTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="setUp" is-config="true" duration-ms="155" started-at="2017-07-30T21:40:36Z" finished-at="2017-07-30T21:40:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAndRedirectToDashboardPage()[pri:0, instance:index.IndexPageTests@65f095f8]" name="loginAndRedirectToDashboardPage" duration-ms="7265" started-at="2017-07-30T21:40:36Z" finished-at="2017-07-30T21:40:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndRedirectToDashboardPage -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="170" started-at="2017-07-30T21:40:44Z" finished-at="2017-07-30T21:40:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:index.IndexPageTests@65f095f8]" name="logout" duration-ms="7786" started-at="2017-07-30T21:40:44Z" finished-at="2017-07-30T21:40:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="209" started-at="2017-07-30T21:40:52Z" finished-at="2017-07-30T21:40:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="searchFromIndexPage()[pri:0, instance:index.IndexPageTests@65f095f8]" name="searchFromIndexPage" duration-ms="3900" started-at="2017-07-30T21:40:52Z" finished-at="2017-07-30T21:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchFromIndexPage -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="103" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:index.IndexPageTests@65f095f8]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- index.IndexPageTests -->
+      <class name="checkout.CheckoutPageTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="setUp" is-config="true" duration-ms="9" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="backToStore()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="backToStore" duration-ms="7868" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToStore -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="cleanUp" is-config="true" duration-ms="199" started-at="2017-07-30T21:44:10Z" finished-at="2017-07-30T21:44:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="checkShippingPrice()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="checkShippingPrice" duration-ms="6357" started-at="2017-07-30T21:44:10Z" finished-at="2017-07-30T21:44:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkShippingPrice -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="cleanUp" is-config="true" duration-ms="172" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- checkout.CheckoutPageTests -->
+      <class name="product_page.ValidationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ValidationTests@747edf66]" name="setUp" is-config="true" duration-ms="13" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:43:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="missingProductSizeValidation()[pri:0, instance:product_page.ValidationTests@747edf66]" name="missingProductSizeValidation" duration-ms="2811" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:44:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingProductSizeValidation -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ValidationTests@747edf66]" name="cleanUp" is-config="true" duration-ms="93" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ValidationTests@747edf66]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- product_page.ValidationTests -->
+      <class name="checkout.ValidationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="setUp" is-config="true" duration-ms="7" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="emptyEmailField()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="emptyEmailField" duration-ms="6757" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyEmailField -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="cleanUp" is-config="true" duration-ms="86" started-at="2017-07-30T21:45:53Z" finished-at="2017-07-30T21:45:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:45:53Z" finished-at="2017-07-30T21:45:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- checkout.ValidationTests -->
+      <class name="checkout.OrderedItemsTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="setUp" is-config="true" duration-ms="9" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addTwoProductsAndDeleteOne()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="addTwoProductsAndDeleteOne" duration-ms="19864" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:45:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTwoProductsAndDeleteOne -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="71" started-at="2017-07-30T21:45:17Z" finished-at="2017-07-30T21:45:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="decreaseItemQty()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="decreaseItemQty" duration-ms="17016" started-at="2017-07-30T21:45:17Z" finished-at="2017-07-30T21:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- decreaseItemQty -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="75" started-at="2017-07-30T21:45:34Z" finished-at="2017-07-30T21:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="increaseItemQty()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="increaseItemQty" duration-ms="12523" started-at="2017-07-30T21:45:34Z" finished-at="2017-07-30T21:45:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- increaseItemQty -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="133" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="tearDown" is-config="true" duration-ms="1" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- checkout.OrderedItemsTests -->
     </test> <!-- Method Test Cases -->
   </suite> <!-- Test Suite -->
 </testng-results>

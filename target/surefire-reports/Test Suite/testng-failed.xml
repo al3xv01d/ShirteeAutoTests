@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Test Suite]">
+  <test name="Method Test Cases(failed)">
+    <classes>
+      <class name="shop.ShopPageTests">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="priceAreEqualOnShopPageAndOnProductsPage"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- shop.ShopPageTests -->
+      <class name="product_page.ProductsWithPromoTests">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="percentPromoPopupAppearsEveryTime"/>
+          <include name="setUp"/>
+          <include name="percentPromoValueInPopup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- product_page.ProductsWithPromoTests -->
+    </classes>
+  </test> <!-- Method Test Cases(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

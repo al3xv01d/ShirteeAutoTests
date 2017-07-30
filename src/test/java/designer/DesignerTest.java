@@ -8,10 +8,7 @@ import pages.CheckoutPage;
 import pages.DesignerPage;
 import pages.ProductPage;
 import pages_elements.designer.StepTwoAddedProduct;
-import tools.Config;
-import tools.PageBuilder;
-import tools.PopupHelper;
-import tools.Wait;
+import tools.*;
 
 import java.util.List;
 
@@ -25,7 +22,7 @@ public class DesignerTest extends AbstractTest {
         //dp.login(true);
 
         //dp.setLocale("de");
-        dp.openUrl("https://dev.shirtee.de/designer/?id=1140/");
+        dp.openUrl("https://stage.shirtee.de/designer/?id=1140/");
 
 //https://dev.shirtee.de/designer/?id=1140/
  //https://stage.shirtee.de/designer/?id=1140/
@@ -69,7 +66,21 @@ public class DesignerTest extends AbstractTest {
         List<StepTwoAddedProduct> allProducts = dp.step2.getAllAddedProducts();
 
         for (StepTwoAddedProduct item : allProducts) {
-            System.out.println(item.getProductName() + " ------- " + item.getSalesPrice() + "----" + item.getProfit());
+//            System.out.println(
+//                    "Name: " + item.getProductName() + ";"
+//                    + " Price: " + item.getSalesPrice() + ";"
+//                    + " Total Profit: " + item.getProfit() + ";"
+//                    + " Designer's profit: " + PriceHelper.getFormattedDouble( item.getProfit() / 100 * 30 ) + ";"
+//                    + " Partner's profit: " + PriceHelper.getFormattedDouble( item.getProfit() / 100 * 70 )
+//            );
+
+            System.out.println(
+                     item.getProductName() + ";"
+                            + item.getSalesPrice() + ";"
+                            + item.getProfit() + ";"
+                            +  PriceHelper.getFormattedDouble( item.getProfit() / 100 * 30 ) + ";"
+                            +  PriceHelper.getFormattedDouble( item.getProfit() / 100 * 70 )
+            );
         }
        
     }
@@ -83,6 +94,8 @@ public class DesignerTest extends AbstractTest {
             productPage.getOtherProducts().get(i).click();
             PopupHelper.waitProductPagePopupLoading();
             Wait.seconds(2);
+            productPage.setRandomSizeAndGetSelected();
+            productPage.addToCartAndStay();
         }
 
 

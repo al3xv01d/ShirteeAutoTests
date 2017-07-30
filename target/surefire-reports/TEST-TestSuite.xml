@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="13.666" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="319.349" tests="35" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -29,7 +29,6 @@
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:/apache-maven-3.5.0/bin/m2.conf"/>
-    <property name="guest" value="no"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\User\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\local\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\User\bin;C:\Program Files (x86)\Skype\Phone;C:\python\Scripts;C:\python;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Google\Chrome\Application;C:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_131\bin;C:\apache-maven-3.5.0\bin;C:\Program Files (x86)\Git\usr\bin\vendor_perl;C:\Program Files (x86)\Git\usr\bin\core_perl;."/>
     <property name="maven.conf" value="C:/apache-maven-3.5.0/conf"/>
@@ -38,7 +37,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="C:\apache-maven-3.5.0\lib\jansi-native\windows64"/>
-    <property name="surefire.suiteXmlFiles" value="testng.xml"/>
+    <property name="surefire.suiteXmlFiles" value="general.xml"/>
     <property name="user.home" value="C:\Users\User"/>
     <property name="user.timezone" value="Europe/Helsinki"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -46,11 +45,12 @@
     <property name="file.encoding" value="Cp1251"/>
     <property name="user.name" value="User"/>
     <property name="java.class.path" value="C:/apache-maven-3.5.0/boot/plexus-classworlds-2.5.2.jar"/>
-    <property name="server" value="live"/>
+    <property name="server" value="stage"/>
+    <property name="isLogged" value="no"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser=chrome -Dserver=live -Ddomain=de -Dguest=no"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dsurefire.suiteXmlFiles=general.xml -Dbrowser=chrome -Dserver=stage -Ddomain=de -DisLogged=no"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -67,5 +67,39 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="addToCart" classname="product_page.AddToCartTests" time="10.112"/>
+  <testcase name="loginAndRedirectToDashboardPage" classname="index.IndexPageTests" time="7.266"/>
+  <testcase name="logout" classname="index.IndexPageTests" time="7.785"/>
+  <testcase name="searchFromIndexPage" classname="index.IndexPageTests" time="3.9"/>
+  <testcase name="checkFirstQtyOnPageSetting" classname="shop.ShopPageTests" time="4.572"/>
+  <testcase name="checkPagination" classname="shop.ShopPageTests" time="12.565"/>
+  <testcase name="checkSecondQtyOnPageSetting" classname="shop.ShopPageTests" time="4.165"/>
+  <testcase name="checkThirdQtyOnPageSetting" classname="shop.ShopPageTests" time="3.698"/>
+  <testcase name="leftSidebarSearch" classname="shop.ShopPageTests" time="3.517"/>
+  <testcase name="priceAreEqualOnShopPageAndOnProductsPage" classname="shop.ShopPageTests" time="5.426"/>
+  <testcase name="qtySortingSavesOnOthersPages" classname="shop.ShopPageTests" time="12.216"/>
+  <testcase name="topSearch" classname="shop.ShopPageTests" time="3.647"/>
+  <testcase name="addToCartAndCheckCartCounter" classname="product_page.ProductPageTests" time="26.289"/>
+  <testcase name="addToCartAndContinueShopping" classname="product_page.ProductPageTests" time="13.651"/>
+  <testcase name="addProductTwiceAndCheckQtyAndPrice" classname="product_page.AddToCartTests" time="18.584"/>
+  <testcase name="addProductTwiceWithDifferentColor" classname="product_page.AddToCartTests" time="17.408"/>
+  <testcase name="addProductTwiceWithDifferentSize" classname="product_page.AddToCartTests" time="17.927"/>
+  <testcase name="addToCart" classname="product_page.AddToCartTests" time="6.393"/>
+  <testcase name="addTwoDifferentProductsWithSameSizeAndColor" classname="product_page.AddToCartTests" time="2.069"/>
+  <testcase name="checkPriceSizeAndColor" classname="product_page.AddToCartTests" time="6.942"/>
+  <testcase name="amountPromoPopupAppearsEveryTime" classname="product_page.ProductsWithPromoTests" time="6.665"/>
+  <testcase name="amountPromoValueInPopup" classname="product_page.ProductsWithPromoTests" time="2.402"/>
+  <testcase name="percentPromoPopupAppearsEveryTime" classname="product_page.ProductsWithPromoTests" time="6.621"/>
+  <testcase name="percentPromoValueInPopup" classname="product_page.ProductsWithPromoTests" time="2.108"/>
+  <testcase name="promoPopupIsPossibleToClose" classname="product_page.ProductsWithPromoTests" time="3.472"/>
+  <testcase name="missingProductSizeValidation" classname="product_page.ValidationTests" time="2.81"/>
+  <testcase name="backToStore" classname="checkout.CheckoutPageTests" time="7.867"/>
+  <testcase name="checkShippingPrice" classname="checkout.CheckoutPageTests" time="6.357"/>
+  <testcase name="addToCartProductWithAmountDiscount" classname="checkout.PromoCodesTests" time="7.741"/>
+  <testcase name="addToCartProductWithPercentDiscount" classname="checkout.PromoCodesTests" time="7.949"/>
+  <testcase name="increaseProductsWithAmountDiscountQty" classname="checkout.PromoCodesTests" time="11.768"/>
+  <testcase name="increaseProductsWithPercentDiscountQty" classname="checkout.PromoCodesTests" time="12.135"/>
+  <testcase name="addTwoProductsAndDeleteOne" classname="checkout.OrderedItemsTests" time="19.864"/>
+  <testcase name="decreaseItemQty" classname="checkout.OrderedItemsTests" time="17.017"/>
+  <testcase name="increaseItemQty" classname="checkout.OrderedItemsTests" time="12.523"/>
+  <testcase name="emptyEmailField" classname="checkout.ValidationTests" time="6.758"/>
 </testsuite>

@@ -168,7 +168,7 @@ public class ProductPage extends AbstractShirteePage {
     public void setRandomColor() {
         try {
             allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
-        } catch (WebDriverException e) {
+        } catch (Exception e) {
             Wait.seconds(2);
             allColors.get( RandomData.getRandomInt(1, allColors.size() - 1) ).click();
         }
@@ -180,7 +180,6 @@ public class ProductPage extends AbstractShirteePage {
         try {
             allColors.get(colorNumber).click();
         } catch (IndexOutOfBoundsException e) {
-            System.out.println();
             allColors.get(0).click();
         }
     }
@@ -207,6 +206,10 @@ public class ProductPage extends AbstractShirteePage {
     }
 
     public boolean isPromoPopUpVisible() {
+        if(isExistsAndVisible(discountFromPromoPopUp) ) {
+            Wait.seconds(2);
+        }
+
         return isExistsAndVisible(discountFromPromoPopUp);
     }
 

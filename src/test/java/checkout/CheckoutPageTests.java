@@ -39,7 +39,7 @@ public class CheckoutPageTests extends AbstractTest {
 
         checkoutPage.returnToStore();
 
-        Assert.assertEquals(  driver.getCurrentUrl(), Config.testProductUrl_1 );
+        Assert.assertFalse(  driver.getCurrentUrl().contains("checkout"), "Error in BACK TO STOLE link on checkout page" );
     }
 
 

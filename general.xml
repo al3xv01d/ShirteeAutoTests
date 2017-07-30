@@ -16,7 +16,6 @@
             <class name="checkout.OrderedItemsTests"/>
             <class name="checkout.ValidationTests"/>
 
-            <class name="designer.StepOneMinimalPriceTests"/>
         </classes>
     </test>
 </suite>

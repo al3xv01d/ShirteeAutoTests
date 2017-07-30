@@ -1,5 +1,6 @@
 pages_elements\checkout\CreditCardBlock.class
 pages_elements\checkout\BillingBlock.class
+tools\PopupHelper.class
 pages_elements\designer\StepOneBlock.class
 pages\ShopPage.class
 pages\dashboard\DashboardFinancePage.class
