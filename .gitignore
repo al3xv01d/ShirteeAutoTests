@@ -22,4 +22,5 @@
 hs_err_pid*
 
 .idea
-Config.java
+
+/src/main/java/tools/Config.java
