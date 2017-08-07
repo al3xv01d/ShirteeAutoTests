@@ -1,10 +1,7 @@
 package designer;
 
-import abstraction.AbstractTest;
-import abstraction.AbstractTestNoConfig;
-import org.openqa.selenium.WebElement;
+import abstraction.AbstractTestNoLogin;
 import org.testng.annotations.Test;
-import pages.CheckoutPage;
 import pages.DesignerPage;
 import pages.ProductPage;
 import pages_elements.designer.StepTwoAddedProduct;
@@ -12,7 +9,7 @@ import tools.*;
 
 import java.util.List;
 
-public class DesignerTest extends AbstractTest {
+public class DesignerTest extends AbstractTestNoLogin {
 
     @Test
     public void step1() {
@@ -22,7 +19,7 @@ public class DesignerTest extends AbstractTest {
         //dp.login(true);
 
         //dp.setLocale("de");
-        dp.openUrl("https://stage.shirtee.de/designer/?id=1140/");
+        dp.openUrl("https://dev.shirtee.de/designer/?id=1140/");
 
 //https://dev.shirtee.de/designer/?id=1140/
  //https://stage.shirtee.de/designer/?id=1140/
@@ -56,7 +53,7 @@ public class DesignerTest extends AbstractTest {
     public void test2() {
         DesignerPage dp = PageBuilder.buildDesignerPage();
        
-        dp.openUrl("https://www.shirtee.com/designer/?id=1140/");
+        dp.openUrl("https://dev.shirtee.de/designer/?id=1140/");
         
 
         dp.step1.fillProductText("TEST");
@@ -78,6 +75,7 @@ public class DesignerTest extends AbstractTest {
                      item.getProductName() + ";"
                             + item.getSalesPrice() + ";"
                             + item.getProfit() + ";"
+                            + PriceHelper.getFormattedDouble(item.getProfit() * 100 / item.getSalesPrice() ) + ";"
                             +  PriceHelper.getFormattedDouble( item.getProfit() / 100 * 30 ) + ";"
                             +  PriceHelper.getFormattedDouble( item.getProfit() / 100 * 70 )
             );
@@ -88,7 +86,7 @@ public class DesignerTest extends AbstractTest {
     @Test
     public void test3(){
         ProductPage productPage = PageBuilder.buildProductPage();
-        productPage.openUrl(Config.testProductUrl_1);
+        productPage.openUrl("https://stage.shirtee.de/ffffffffffuuuuuuullllllll");
 
         for(int i = 1; i < productPage.getOtherProducts().size(); i++) {
             productPage.getOtherProducts().get(i).click();

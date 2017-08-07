@@ -61,9 +61,10 @@ public class PageBuilder {
         StepOneBlock step1 = new StepOneBlock();
         StepTwoBlock step2 = new StepTwoBlock();
         StepThreeBlock step3 = new StepThreeBlock(loginForm);
+        DesignerValidation validation = new DesignerValidation();
 
 
-        DesignerPage designerPage = new DesignerPage(step1, step2, step3);
+        DesignerPage designerPage = new DesignerPage(step1, step2, step3, validation);
 
         return designerPage;
     }

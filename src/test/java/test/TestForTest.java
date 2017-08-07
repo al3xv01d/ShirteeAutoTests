@@ -1,44 +1,35 @@
 package test;
 
 import abstraction.AbstractTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.dashboard.DashboardCampaignsPage;
 import tools.Config;
 
-public class TestForTest extends AbstractTest {
+public class TestForTest  {
 
-    @Test
+    @DataProvider
+    public Object[][] data() {
+        return new Object[][] {
+                {"Fuck1", "Fuck2", "Fuck3"},
+                {"cunt1", "cunt2", "cunt3"}
+        };
+    }
+
+
     public void firstTest() {
-
-        IndexPage pp = new IndexPage();
-        pp.openUrl(Config.indexShirteeUrl);
-        pp.login(false);
-
-        DashboardCampaignsPage dpc = new DashboardCampaignsPage();
-
-        dpc.closePopUp();
-
-        dpc.setLocale("eng");
-        dpc.logout();
 
 
     }
 
-    @Test
-    public void secondTest() {
+    @Test(dataProvider = "data")
+    public void secondTest(String ffm, String ffm2, String ffm3) {
 
-//        AdminLoginPage alp = PageBuilder.buildAdminLoginPage();
-//        AdminFacade af = PageBuilder.buildAdminFacade();
-//
-//        alp.openUrl("https://dev.shirtee.de/index.php/ffadmin");
-//        alp.login();
-//
-//        af.openOrdersPage();
-//        OrderLine pushOrderBtn = af.ordersPage.findAndGetOrder("12");
-//
-//        System.out.println(pushOrderBtn.getOrderId());
-
+        System.out.println(ffm);
+        System.out.println(ffm2);
+        System.out.println(ffm3);
 
     }
 }
+

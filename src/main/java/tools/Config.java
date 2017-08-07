@@ -56,7 +56,7 @@ public class Config {
 
     static {
         if(null == Config.browser) {
-            System.out.println("OOOOOOOOOOOOO FUCK");
+            System.out.println("You are in IDE");
             Config.browser = "chrome";
             Config.server = "dev";
             Config.domain = "de";
@@ -73,7 +73,7 @@ public class Config {
             Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
             Config.checkoutUrl = "https://www.shirtee." + Config.domain + "/checkout/onepage/";
 
-            Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1//";
+            Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1/";
 
             Config.dashboardOrdersPage = "https://www.shirtee.de/customdashboard/order/history/";
             Config.dashboardPromoPageUrl = "https://www.shirtee.de/promotion/dashboard/index/";
@@ -87,7 +87,7 @@ public class Config {
 
             Config.indexShirteeUrl = "https://dev.shirtee.de";
             Config.shopUrl = "https://dev.shirtee.de/shop";
-            Config.designerUrl = "https://dev.shirtee.de/shop/designer/?id=1140/";
+            Config.designerUrl = "https://dev.shirtee.com/de/designer/?id=1140/";
             Config.checkoutUrl = "https://dev.shirtee.de/checkout/onepage/";
 
             Config.testProductUrl_1 = "https://dev.shirtee.de/auto-test-company-1/";

@@ -85,13 +85,13 @@ public class PromoCodesTests extends AbstractTest {
 
 
         softAssert.assertEquals(checkout.orderReviewBlock.getDiscountValue(),Config.amountPromoValue * 2, "Wrong discount value");
-        softAssert.assertEquals(checkout.orderReviewBlock.getGrandTotalPrice(), exceptedTotalPrice);
+        softAssert.assertEquals(checkout.orderReviewBlock.getGrandTotalPrice(), exceptedTotalPrice, "Wrong total price");
 
         orderedItem.increaseQty();
         exceptedTotalPrice = PriceHelper.getFormattedDouble(productPrice * 3 - checkout.orderReviewBlock.getDiscountValue() + Config.shippingPrice);
 
         softAssert.assertEquals(checkout.orderReviewBlock.getDiscountValue(),Config.amountPromoValue * 3, "Wrong discount value");
-        softAssert.assertEquals(checkout.orderReviewBlock.getGrandTotalPrice(), exceptedTotalPrice);
+        softAssert.assertEquals(checkout.orderReviewBlock.getGrandTotalPrice(), exceptedTotalPrice, "Wrong total price");
 
         softAssert.assertAll();
     }

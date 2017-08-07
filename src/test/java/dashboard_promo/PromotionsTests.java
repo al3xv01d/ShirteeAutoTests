@@ -1,6 +1,6 @@
 package dashboard_promo;
 
-import abstraction.AbstractTestNoConfig;
+import abstraction.AbstractTestNoLogin;
 import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.dashboard.DashboardFacade;
@@ -8,7 +8,7 @@ import tools.Config;
 import tools.PageBuilder;
 
 
-public class PromotionsTests extends AbstractTestNoConfig{
+public class PromotionsTests extends AbstractTestNoLogin {
 
    @Test
     public void createNewPromoCode() {

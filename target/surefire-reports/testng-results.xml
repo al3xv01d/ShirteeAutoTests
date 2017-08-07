@@ -1,387 +1,704 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="35" passed="35">
+<testng-results skipped="0" failed="5" ignored="0" total="35" passed="30">
   <reporter-output>
   </reporter-output>
-  <suite name="Test Suite" duration-ms="316947" started-at="2017-07-30T18:40:36Z" finished-at="2017-07-30T18:45:53Z">
+  <suite name="Test Suite" duration-ms="339550" started-at="2017-08-03T13:33:55Z" finished-at="2017-08-03T13:39:35Z">
     <groups>
     </groups>
-    <test name="Method Test Cases" duration-ms="316947" started-at="2017-07-30T18:40:36Z" finished-at="2017-07-30T18:45:53Z">
+    <test name="Method Test Cases" duration-ms="339550" started-at="2017-08-03T13:33:55Z" finished-at="2017-08-03T13:39:35Z">
       <class name="product_page.AddToCartTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="setUp" is-config="true" duration-ms="9" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:27Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="setUp" is-config="true" duration-ms="17" started-at="2017-08-03T16:36:22Z" finished-at="2017-08-03T16:36:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addProductTwiceAndCheckQtyAndPrice()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceAndCheckQtyAndPrice" duration-ms="18583" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:45Z">
+        <test-method status="PASS" signature="addProductTwiceAndCheckQtyAndPrice()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceAndCheckQtyAndPrice" duration-ms="18278" started-at="2017-08-03T16:36:22Z" finished-at="2017-08-03T16:36:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductTwiceAndCheckQtyAndPrice -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="87" started-at="2017-07-30T21:42:45Z" finished-at="2017-07-30T21:42:45Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="69" started-at="2017-08-03T16:36:40Z" finished-at="2017-08-03T16:36:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="addProductTwiceWithDifferentColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceWithDifferentColor" duration-ms="17407" started-at="2017-07-30T21:42:45Z" finished-at="2017-07-30T21:43:03Z">
+        <test-method status="PASS" signature="addProductTwiceWithDifferentColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceWithDifferentColor" duration-ms="17055" started-at="2017-08-03T16:36:40Z" finished-at="2017-08-03T16:36:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductTwiceWithDifferentColor -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="131" started-at="2017-07-30T21:43:03Z" finished-at="2017-07-30T21:43:03Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="77" started-at="2017-08-03T16:36:57Z" finished-at="2017-08-03T16:36:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="addProductTwiceWithDifferentSize()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceWithDifferentSize" duration-ms="17927" started-at="2017-07-30T21:43:03Z" finished-at="2017-07-30T21:43:21Z">
+        <test-method status="PASS" signature="addProductTwiceWithDifferentSize()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addProductTwiceWithDifferentSize" duration-ms="15762" started-at="2017-08-03T16:36:57Z" finished-at="2017-08-03T16:37:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductTwiceWithDifferentSize -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="167" started-at="2017-07-30T21:43:21Z" finished-at="2017-07-30T21:43:21Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="68" started-at="2017-08-03T16:37:13Z" finished-at="2017-08-03T16:37:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="addToCart()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addToCart" duration-ms="6392" started-at="2017-07-30T21:43:21Z" finished-at="2017-07-30T21:43:27Z">
+        <test-method status="PASS" signature="addToCart()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addToCart" duration-ms="5422" started-at="2017-08-03T16:37:13Z" finished-at="2017-08-03T16:37:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="375" started-at="2017-07-30T21:43:27Z" finished-at="2017-07-30T21:43:28Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="94" started-at="2017-08-03T16:37:18Z" finished-at="2017-08-03T16:37:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="addTwoDifferentProductsWithSameSizeAndColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addTwoDifferentProductsWithSameSizeAndColor" duration-ms="2068" started-at="2017-07-30T21:43:28Z" finished-at="2017-07-30T21:43:30Z">
+        <test-method status="PASS" signature="addTwoDifferentProductsWithSameSizeAndColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="addTwoDifferentProductsWithSameSizeAndColor" duration-ms="2103" started-at="2017-08-03T16:37:18Z" finished-at="2017-08-03T16:37:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTwoDifferentProductsWithSameSizeAndColor -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="124" started-at="2017-07-30T21:43:30Z" finished-at="2017-07-30T21:43:30Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="115" started-at="2017-08-03T16:37:21Z" finished-at="2017-08-03T16:37:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="checkPriceSizeAndColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="checkPriceSizeAndColor" duration-ms="6942" started-at="2017-07-30T21:43:30Z" finished-at="2017-07-30T21:43:37Z">
+        <test-method status="PASS" signature="checkPriceSizeAndColor()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="checkPriceSizeAndColor" duration-ms="5906" started-at="2017-08-03T16:37:21Z" finished-at="2017-08-03T16:37:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPriceSizeAndColor -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="111" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:37Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="cleanUp" is-config="true" duration-ms="128" started-at="2017-08-03T16:37:27Z" finished-at="2017-08-03T16:37:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.AddToCartTests@346d61be]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:37:27Z" finished-at="2017-08-03T16:37:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- product_page.AddToCartTests -->
       <class name="product_page.ProductPageTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="setUp" is-config="true" duration-ms="8" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:41:47Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="setUp" is-config="true" duration-ms="15" started-at="2017-08-03T16:35:38Z" finished-at="2017-08-03T16:35:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addToCartAndCheckCartCounter()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="addToCartAndCheckCartCounter" duration-ms="26288" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:42:13Z">
+        <test-method status="PASS" signature="addToCartAndCheckCartCounter()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="addToCartAndCheckCartCounter" duration-ms="27502" started-at="2017-08-03T16:35:38Z" finished-at="2017-08-03T16:36:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartAndCheckCartCounter -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="cleanUp" is-config="true" duration-ms="92" started-at="2017-07-30T21:42:13Z" finished-at="2017-07-30T21:42:13Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="cleanUp" is-config="true" duration-ms="71" started-at="2017-08-03T16:36:05Z" finished-at="2017-08-03T16:36:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="addToCartAndContinueShopping()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="addToCartAndContinueShopping" duration-ms="13650" started-at="2017-07-30T21:42:13Z" finished-at="2017-07-30T21:42:27Z">
+        <test-method status="PASS" signature="addToCartAndContinueShopping()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="addToCartAndContinueShopping" duration-ms="15903" started-at="2017-08-03T16:36:06Z" finished-at="2017-08-03T16:36:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartAndContinueShopping -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="cleanUp" is-config="true" duration-ms="73" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:27Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="cleanUp" is-config="true" duration-ms="104" started-at="2017-08-03T16:36:21Z" finished-at="2017-08-03T16:36:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:42:27Z" finished-at="2017-07-30T21:42:27Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ProductPageTests@3e6ef8ad]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:36:22Z" finished-at="2017-08-03T16:36:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- product_page.ProductPageTests -->
-      <class name="product_page.ProductsWithPromoTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="setUp" is-config="true" duration-ms="110" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="amountPromoPopupAppearsEveryTime()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="amountPromoPopupAppearsEveryTime" duration-ms="6664" started-at="2017-07-30T21:43:37Z" finished-at="2017-07-30T21:43:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amountPromoPopupAppearsEveryTime -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="165" started-at="2017-07-30T21:43:44Z" finished-at="2017-07-30T21:43:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="amountPromoValueInPopup()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="amountPromoValueInPopup" duration-ms="2403" started-at="2017-07-30T21:43:44Z" finished-at="2017-07-30T21:43:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amountPromoValueInPopup -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="176" started-at="2017-07-30T21:43:46Z" finished-at="2017-07-30T21:43:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="percentPromoPopupAppearsEveryTime()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="percentPromoPopupAppearsEveryTime" duration-ms="6621" started-at="2017-07-30T21:43:47Z" finished-at="2017-07-30T21:43:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- percentPromoPopupAppearsEveryTime -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="150" started-at="2017-07-30T21:43:53Z" finished-at="2017-07-30T21:43:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="percentPromoValueInPopup()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="percentPromoValueInPopup" duration-ms="2108" started-at="2017-07-30T21:43:53Z" finished-at="2017-07-30T21:43:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- percentPromoValueInPopup -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="103" started-at="2017-07-30T21:43:56Z" finished-at="2017-07-30T21:43:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="promoPopupIsPossibleToClose()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="promoPopupIsPossibleToClose" duration-ms="3473" started-at="2017-07-30T21:43:56Z" finished-at="2017-07-30T21:43:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- promoPopupIsPossibleToClose -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="66" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:43:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:43:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- product_page.ProductsWithPromoTests -->
       <class name="checkout.PromoCodesTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="setUp" is-config="true" duration-ms="10" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="setUp" is-config="true" duration-ms="7" started-at="2017-08-03T16:38:06Z" finished-at="2017-08-03T16:38:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addToCartProductWithAmountDiscount()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="addToCartProductWithAmountDiscount" duration-ms="7742" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:24Z">
+        <test-method status="PASS" signature="addToCartProductWithAmountDiscount()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="addToCartProductWithAmountDiscount" duration-ms="7868" started-at="2017-08-03T16:38:07Z" finished-at="2017-08-03T16:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartProductWithAmountDiscount -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="157" started-at="2017-07-30T21:44:24Z" finished-at="2017-07-30T21:44:25Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="489" started-at="2017-08-03T16:38:14Z" finished-at="2017-08-03T16:38:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="addToCartProductWithPercentDiscount()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="addToCartProductWithPercentDiscount" duration-ms="7948" started-at="2017-07-30T21:44:25Z" finished-at="2017-07-30T21:44:33Z">
+        <test-method status="FAIL" signature="addToCartProductWithPercentDiscount()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="addToCartProductWithPercentDiscount" duration-ms="5744" started-at="2017-08-03T16:38:15Z" finished-at="2017-08-03T16:38:21Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <span onclick="changeColor(this)" class="color-btn" color_id="224" title="Sand" id="224" style="background-color: #e0b86e; background-image: url(https://www.shirtee.de/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1217, 391). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 52 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <span onclick="changeColor(this)" class="color-btn" color_id="224" title="Sand" id="224" style="background-color: #e0b86e; background-image: url(https://www.shirtee.de/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1217, 391). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 52 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at pages.ProductPage.setRandomColor(ProductPage.java:173)
+	at checkout.PromoCodesTests.addToCartProductWithPercentDiscount(PromoCodesTests.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartProductWithPercentDiscount -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="138" started-at="2017-07-30T21:44:33Z" finished-at="2017-07-30T21:44:33Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="57" started-at="2017-08-03T16:38:21Z" finished-at="2017-08-03T16:38:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="increaseProductsWithAmountDiscountQty()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="increaseProductsWithAmountDiscountQty" duration-ms="11769" started-at="2017-07-30T21:44:33Z" finished-at="2017-07-30T21:44:44Z">
+        <test-method status="FAIL" signature="increaseProductsWithAmountDiscountQty()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="increaseProductsWithAmountDiscountQty" duration-ms="5806" started-at="2017-08-03T16:38:21Z" finished-at="2017-08-03T16:38:26Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <span onclick="changeColor(this)" class="color-btn" color_id="3" title="White" id="3" style="background-color: #ffffff; background-image: url(https://www.shirtee.com/media/option_image/white.jpg); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1120, 815). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <span onclick="changeColor(this)" class="color-btn" color_id="3" title="White" id="3" style="background-color: #ffffff; background-image: url(https://www.shirtee.com/media/option_image/white.jpg); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1120, 815). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at pages.ProductPage.setRandomColor(ProductPage.java:173)
+	at checkout.PromoCodesTests.increaseProductsWithAmountDiscountQty(PromoCodesTests.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- increaseProductsWithAmountDiscountQty -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="76" started-at="2017-07-30T21:44:44Z" finished-at="2017-07-30T21:44:45Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="85" started-at="2017-08-03T16:38:26Z" finished-at="2017-08-03T16:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="increaseProductsWithPercentDiscountQty()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="increaseProductsWithPercentDiscountQty" duration-ms="12134" started-at="2017-07-30T21:44:45Z" finished-at="2017-07-30T21:44:57Z">
+        <test-method status="FAIL" signature="increaseProductsWithPercentDiscountQty()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="increaseProductsWithPercentDiscountQty" duration-ms="8823" started-at="2017-08-03T16:38:27Z" finished-at="2017-08-03T16:38:35Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+	Wrong discount value expected [20.66] but found [20.65],
+	expected [52.7] but found [48.2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+	Wrong discount value expected [20.66] but found [20.65],
+	expected [52.7] but found [48.2]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at checkout.PromoCodesTests.increaseProductsWithPercentDiscountQty(PromoCodesTests.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- increaseProductsWithPercentDiscountQty -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="70" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:44:57Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="cleanUp" is-config="true" duration-ms="82" started-at="2017-08-03T16:38:35Z" finished-at="2017-08-03T16:38:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:44:57Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.PromoCodesTests@62230c58]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:38:35Z" finished-at="2017-08-03T16:38:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- checkout.PromoCodesTests -->
-      <class name="shop.ShopPageTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="setUp" is-config="true" duration-ms="11" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:40:56Z">
+      <class name="product_page.ProductsWithPromoTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="setUp" is-config="true" duration-ms="9" started-at="2017-08-03T16:37:27Z" finished-at="2017-08-03T16:37:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="checkFirstQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkFirstQtyOnPageSetting" duration-ms="4573" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:41:01Z">
+        <test-method status="PASS" signature="amountPromoPopupAppearsEveryTime()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="amountPromoPopupAppearsEveryTime" duration-ms="8839" started-at="2017-08-03T16:37:27Z" finished-at="2017-08-03T16:37:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amountPromoPopupAppearsEveryTime -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="89" started-at="2017-08-03T16:37:36Z" finished-at="2017-08-03T16:37:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="amountPromoValueInPopup()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="amountPromoValueInPopup" duration-ms="2016" started-at="2017-08-03T16:37:36Z" finished-at="2017-08-03T16:37:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amountPromoValueInPopup -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="92" started-at="2017-08-03T16:37:38Z" finished-at="2017-08-03T16:37:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="percentPromoPopupAppearsEveryTime()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="percentPromoPopupAppearsEveryTime" duration-ms="7402" started-at="2017-08-03T16:37:38Z" finished-at="2017-08-03T16:37:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- percentPromoPopupAppearsEveryTime -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="93" started-at="2017-08-03T16:37:45Z" finished-at="2017-08-03T16:37:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="percentPromoValueInPopup()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="percentPromoValueInPopup" duration-ms="2437" started-at="2017-08-03T16:37:45Z" finished-at="2017-08-03T16:37:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- percentPromoValueInPopup -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="93" started-at="2017-08-03T16:37:48Z" finished-at="2017-08-03T16:37:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="promoPopupIsPossibleToClose()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="promoPopupIsPossibleToClose" duration-ms="3484" started-at="2017-08-03T16:37:48Z" finished-at="2017-08-03T16:37:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- promoPopupIsPossibleToClose -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="cleanUp" is-config="true" duration-ms="79" started-at="2017-08-03T16:37:51Z" finished-at="2017-08-03T16:37:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ProductsWithPromoTests@55536d9e]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:37:51Z" finished-at="2017-08-03T16:37:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- product_page.ProductsWithPromoTests -->
+      <class name="shop.ShopPageTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="setUp" is-config="true" duration-ms="11" started-at="2017-08-03T16:34:21Z" finished-at="2017-08-03T16:34:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkFirstQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkFirstQtyOnPageSetting" duration-ms="3866" started-at="2017-08-03T16:34:21Z" finished-at="2017-08-03T16:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkFirstQtyOnPageSetting -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="93" started-at="2017-07-30T21:41:01Z" finished-at="2017-07-30T21:41:01Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="76" started-at="2017-08-03T16:34:24Z" finished-at="2017-08-03T16:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="checkPagination()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkPagination" duration-ms="12563" started-at="2017-07-30T21:41:01Z" finished-at="2017-07-30T21:41:13Z">
+        <test-method status="PASS" signature="checkPagination()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkPagination" duration-ms="10574" started-at="2017-08-03T16:34:24Z" finished-at="2017-08-03T16:34:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPagination -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="89" started-at="2017-07-30T21:41:13Z" finished-at="2017-07-30T21:41:13Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="86" started-at="2017-08-03T16:34:35Z" finished-at="2017-08-03T16:34:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="checkSecondQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkSecondQtyOnPageSetting" duration-ms="4164" started-at="2017-07-30T21:41:13Z" finished-at="2017-07-30T21:41:17Z">
+        <test-method status="PASS" signature="checkSecondQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkSecondQtyOnPageSetting" duration-ms="4240" started-at="2017-08-03T16:34:35Z" finished-at="2017-08-03T16:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkSecondQtyOnPageSetting -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="168" started-at="2017-07-30T21:41:17Z" finished-at="2017-07-30T21:41:18Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="72" started-at="2017-08-03T16:34:39Z" finished-at="2017-08-03T16:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="checkThirdQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkThirdQtyOnPageSetting" duration-ms="3701" started-at="2017-07-30T21:41:18Z" finished-at="2017-07-30T21:41:21Z">
+        <test-method status="PASS" signature="checkThirdQtyOnPageSetting()[pri:0, instance:shop.ShopPageTests@59af0466]" name="checkThirdQtyOnPageSetting" duration-ms="2658" started-at="2017-08-03T16:34:39Z" finished-at="2017-08-03T16:34:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkThirdQtyOnPageSetting -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="160" started-at="2017-07-30T21:41:21Z" finished-at="2017-07-30T21:41:21Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="83" started-at="2017-08-03T16:34:42Z" finished-at="2017-08-03T16:34:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="leftSidebarSearch()[pri:0, instance:shop.ShopPageTests@59af0466]" name="leftSidebarSearch" duration-ms="3517" started-at="2017-07-30T21:41:21Z" finished-at="2017-07-30T21:41:25Z">
+        <test-method status="PASS" signature="leftSidebarSearch()[pri:0, instance:shop.ShopPageTests@59af0466]" name="leftSidebarSearch" duration-ms="5171" started-at="2017-08-03T16:34:42Z" finished-at="2017-08-03T16:34:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leftSidebarSearch -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="165" started-at="2017-07-30T21:41:25Z" finished-at="2017-07-30T21:41:25Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="85" started-at="2017-08-03T16:34:47Z" finished-at="2017-08-03T16:34:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="priceAreEqualOnShopPageAndOnProductsPage()[pri:0, instance:shop.ShopPageTests@59af0466]" name="priceAreEqualOnShopPageAndOnProductsPage" duration-ms="5427" started-at="2017-07-30T21:41:25Z" finished-at="2017-07-30T21:41:31Z">
+        <test-method status="FAIL" signature="priceAreEqualOnShopPageAndOnProductsPage()[pri:0, instance:shop.ShopPageTests@59af0466]" name="priceAreEqualOnShopPageAndOnProductsPage" duration-ms="28209" started-at="2017-08-03T16:34:47Z" finished-at="2017-08-03T16:35:16Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="w-block-head"]"}
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+*** Element info: {Using=xpath, value=//div[@class="w-block-head"]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="w-block-head"]"}
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+*** Element info: {Using=xpath, value=//div[@class="w-block-head"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.getText(Unknown Source)
+	at pages.ProductPage.getProductName(ProductPage.java:88)
+	at shop.ShopPageTests.priceAreEqualOnShopPageAndOnProductsPage(ShopPageTests.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- priceAreEqualOnShopPageAndOnProductsPage -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="86" started-at="2017-07-30T21:41:31Z" finished-at="2017-07-30T21:41:31Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="111" started-at="2017-08-03T16:35:16Z" finished-at="2017-08-03T16:35:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="qtySortingSavesOnOthersPages()[pri:0, instance:shop.ShopPageTests@59af0466]" name="qtySortingSavesOnOthersPages" duration-ms="12216" started-at="2017-07-30T21:41:31Z" finished-at="2017-07-30T21:41:43Z">
+        <test-method status="PASS" signature="qtySortingSavesOnOthersPages()[pri:0, instance:shop.ShopPageTests@59af0466]" name="qtySortingSavesOnOthersPages" duration-ms="16330" started-at="2017-08-03T16:35:16Z" finished-at="2017-08-03T16:35:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtySortingSavesOnOthersPages -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="84" started-at="2017-07-30T21:41:43Z" finished-at="2017-07-30T21:41:43Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="107" started-at="2017-08-03T16:35:32Z" finished-at="2017-08-03T16:35:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="topSearch()[pri:0, instance:shop.ShopPageTests@59af0466]" name="topSearch" duration-ms="3647" started-at="2017-07-30T21:41:43Z" finished-at="2017-07-30T21:41:47Z">
+        <test-method status="PASS" signature="topSearch()[pri:0, instance:shop.ShopPageTests@59af0466]" name="topSearch" duration-ms="5629" started-at="2017-08-03T16:35:32Z" finished-at="2017-08-03T16:35:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- topSearch -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="88" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:41:47Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:shop.ShopPageTests@59af0466]" name="cleanUp" is-config="true" duration-ms="87" started-at="2017-08-03T16:35:38Z" finished-at="2017-08-03T16:35:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:shop.ShopPageTests@59af0466]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:41:47Z" finished-at="2017-07-30T21:41:47Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:shop.ShopPageTests@59af0466]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:35:38Z" finished-at="2017-08-03T16:35:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- shop.ShopPageTests -->
       <class name="index.IndexPageTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="setUp" is-config="true" duration-ms="155" started-at="2017-07-30T21:40:36Z" finished-at="2017-07-30T21:40:36Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="setUp" is-config="true" duration-ms="167" started-at="2017-08-03T16:33:55Z" finished-at="2017-08-03T16:33:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAndRedirectToDashboardPage()[pri:0, instance:index.IndexPageTests@65f095f8]" name="loginAndRedirectToDashboardPage" duration-ms="7265" started-at="2017-07-30T21:40:36Z" finished-at="2017-07-30T21:40:44Z">
+        <test-method status="PASS" signature="loginAndRedirectToDashboardPage()[pri:0, instance:index.IndexPageTests@65f095f8]" name="loginAndRedirectToDashboardPage" duration-ms="9162" started-at="2017-08-03T16:33:55Z" finished-at="2017-08-03T16:34:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndRedirectToDashboardPage -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="170" started-at="2017-07-30T21:40:44Z" finished-at="2017-07-30T21:40:44Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="126" started-at="2017-08-03T16:34:04Z" finished-at="2017-08-03T16:34:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:index.IndexPageTests@65f095f8]" name="logout" duration-ms="7786" started-at="2017-07-30T21:40:44Z" finished-at="2017-07-30T21:40:52Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:index.IndexPageTests@65f095f8]" name="logout" duration-ms="9785" started-at="2017-08-03T16:34:04Z" finished-at="2017-08-03T16:34:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="209" started-at="2017-07-30T21:40:52Z" finished-at="2017-07-30T21:40:52Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="110" started-at="2017-08-03T16:34:14Z" finished-at="2017-08-03T16:34:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="searchFromIndexPage()[pri:0, instance:index.IndexPageTests@65f095f8]" name="searchFromIndexPage" duration-ms="3900" started-at="2017-07-30T21:40:52Z" finished-at="2017-07-30T21:40:56Z">
+        <test-method status="PASS" signature="searchFromIndexPage()[pri:0, instance:index.IndexPageTests@65f095f8]" name="searchFromIndexPage" duration-ms="6124" started-at="2017-08-03T16:34:14Z" finished-at="2017-08-03T16:34:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchFromIndexPage -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="103" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:40:56Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:index.IndexPageTests@65f095f8]" name="cleanUp" is-config="true" duration-ms="90" started-at="2017-08-03T16:34:20Z" finished-at="2017-08-03T16:34:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:index.IndexPageTests@65f095f8]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:40:56Z" finished-at="2017-07-30T21:40:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:index.IndexPageTests@65f095f8]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:34:21Z" finished-at="2017-08-03T16:34:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- index.IndexPageTests -->
       <class name="checkout.CheckoutPageTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="setUp" is-config="true" duration-ms="9" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:02Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="setUp" is-config="true" duration-ms="10" started-at="2017-08-03T16:37:54Z" finished-at="2017-08-03T16:37:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="backToStore()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="backToStore" duration-ms="7868" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:10Z">
+        <test-method status="PASS" signature="backToStore()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="backToStore" duration-ms="7476" started-at="2017-08-03T16:37:54Z" finished-at="2017-08-03T16:38:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToStore -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="cleanUp" is-config="true" duration-ms="199" started-at="2017-07-30T21:44:10Z" finished-at="2017-07-30T21:44:10Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="cleanUp" is-config="true" duration-ms="85" started-at="2017-08-03T16:38:01Z" finished-at="2017-08-03T16:38:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="checkShippingPrice()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="checkShippingPrice" duration-ms="6357" started-at="2017-07-30T21:44:10Z" finished-at="2017-07-30T21:44:17Z">
+        <test-method status="PASS" signature="checkShippingPrice()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="checkShippingPrice" duration-ms="5035" started-at="2017-08-03T16:38:01Z" finished-at="2017-08-03T16:38:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkShippingPrice -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="cleanUp" is-config="true" duration-ms="172" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:17Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="cleanUp" is-config="true" duration-ms="82" started-at="2017-08-03T16:38:06Z" finished-at="2017-08-03T16:38:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:44:17Z" finished-at="2017-07-30T21:44:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.CheckoutPageTests@3d1cfad4]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:38:06Z" finished-at="2017-08-03T16:38:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- checkout.CheckoutPageTests -->
       <class name="product_page.ValidationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ValidationTests@747edf66]" name="setUp" is-config="true" duration-ms="13" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:43:59Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:product_page.ValidationTests@747edf66]" name="setUp" is-config="true" duration-ms="10" started-at="2017-08-03T16:37:51Z" finished-at="2017-08-03T16:37:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="missingProductSizeValidation()[pri:0, instance:product_page.ValidationTests@747edf66]" name="missingProductSizeValidation" duration-ms="2811" started-at="2017-07-30T21:43:59Z" finished-at="2017-07-30T21:44:02Z">
+        <test-method status="PASS" signature="missingProductSizeValidation()[pri:0, instance:product_page.ValidationTests@747edf66]" name="missingProductSizeValidation" duration-ms="2402" started-at="2017-08-03T16:37:51Z" finished-at="2017-08-03T16:37:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- missingProductSizeValidation -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ValidationTests@747edf66]" name="cleanUp" is-config="true" duration-ms="93" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:02Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:product_page.ValidationTests@747edf66]" name="cleanUp" is-config="true" duration-ms="95" started-at="2017-08-03T16:37:54Z" finished-at="2017-08-03T16:37:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ValidationTests@747edf66]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:44:02Z" finished-at="2017-07-30T21:44:02Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:product_page.ValidationTests@747edf66]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:37:54Z" finished-at="2017-08-03T16:37:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- product_page.ValidationTests -->
       <class name="checkout.ValidationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="setUp" is-config="true" duration-ms="7" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:46Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="setUp" is-config="true" duration-ms="8" started-at="2017-08-03T16:39:29Z" finished-at="2017-08-03T16:39:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="emptyEmailField()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="emptyEmailField" duration-ms="6757" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:53Z">
+        <test-method status="PASS" signature="emptyEmailField()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="emptyEmailField" duration-ms="5600" started-at="2017-08-03T16:39:29Z" finished-at="2017-08-03T16:39:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyEmailField -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="cleanUp" is-config="true" duration-ms="86" started-at="2017-07-30T21:45:53Z" finished-at="2017-07-30T21:45:53Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="cleanUp" is-config="true" duration-ms="74" started-at="2017-08-03T16:39:34Z" finished-at="2017-08-03T16:39:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-07-30T21:45:53Z" finished-at="2017-07-30T21:45:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.ValidationTests@2e55dd0c]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:39:35Z" finished-at="2017-08-03T16:39:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- checkout.ValidationTests -->
       <class name="checkout.OrderedItemsTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="setUp" is-config="true" duration-ms="9" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:44:57Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="setUp" is-config="true" duration-ms="110" started-at="2017-08-03T16:38:35Z" finished-at="2017-08-03T16:38:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addTwoProductsAndDeleteOne()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="addTwoProductsAndDeleteOne" duration-ms="19864" started-at="2017-07-30T21:44:57Z" finished-at="2017-07-30T21:45:17Z">
+        <test-method status="PASS" signature="addTwoProductsAndDeleteOne()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="addTwoProductsAndDeleteOne" duration-ms="17644" started-at="2017-08-03T16:38:36Z" finished-at="2017-08-03T16:38:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTwoProductsAndDeleteOne -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="71" started-at="2017-07-30T21:45:17Z" finished-at="2017-07-30T21:45:17Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="88" started-at="2017-08-03T16:38:53Z" finished-at="2017-08-03T16:38:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="decreaseItemQty()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="decreaseItemQty" duration-ms="17016" started-at="2017-07-30T21:45:17Z" finished-at="2017-07-30T21:45:34Z">
+        <test-method status="PASS" signature="decreaseItemQty()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="decreaseItemQty" duration-ms="12163" started-at="2017-08-03T16:38:53Z" finished-at="2017-08-03T16:39:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- decreaseItemQty -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="75" started-at="2017-07-30T21:45:34Z" finished-at="2017-07-30T21:45:34Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="68" started-at="2017-08-03T16:39:05Z" finished-at="2017-08-03T16:39:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="increaseItemQty()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="increaseItemQty" duration-ms="12523" started-at="2017-07-30T21:45:34Z" finished-at="2017-07-30T21:45:46Z">
+        <test-method status="FAIL" signature="increaseItemQty()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="increaseItemQty" duration-ms="23205" started-at="2017-08-03T16:39:06Z" finished-at="2017-08-03T16:39:29Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"go_to_checkout"}
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+*** Element info: {Using=id, value=go_to_checkout}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"go_to_checkout"}
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+*** Element info: {Using=id, value=go_to_checkout}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.getTagName(Unknown Source)
+	at tools.Wait.visibility(Wait.java:30)
+	at pages.ProductPage.addToCartAndGoToCheckout(ProductPage.java:123)
+	at checkout.OrderedItemsTests.increaseItemQty(OrderedItemsTests.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- increaseItemQty -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="133" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:46Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="cleanUp" is-config="true" duration-ms="84" started-at="2017-08-03T16:39:29Z" finished-at="2017-08-03T16:39:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="tearDown" is-config="true" duration-ms="1" started-at="2017-07-30T21:45:46Z" finished-at="2017-07-30T21:45:46Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.OrderedItemsTests@2cd2a21f]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-08-03T16:39:29Z" finished-at="2017-08-03T16:39:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

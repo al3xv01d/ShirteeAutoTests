@@ -1,20 +1,19 @@
 package checkout;
 
 
-import abstraction.AbstractTestNoConfig;
+import abstraction.AbstractTestNoLogin;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
 import pages.OrderSuccessPage;
 import pages.ProductPage;
 import pages.dashboard.DashboardFacade;
 import pages.magento_admin.AdminFacade;
-import pages_elements.checkout.OrderedItem;
 import pages_elements.dashboard_orders.Order;
 import tools.Config;
 import tools.PageBuilder;
 import tools.PriceHelper;
 
-public class OrderWithPromoTests extends AbstractTestNoConfig{
+public class OrderWithPromoTests extends AbstractTestNoLogin {
 
     @Test
     public void authorizedOrderWithAmountPromo() {

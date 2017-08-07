@@ -42,6 +42,13 @@ public class StepThreeBlock extends AbstractPageElement{
         fillInputField(campaignName, name);
     }
 
+    public String getCampaignName() {
+       // campaignName.click();
+        //campaignName.sendKeys();
+
+        return  campaignName.getText();//("innerText");
+    }
+
     public void setCampaignUrl(String url) {
         fillInputField(campaignUrl, url);
     }
