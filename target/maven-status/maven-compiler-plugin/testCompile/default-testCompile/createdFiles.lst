@@ -1,9 +1,7 @@
 test\TestForTest.class
 designer\TestSikuli.class
 abstraction\AbstractTest.class
-abstraction\AbstractTestNoConfig.class
 product_page\ProductsWithPromoTests.class
-dashboard_promo\ValidationDashboardPromotionTests.class
 product_page\AddToCartTests.class
 shop\ShopPageTests.class
 dashboard_promo\PromotionsTests.class

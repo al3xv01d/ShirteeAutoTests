@@ -1,6 +1,5 @@
 package abstraction;
 
-import abstraction.AbstractPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import tools.Config;
@@ -101,10 +100,10 @@ public abstract class AbstractShirteePage extends AbstractPage {
         Wait.clickable(loginInputField);
 
         loginInputField.clear();
-        loginInputField.sendKeys(Config.user_email);
+        loginInputField.sendKeys(Config.tester1_email);
 
         passwordInputField.clear();
-        passwordInputField.sendKeys(Config.user_pass);
+        passwordInputField.sendKeys(Config.tester1_pass);
 
         loginBtn.click();
 
@@ -112,6 +111,40 @@ public abstract class AbstractShirteePage extends AbstractPage {
             driver.get(currentUrl);
         }
     }
+
+
+    public void login(boolean returnBackFromDashboard, String tester) {
+        String login;
+        String password;
+
+        String currentUrl = driver.getCurrentUrl();
+        this.openloginFormBtn.click();
+
+        Wait.visibility(loginInputField);
+        Wait.clickable(loginInputField);
+
+        if (tester.contains("auto1")) {
+            login = Config.tester1_email;
+            password = Config.tester1_pass;
+        } else {
+            login = Config.tester2_email;
+            password = Config.tester2_pass;
+        }
+
+        loginInputField.clear();
+        loginInputField.sendKeys(login);
+
+        passwordInputField.clear();
+        passwordInputField.sendKeys(password);
+
+        loginBtn.click();
+
+        if(returnBackFromDashboard) {
+            driver.get(currentUrl);
+        }
+    }
+
+
 
     public void logout() {
         try {

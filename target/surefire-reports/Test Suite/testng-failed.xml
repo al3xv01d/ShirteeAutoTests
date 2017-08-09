@@ -3,13 +3,20 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Test Suite]">
   <test name="Method Test Cases(failed)">
     <classes>
+      <class name="index.IndexPageTests">
+        <methods>
+          <include name="logout"/>
+          <include name="cleanUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- index.IndexPageTests -->
       <class name="checkout.PromoCodesTests">
         <methods>
+          <include name="addToCartProductWithAmountDiscount"/>
           <include name="cleanUp"/>
-          <include name="addToCartProductWithPercentDiscount"/>
           <include name="setUp"/>
           <include name="increaseProductsWithAmountDiscountQty"/>
-          <include name="increaseProductsWithPercentDiscountQty"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- checkout.PromoCodesTests -->
@@ -21,14 +28,6 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- shop.ShopPageTests -->
-      <class name="checkout.OrderedItemsTests">
-        <methods>
-          <include name="increaseItemQty"/>
-          <include name="cleanUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- checkout.OrderedItemsTests -->
     </classes>
   </test> <!-- Method Test Cases(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

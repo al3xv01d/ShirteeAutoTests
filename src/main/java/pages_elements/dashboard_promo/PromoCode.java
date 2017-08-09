@@ -14,7 +14,7 @@ public class PromoCode extends AbstractPageElement{
 
     private final String Id_lo = "./td[1]";
     private final String Type_lo = "./td[2]";
-    private final String discountValue_lo = "./td[2]";
+    private final String discountValue_lo = "./td[3]";
     private final String deleteButton_Lo = "./td[5]/button[1]";
 
 
@@ -34,6 +34,7 @@ public class PromoCode extends AbstractPageElement{
     }
 
     public double getDiscountValue() {
+
         return PriceHelper.getRealPrice(promoLine.findElement(By.xpath(discountValue_lo)).getText());
     }
 

@@ -21,14 +21,14 @@ public class AbstractTestNoLogin {
     @BeforeClass
     public void setUp(){
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         Config.init();
     }
 
     @AfterMethod
     public void setEnv(){
-        driver.get(Config.indexShirteeUrl);
+       // driver.get(Config.indexShirteeUrl);
         try {
             Wait.seconds(2);
             driver.switchTo().alert().accept();
@@ -36,7 +36,7 @@ public class AbstractTestNoLogin {
 
         }
 
-        //Driver.getDriver().manage().deleteAllCookies();
+        Driver.getDriver().manage().deleteAllCookies();
     }
 
 

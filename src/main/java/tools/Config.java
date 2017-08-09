@@ -25,8 +25,12 @@ public class Config {
     //************* ACCOUNTS AND PASSWORDS ***************** //
 
         // AUTO TESTER 1 //
-    public static String user_email = "auto_tester_1@gomage.com";
-    public static String user_pass = "test777";
+    public static String tester1_email = "auto_tester_1@gomage.com";
+    public static String tester1_pass = "test777";
+
+    // AUTO TESTER 2 //
+    public static String tester2_email = "auto_tester_2@gomage.com";
+    public static String tester2_pass = "test777";
 
     // ADMIN ACCOUNT //
     public static String admin_user = "gomage";
@@ -58,8 +62,8 @@ public class Config {
         if(null == Config.browser) {
             System.out.println("You are in IDE");
             Config.browser = "chrome";
-            Config.server = "dev";
-            Config.domain = "de";
+            Config.server = "live";
+            Config.domain = "com";
             Config.isLogged = "no";
         }
     }
@@ -68,7 +72,7 @@ public class Config {
 
         if( Config.server.equals("live") ) {
 
-            Config.indexShirteeUrl = "https://shirtee." + Config.domain;
+            Config.indexShirteeUrl = "https://www.shirtee." + Config.domain;
             Config.shopUrl = "https://shirtee." + Config.domain + "/shop";
             Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
             Config.checkoutUrl = "https://www.shirtee." + Config.domain + "/checkout/onepage/";
@@ -76,7 +80,7 @@ public class Config {
             Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1/";
 
             Config.dashboardOrdersPage = "https://www.shirtee.de/customdashboard/order/history/";
-            Config.dashboardPromoPageUrl = "https://www.shirtee.de/promotion/dashboard/index/";
+            Config.dashboardPromoPageUrl = "https://www.shirtee.com/promotion/dashboard/index/";
 
             Config.adminLoginPage = "https://shirtee.de/index.php/ffadmin";
             Config.adminOrdersPageUrl = "https://shirtee.de/index.php/ffadmin/sales_order/";

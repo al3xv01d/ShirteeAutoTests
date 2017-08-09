@@ -18,7 +18,6 @@ public class ValidationTests extends AbstractTestNoLogin {
                 {"   www"},
                 {"тест"},
                 {"тtestру"}
-
         };
     }
 
@@ -94,9 +93,7 @@ public class ValidationTests extends AbstractTestNoLogin {
     @Test(dataProvider = "wrongUrl")
     public void s3UrlValidation(String wrongUrl) {
         DesignerPage dp = PageBuilder.buildDesignerPage();
-
-        //dp.openUrl(Config.designerUrl);
-        dp.openUrl("https://dev.shirtee.com/de/designer/?id=1140/");
+        dp.openUrl(Config.designerUrl);
 
         dp.step1.fillProductText("TEST");
         dp.gotoNextStep();

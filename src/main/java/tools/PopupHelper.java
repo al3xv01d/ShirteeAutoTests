@@ -17,4 +17,9 @@ public class PopupHelper {
         WebElement popup = driver.findElement(By.xpath(productPageLoadingPopup_lo));
         Wait.invisibility(productPageLoadingPopup_lo);
     }
+
+    public static void waitLoadingPromoPopup() {
+        Wait.invisibility("//*[@id=\"promo_loading-loading\"]");
+
+    }
 }

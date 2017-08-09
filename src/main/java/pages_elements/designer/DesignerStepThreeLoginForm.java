@@ -42,8 +42,8 @@ public class DesignerStepThreeLoginForm extends AbstractPageElement {
     public void login() {
         Wait.visibility(emailField);
 
-        fillInputField(emailField, Config.user_email);
-        fillInputField(passwordField, Config.user_pass);
+        fillInputField(emailField, Config.tester1_email);
+        fillInputField(passwordField, Config.tester1_pass);
         loginBtn.click();
     }
 }

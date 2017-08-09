@@ -7,12 +7,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import pages_elements.checkout.OrderedItem;
 import pages_elements.dashboard_promo.PromoCode;
+import pages_elements.dashboard_promo.PromoValidation;
 import tools.Wait;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardPromotionPage extends AbstractDashboardPage{
+
+    public PromoValidation validation;
 
     //*******************  LOCATORS ********************//
 
@@ -23,6 +26,8 @@ public class DashboardPromotionPage extends AbstractDashboardPage{
     private final String addCodeBtn_lo = "add_code";
 
     private final String promoCodeLine_lo = "//*[@id='coupons_list']/tr";
+
+    private final String promoCreationErrorPopup_lo = "//*[@id=\"create-promo-error\"]/div[1]";
 
     //*******************  WEBDRIVER ELEMENTS ********************//
 
@@ -41,14 +46,25 @@ public class DashboardPromotionPage extends AbstractDashboardPage{
     @FindBy(id = addCodeBtn_lo)
     private WebElement addCodeBtn;
 
+    @FindBy(xpath = promoCreationErrorPopup_lo)
+    private WebElement promoCreationErrorPopup;
+
     //****************** Other ************************//
 
     public List<PromoCode> allPromoCodes = new ArrayList<PromoCode>();
+
+    //*******************  Constructor  ********************//
+
+    public DashboardPromotionPage(PromoValidation validation) {
+        this.validation = validation;
+    }
 
     //*******************  ACTIONS ********************//
 
 
     public List<PromoCode> getAllPromoCodes() {
+
+        allPromoCodes.clear();
 
         int allPromoQty = driver.findElements(By.xpath(this.promoCodeLine_lo)).size();
 
@@ -91,8 +107,18 @@ public class DashboardPromotionPage extends AbstractDashboardPage{
         fillInputField(discountAmountField, Double.toString(discountAmount));
     }
 
+    public void setDiscountAmount(String discountAmount) {
+        fillInputField(discountAmountField, discountAmount);
+    }
+
     public void pushAddCodeBtn() {
         addCodeBtn.click();
     }
 
+    // *****************
+
+    public boolean isCreationErrorPopupVisible() {
+        Wait.seconds(2);
+        return isExistsAndVisible(promoCreationErrorPopup);
+    }
 }

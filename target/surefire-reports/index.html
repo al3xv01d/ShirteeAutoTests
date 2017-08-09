@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">35 methods, 5 failed,   30 passed</span>
+                    <span class="method-stats">35 methods, 4 failed,   31 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content failed suite-Test_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.PromoCodesTests" hash-for-method="addToCartProductWithPercentDiscount">addToCartProductWithPercentDiscount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.OrderedItemsTests" hash-for-method="increaseItemQty">increaseItemQty</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.PromoCodesTests" hash-for-method="addToCartProductWithAmountDiscount">addToCartProductWithAmountDiscount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -117,7 +112,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.PromoCodesTests" hash-for-method="increaseProductsWithPercentDiscountQty">increaseProductsWithPercentDiscountQty</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="index.IndexPageTests" hash-for-method="logout">logout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -166,7 +161,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.PromoCodesTests" hash-for-method="addToCartProductWithAmountDiscount">addToCartProductWithAmountDiscount</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.PromoCodesTests" hash-for-method="addToCartProductWithPercentDiscount">addToCartProductWithPercentDiscount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -236,17 +231,22 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.OrderedItemsTests" hash-for-method="increaseItemQty">increaseItemQty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="checkout.PromoCodesTests" hash-for-method="increaseProductsWithPercentDiscountQty">increaseProductsWithPercentDiscountQty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="shop.ShopPageTests" hash-for-method="leftSidebarSearch">leftSidebarSearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="index.IndexPageTests" hash-for-method="loginAndRedirectToDashboardPage">loginAndRedirectToDashboardPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="index.IndexPageTests" hash-for-method="logout">logout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -299,30 +299,70 @@
           <div class="suite-Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">index.IndexPageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logout">
+                  </a> <!-- logout -->
+                  <span class="method-name">logout</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(@href,&quot;/account/logout/&quot;)]&quot;}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5a32e740a6be125623d89bb0d8bafcb1
+*** Element info: {Using=xpath, value=//a[contains(@href,&quot;/account/logout/&quot;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at abstraction.AbstractShirteePage.logout(AbstractShirteePage.java:154)
+	at index.IndexPageTests.logout(IndexPageTests.java:34)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-failed -->
+          <div class="suite-Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">checkout.PromoCodesTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addToCartProductWithPercentDiscount">
-                  </a> <!-- addToCartProductWithPercentDiscount -->
-                  <span class="method-name">addToCartProductWithPercentDiscount</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;span onclick=&quot;changeColor(this)&quot; class=&quot;color-btn&quot; color_id=&quot;224&quot; title=&quot;Sand&quot; id=&quot;224&quot; style=&quot;background-color: #e0b86e; background-image: url(https://www.shirtee.de/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat&quot;&gt;...&lt;/span&gt; is not clickable at point (1217, 391). Other element would receive the click: &lt;div class=&quot;event-popup-placeholder&quot; style=&quot;opacity: 0.6;&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=59.0.3071.115)
+                  <a name="addToCartProductWithAmountDiscount">
+                  </a> <!-- addToCartProductWithAmountDiscount -->
+                  <span class="method-name">addToCartProductWithAmountDiscount</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;span onclick=&quot;changeColor(this)&quot; class=&quot;color-btn active&quot; color_id=&quot;1102&quot; title=&quot;Gold&quot; id=&quot;1102&quot; style=&quot;background-color: #f5d902; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat&quot;&gt;...&lt;/span&gt; is not clickable at point (1152, 815). Other element would receive the click: &lt;div class=&quot;event-popup-placeholder&quot; style=&quot;opacity: 0.6;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=60.0.3112.90)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 52 milliseconds
+Command duration or timeout: 47 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5a32e740a6be125623d89bb0d8bafcb1
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
 	at pages.ProductPage.setRandomColor(ProductPage.java:173)
-	at checkout.PromoCodesTests.addToCartProductWithPercentDiscount(PromoCodesTests.java:25)
+	at checkout.PromoCodesTests.addToCartProductWithAmountDiscount(PromoCodesTests.java:51)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -332,15 +372,15 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
                   <a name="increaseProductsWithAmountDiscountQty">
                   </a> <!-- increaseProductsWithAmountDiscountQty -->
                   <span class="method-name">increaseProductsWithAmountDiscountQty</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;span onclick=&quot;changeColor(this)&quot; class=&quot;color-btn&quot; color_id=&quot;3&quot; title=&quot;White&quot; id=&quot;3&quot; style=&quot;background-color: #ffffff; background-image: url(https://www.shirtee.com/media/option_image/white.jpg); background-position: 50% 50%; background-repeat: no-repeat no-repeat&quot;&gt;...&lt;/span&gt; is not clickable at point (1120, 815). Other element would receive the click: &lt;div class=&quot;event-popup-placeholder&quot; style=&quot;opacity: 0.6;&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=59.0.3071.115)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;span onclick=&quot;changeColor(this)&quot; class=&quot;color-btn&quot; color_id=&quot;1216&quot; title=&quot;Sorbet&quot; id=&quot;1216&quot; style=&quot;background-color: #ab0017; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat&quot;&gt;...&lt;/span&gt; is not clickable at point (1249, 815). Other element would receive the click: &lt;div class=&quot;event-popup-placeholder&quot; style=&quot;opacity: 0.6;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=60.0.3112.90)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 57 milliseconds
+Command duration or timeout: 48 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5a32e740a6be125623d89bb0d8bafcb1
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
@@ -349,19 +389,6 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
 	at pages.ProductPage.setRandomColor(ProductPage.java:173)
 	at checkout.PromoCodesTests.increaseProductsWithAmountDiscountQty(PromoCodesTests.java:75)
 ... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="increaseProductsWithPercentDiscountQty">
-                  </a> <!-- increaseProductsWithPercentDiscountQty -->
-                  <span class="method-name">increaseProductsWithPercentDiscountQty</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	Wrong discount value expected [20.66] but found [20.65],
-	expected [52.7] but found [48.2]
-	at checkout.PromoCodesTests.increaseProductsWithPercentDiscountQty(PromoCodesTests.java:133)
-... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -379,15 +406,15 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
                   </a> <!-- priceAreEqualOnShopPageAndOnProductsPage -->
                   <span class="method-name">priceAreEqualOnShopPageAndOnProductsPage</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;w-block-head&quot;]&quot;}
-  (Session info: chrome=59.0.3071.115)
+  (Session info: chrome=60.0.3112.90)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.01 seconds
+Command duration or timeout: 15.02 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: f791f4afc8c014809ab6d4d1d1deba3a
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5a32e740a6be125623d89bb0d8bafcb1
 *** Element info: {Using=xpath, value=//div[@class=&quot;w-block-head&quot;]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
@@ -402,47 +429,6 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
 	at pages.ProductPage.getProductName(ProductPage.java:88)
 	at shop.ShopPageTests.priceAreEqualOnShopPageAndOnProductsPage(ShopPageTests.java:80)
 ... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Test_Suite-class-failed -->
-          <div class="suite-Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">checkout.OrderedItemsTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="increaseItemQty">
-                  </a> <!-- increaseItemQty -->
-                  <span class="method-name">increaseItemQty</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;go_to_checkout&quot;}
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir9472_21479}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: f791f4afc8c014809ab6d4d1d1deba3a
-*** Element info: {Using=id, value=go_to_checkout}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy6.getTagName(Unknown Source)
-	at tools.Wait.visibility(Wait.java:30)
-	at pages.ProductPage.addToCartAndGoToCheckout(ProductPage.java:123)
-	at checkout.OrderedItemsTests.increaseItemQty(OrderedItemsTests.java:44)
-... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -478,16 +464,24 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="logout">
-                  </a> <!-- logout -->
-                  <span class="method-name">logout</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="searchFromIndexPage">
                   </a> <!-- searchFromIndexPage -->
                   <span class="method-name">searchFromIndexPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-passed -->
+          <div class="suite-Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">checkout.ValidationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyEmailField">
+                  </a> <!-- emptyEmailField -->
+                  <span class="method-name">emptyEmailField</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -510,21 +504,6 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
                   <a name="checkShippingPrice">
                   </a> <!-- checkShippingPrice -->
                   <span class="method-name">checkShippingPrice</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Test_Suite-class-passed -->
-          <div class="suite-Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">checkout.ValidationTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="emptyEmailField">
-                  </a> <!-- emptyEmailField -->
-                  <span class="method-name">emptyEmailField</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -587,9 +566,16 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addToCartProductWithAmountDiscount">
-                  </a> <!-- addToCartProductWithAmountDiscount -->
-                  <span class="method-name">addToCartProductWithAmountDiscount</span>
+                  <a name="addToCartProductWithPercentDiscount">
+                  </a> <!-- addToCartProductWithPercentDiscount -->
+                  <span class="method-name">addToCartProductWithPercentDiscount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="increaseProductsWithPercentDiscountQty">
+                  </a> <!-- increaseProductsWithPercentDiscountQty -->
+                  <span class="method-name">increaseProductsWithPercentDiscountQty</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -691,6 +677,13 @@ Session ID: f791f4afc8c014809ab6d4d1d1deba3a
                   <a name="decreaseItemQty">
                   </a> <!-- decreaseItemQty -->
                   <span class="method-name">decreaseItemQty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="increaseItemQty">
+                  </a> <!-- increaseItemQty -->
+                  <span class="method-name">increaseItemQty</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -803,148 +796,148 @@ data.addRows(35);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'priceAreEqualOnShopPageAndOnProductsPage')
 data.setCell(0, 2, 'shop.ShopPageTests')
-data.setCell(0, 3, 28209);
+data.setCell(0, 3, 47461);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addToCartAndCheckCartCounter')
-data.setCell(1, 2, 'product_page.ProductPageTests')
-data.setCell(1, 3, 27502);
+data.setCell(1, 1, 'logout')
+data.setCell(1, 2, 'index.IndexPageTests')
+data.setCell(1, 3, 39731);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'increaseItemQty')
-data.setCell(2, 2, 'checkout.OrderedItemsTests')
-data.setCell(2, 3, 23205);
+data.setCell(2, 1, 'addToCartAndCheckCartCounter')
+data.setCell(2, 2, 'product_page.ProductPageTests')
+data.setCell(2, 3, 31991);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'addProductTwiceAndCheckQtyAndPrice')
-data.setCell(3, 2, 'product_page.AddToCartTests')
-data.setCell(3, 3, 18278);
+data.setCell(3, 1, 'qtySortingSavesOnOthersPages')
+data.setCell(3, 2, 'shop.ShopPageTests')
+data.setCell(3, 3, 25137);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'addTwoProductsAndDeleteOne')
 data.setCell(4, 2, 'checkout.OrderedItemsTests')
-data.setCell(4, 3, 17644);
+data.setCell(4, 3, 17797);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'addProductTwiceWithDifferentColor')
+data.setCell(5, 1, 'addProductTwiceAndCheckQtyAndPrice')
 data.setCell(5, 2, 'product_page.AddToCartTests')
-data.setCell(5, 3, 17055);
+data.setCell(5, 3, 17185);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'qtySortingSavesOnOthersPages')
-data.setCell(6, 2, 'shop.ShopPageTests')
-data.setCell(6, 3, 16330);
+data.setCell(6, 1, 'addProductTwiceWithDifferentColor')
+data.setCell(6, 2, 'product_page.AddToCartTests')
+data.setCell(6, 3, 17014);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'addToCartAndContinueShopping')
 data.setCell(7, 2, 'product_page.ProductPageTests')
-data.setCell(7, 3, 15903);
+data.setCell(7, 3, 16414);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'addProductTwiceWithDifferentSize')
 data.setCell(8, 2, 'product_page.AddToCartTests')
-data.setCell(8, 3, 15762);
+data.setCell(8, 3, 15927);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'decreaseItemQty')
-data.setCell(9, 2, 'checkout.OrderedItemsTests')
-data.setCell(9, 3, 12163);
+data.setCell(9, 1, 'checkPagination')
+data.setCell(9, 2, 'shop.ShopPageTests')
+data.setCell(9, 3, 13749);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'checkPagination')
-data.setCell(10, 2, 'shop.ShopPageTests')
-data.setCell(10, 3, 10574);
+data.setCell(10, 1, 'decreaseItemQty')
+data.setCell(10, 2, 'checkout.OrderedItemsTests')
+data.setCell(10, 3, 12504);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'logout')
+data.setCell(11, 1, 'loginAndRedirectToDashboardPage')
 data.setCell(11, 2, 'index.IndexPageTests')
-data.setCell(11, 3, 9785);
+data.setCell(11, 3, 10161);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'loginAndRedirectToDashboardPage')
-data.setCell(12, 2, 'index.IndexPageTests')
-data.setCell(12, 3, 9162);
+data.setCell(12, 1, 'increaseProductsWithPercentDiscountQty')
+data.setCell(12, 2, 'checkout.PromoCodesTests')
+data.setCell(12, 3, 10012);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'amountPromoPopupAppearsEveryTime')
+data.setCell(13, 1, 'percentPromoPopupAppearsEveryTime')
 data.setCell(13, 2, 'product_page.ProductsWithPromoTests')
-data.setCell(13, 3, 8839);
+data.setCell(13, 3, 9537);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'increaseProductsWithPercentDiscountQty')
-data.setCell(14, 2, 'checkout.PromoCodesTests')
-data.setCell(14, 3, 8823);
+data.setCell(14, 1, 'increaseItemQty')
+data.setCell(14, 2, 'checkout.OrderedItemsTests')
+data.setCell(14, 3, 9029);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'addToCartProductWithAmountDiscount')
-data.setCell(15, 2, 'checkout.PromoCodesTests')
-data.setCell(15, 3, 7868);
+data.setCell(15, 1, 'checkFirstQtyOnPageSetting')
+data.setCell(15, 2, 'shop.ShopPageTests')
+data.setCell(15, 3, 8899);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'backToStore')
-data.setCell(16, 2, 'checkout.CheckoutPageTests')
-data.setCell(16, 3, 7476);
+data.setCell(16, 1, 'searchFromIndexPage')
+data.setCell(16, 2, 'index.IndexPageTests')
+data.setCell(16, 3, 8442);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'percentPromoPopupAppearsEveryTime')
+data.setCell(17, 1, 'amountPromoPopupAppearsEveryTime')
 data.setCell(17, 2, 'product_page.ProductsWithPromoTests')
-data.setCell(17, 3, 7402);
+data.setCell(17, 3, 8159);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'searchFromIndexPage')
-data.setCell(18, 2, 'index.IndexPageTests')
-data.setCell(18, 3, 6124);
+data.setCell(18, 1, 'increaseProductsWithAmountDiscountQty')
+data.setCell(18, 2, 'checkout.PromoCodesTests')
+data.setCell(18, 3, 8032);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'checkPriceSizeAndColor')
-data.setCell(19, 2, 'product_page.AddToCartTests')
-data.setCell(19, 3, 5906);
+data.setCell(19, 1, 'addToCartProductWithPercentDiscount')
+data.setCell(19, 2, 'checkout.PromoCodesTests')
+data.setCell(19, 3, 7158);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'increaseProductsWithAmountDiscountQty')
-data.setCell(20, 2, 'checkout.PromoCodesTests')
-data.setCell(20, 3, 5806);
+data.setCell(20, 1, 'emptyEmailField')
+data.setCell(20, 2, 'checkout.ValidationTests')
+data.setCell(20, 3, 6539);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'addToCartProductWithPercentDiscount')
-data.setCell(21, 2, 'checkout.PromoCodesTests')
-data.setCell(21, 3, 5744);
+data.setCell(21, 1, 'backToStore')
+data.setCell(21, 2, 'checkout.CheckoutPageTests')
+data.setCell(21, 3, 6387);
 data.setCell(22, 0, 22)
 data.setCell(22, 1, 'topSearch')
 data.setCell(22, 2, 'shop.ShopPageTests')
-data.setCell(22, 3, 5629);
+data.setCell(22, 3, 6335);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'emptyEmailField')
-data.setCell(23, 2, 'checkout.ValidationTests')
-data.setCell(23, 3, 5600);
+data.setCell(23, 1, 'leftSidebarSearch')
+data.setCell(23, 2, 'shop.ShopPageTests')
+data.setCell(23, 3, 6294);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'addToCart')
-data.setCell(24, 2, 'product_page.AddToCartTests')
-data.setCell(24, 3, 5422);
+data.setCell(24, 1, 'addToCartProductWithAmountDiscount')
+data.setCell(24, 2, 'checkout.PromoCodesTests')
+data.setCell(24, 3, 5991);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'leftSidebarSearch')
+data.setCell(25, 1, 'checkSecondQtyOnPageSetting')
 data.setCell(25, 2, 'shop.ShopPageTests')
-data.setCell(25, 3, 5171);
+data.setCell(25, 3, 5669);
 data.setCell(26, 0, 26)
 data.setCell(26, 1, 'checkShippingPrice')
 data.setCell(26, 2, 'checkout.CheckoutPageTests')
-data.setCell(26, 3, 5035);
+data.setCell(26, 3, 5576);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'checkSecondQtyOnPageSetting')
-data.setCell(27, 2, 'shop.ShopPageTests')
-data.setCell(27, 3, 4240);
+data.setCell(27, 1, 'addToCart')
+data.setCell(27, 2, 'product_page.AddToCartTests')
+data.setCell(27, 3, 4887);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'checkFirstQtyOnPageSetting')
+data.setCell(28, 1, 'checkThirdQtyOnPageSetting')
 data.setCell(28, 2, 'shop.ShopPageTests')
-data.setCell(28, 3, 3866);
+data.setCell(28, 3, 4865);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'promoPopupIsPossibleToClose')
-data.setCell(29, 2, 'product_page.ProductsWithPromoTests')
-data.setCell(29, 3, 3484);
+data.setCell(29, 1, 'checkPriceSizeAndColor')
+data.setCell(29, 2, 'product_page.AddToCartTests')
+data.setCell(29, 3, 4785);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'checkThirdQtyOnPageSetting')
-data.setCell(30, 2, 'shop.ShopPageTests')
-data.setCell(30, 3, 2658);
+data.setCell(30, 1, 'promoPopupIsPossibleToClose')
+data.setCell(30, 2, 'product_page.ProductsWithPromoTests')
+data.setCell(30, 3, 4063);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'percentPromoValueInPopup')
-data.setCell(31, 2, 'product_page.ProductsWithPromoTests')
-data.setCell(31, 3, 2437);
+data.setCell(31, 1, 'missingProductSizeValidation')
+data.setCell(31, 2, 'product_page.ValidationTests')
+data.setCell(31, 3, 2392);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'missingProductSizeValidation')
-data.setCell(32, 2, 'product_page.ValidationTests')
-data.setCell(32, 3, 2402);
+data.setCell(32, 1, 'addTwoDifferentProductsWithSameSizeAndColor')
+data.setCell(32, 2, 'product_page.AddToCartTests')
+data.setCell(32, 3, 2188);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'addTwoDifferentProductsWithSameSizeAndColor')
-data.setCell(33, 2, 'product_page.AddToCartTests')
-data.setCell(33, 3, 2103);
+data.setCell(33, 1, 'amountPromoValueInPopup')
+data.setCell(33, 2, 'product_page.ProductsWithPromoTests')
+data.setCell(33, 3, 2090);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'amountPromoValueInPopup')
+data.setCell(34, 1, 'percentPromoValueInPopup')
 data.setCell(34, 2, 'product_page.ProductsWithPromoTests')
-data.setCell(34, 3, 2016);
+data.setCell(34, 3, 2015);
 window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Test_Suite">
               </div> <!-- times-div-Test_Suite -->
             </div> <!-- times-div -->
@@ -977,432 +970,436 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginAndRedirectToDashboardPage</span>
-                <span class="method-start">174 ms</span>
+                <span class="method-start">159 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">9336 ms</span>
+                <span class="method-start">10320 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">logout</span>
-                <span class="method-start">9463 ms</span>
+                <span class="method-start">10427 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">19249 ms</span>
+                <span class="method-start">50179 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">searchFromIndexPage</span>
-                <span class="method-start">19359 ms</span>
+                <span class="method-start">50285 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">25483 ms</span>
+                <span class="method-start">58728 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25574 ms</span>
+                <span class="method-start">58819 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">shop.ShopPageTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25575 ms</span>
+                <span class="method-start">58820 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">checkFirstQtyOnPageSetting</span>
-                <span class="method-start">25586 ms</span>
+                <span class="method-start">58827 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">29452 ms</span>
+                <span class="method-start">67726 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">checkPagination</span>
-                <span class="method-start">29529 ms</span>
+                <span class="method-start">67841 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">40104 ms</span>
+                <span class="method-start">81590 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">checkSecondQtyOnPageSetting</span>
-                <span class="method-start">40191 ms</span>
+                <span class="method-start">81664 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">44431 ms</span>
+                <span class="method-start">87334 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">checkThirdQtyOnPageSetting</span>
-                <span class="method-start">44503 ms</span>
+                <span class="method-start">87427 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">47161 ms</span>
+                <span class="method-start">92292 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">leftSidebarSearch</span>
-                <span class="method-start">47244 ms</span>
+                <span class="method-start">92385 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">52415 ms</span>
+                <span class="method-start">98679 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">priceAreEqualOnShopPageAndOnProductsPage</span>
-                <span class="method-start">52500 ms</span>
+                <span class="method-start">98753 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">80736 ms</span>
+                <span class="method-start">146217 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">qtySortingSavesOnOthersPages</span>
-                <span class="method-start">80848 ms</span>
+                <span class="method-start">146382 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">97178 ms</span>
+                <span class="method-start">171519 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">topSearch</span>
-                <span class="method-start">97285 ms</span>
+                <span class="method-start">171602 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">102914 ms</span>
+                <span class="method-start">177937 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ProductPageTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">103002 ms</span>
+                <span class="method-start">178003 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">shop.ShopPageTests</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">103002 ms</span>
+                <span class="method-start">178003 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ProductPageTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addToCartAndCheckCartCounter</span>
-                <span class="method-start">103017 ms</span>
+                <span class="method-start">178011 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">130519 ms</span>
+                <span class="method-start">210003 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">addToCartAndContinueShopping</span>
-                <span class="method-start">130590 ms</span>
+                <span class="method-start">210090 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">146494 ms</span>
+                <span class="method-start">226504 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">146598 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.AddToCartTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">146599 ms</span>
+                <span class="method-start">226590 ms</span>
               </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">product_page.ProductPageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">226590 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">product_page.AddToCartTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addProductTwiceAndCheckQtyAndPrice</span>
-                <span class="method-start">146616 ms</span>
+                <span class="method-start">226596 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">164895 ms</span>
+                <span class="method-start">243782 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">addProductTwiceWithDifferentColor</span>
-                <span class="method-start">164965 ms</span>
+                <span class="method-start">243866 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">182020 ms</span>
+                <span class="method-start">260880 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">addProductTwiceWithDifferentSize</span>
-                <span class="method-start">182098 ms</span>
+                <span class="method-start">260956 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">197860 ms</span>
+                <span class="method-start">276883 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">addToCart</span>
-                <span class="method-start">197928 ms</span>
+                <span class="method-start">276975 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">203350 ms</span>
+                <span class="method-start">281862 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">addTwoDifferentProductsWithSameSizeAndColor</span>
-                <span class="method-start">203444 ms</span>
+                <span class="method-start">281933 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">205547 ms</span>
+                <span class="method-start">284122 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">checkPriceSizeAndColor</span>
-                <span class="method-start">205663 ms</span>
+                <span class="method-start">284214 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">211569 ms</span>
+                <span class="method-start">288999 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ProductsWithPromoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">211697 ms</span>
+                <span class="method-start">289072 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.AddToCartTests</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">211697 ms</span>
+                <span class="method-start">289072 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ProductsWithPromoTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">amountPromoPopupAppearsEveryTime</span>
-                <span class="method-start">211706 ms</span>
+                <span class="method-start">289077 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">220546 ms</span>
+                <span class="method-start">297236 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">amountPromoValueInPopup</span>
-                <span class="method-start">220635 ms</span>
+                <span class="method-start">297335 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">222652 ms</span>
+                <span class="method-start">299425 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">percentPromoPopupAppearsEveryTime</span>
-                <span class="method-start">222744 ms</span>
+                <span class="method-start">299494 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">230146 ms</span>
+                <span class="method-start">309031 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">percentPromoValueInPopup</span>
-                <span class="method-start">230240 ms</span>
+                <span class="method-start">309104 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">232677 ms</span>
+                <span class="method-start">311119 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">promoPopupIsPossibleToClose</span>
-                <span class="method-start">232770 ms</span>
+                <span class="method-start">311217 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">236254 ms</span>
+                <span class="method-start">315280 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ValidationTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">236333 ms</span>
+                <span class="method-start">315474 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ProductsWithPromoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">236333 ms</span>
+                <span class="method-start">315474 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">product_page.ValidationTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">missingProductSizeValidation</span>
-                <span class="method-start">236344 ms</span>
+                <span class="method-start">315483 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">238746 ms</span>
+                <span class="method-start">317875 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">317960 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.CheckoutPageTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">238841 ms</span>
+                <span class="method-start">317961 ms</span>
               </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">product_page.ValidationTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">238841 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">checkout.CheckoutPageTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">backToStore</span>
-                <span class="method-start">238851 ms</span>
+                <span class="method-start">317965 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">246327 ms</span>
+                <span class="method-start">324352 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">checkShippingPrice</span>
-                <span class="method-start">246412 ms</span>
+                <span class="method-start">324437 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">251447 ms</span>
+                <span class="method-start">330013 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">251529 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.PromoCodesTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">251530 ms</span>
+                <span class="method-start">330107 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">addToCartProductWithAmountDiscount</span>
-                <span class="method-start">251537 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">259405 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">checkout.CheckoutPageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">330107 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">checkout.PromoCodesTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">addToCartProductWithPercentDiscount</span>
-                <span class="method-start">259894 ms</span>
+                <span class="method-name">addToCartProductWithAmountDiscount</span>
+                <span class="method-start">330112 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">265640 ms</span>
+                <span class="method-start">336105 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addToCartProductWithPercentDiscount</span>
+                <span class="method-start">336186 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">343344 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">increaseProductsWithAmountDiscountQty</span>
-                <span class="method-start">265698 ms</span>
+                <span class="method-start">343407 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">271506 ms</span>
+                <span class="method-start">351441 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">increaseProductsWithPercentDiscountQty</span>
-                <span class="method-start">271591 ms</span>
+                <span class="method-start">351522 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">280415 ms</span>
+                <span class="method-start">361534 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.OrderedItemsTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">280497 ms</span>
+                <span class="method-start">361600 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.PromoCodesTests</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">280497 ms</span>
+                <span class="method-start">361600 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.OrderedItemsTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addTwoProductsAndDeleteOne</span>
-                <span class="method-start">280607 ms</span>
+                <span class="method-start">361606 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">298251 ms</span>
+                <span class="method-start">379403 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">decreaseItemQty</span>
-                <span class="method-start">298339 ms</span>
+                <span class="method-start">379524 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">310502 ms</span>
+                <span class="method-start">392028 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">increaseItemQty</span>
-                <span class="method-start">310570 ms</span>
+                <span class="method-start">392096 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">333776 ms</span>
+                <span class="method-start">401126 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.ValidationTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">333860 ms</span>
+                <span class="method-start">401220 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.OrderedItemsTests</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">333860 ms</span>
+                <span class="method-start">401220 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">checkout.ValidationTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">emptyEmailField</span>
-                <span class="method-start">333868 ms</span>
+                <span class="method-start">401227 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">339468 ms</span>
+                <span class="method-start">407766 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">339542 ms</span>
+                <span class="method-start">407841 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

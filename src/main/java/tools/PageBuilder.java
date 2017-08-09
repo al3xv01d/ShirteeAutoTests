@@ -12,6 +12,7 @@ import pages_elements.checkout.BillingBlock;
 import pages_elements.checkout.OrderReviewBlock;
 import pages_elements.checkout.PaymentBlock;
 import pages_elements.checkout.ValidationElements;
+import pages_elements.dashboard_promo.PromoValidation;
 import pages_elements.designer.*;
 
 public class PageBuilder {
@@ -49,7 +50,7 @@ public class PageBuilder {
     public static DashboardFacade buildDashboardFacade() {
 
         DashboardOrdersPage ordersPage = new DashboardOrdersPage();
-        DashboardPromotionPage promoPage = new DashboardPromotionPage();
+        DashboardPromotionPage promoPage = new DashboardPromotionPage(new PromoValidation());
 
         return new DashboardFacade(ordersPage, promoPage);
     }

@@ -1,36 +1,60 @@
 package dashboard_promo;
 
 import abstraction.AbstractTestNoLogin;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.dashboard.DashboardFacade;
 import tools.Config;
 import tools.PageBuilder;
+import tools.PopupHelper;
 
 
 public class PromotionsTests extends AbstractTestNoLogin {
 
-   @Test
-    public void createNewPromoCode() {
+    public double testDiscountValue = 5;
+
+    @DataProvider
+    public Object[][] promoType() {
+        return new Object[][] {
+                {"amount"},
+                {"percent"}
+        };
+    }
+
+   @Test(dataProvider = "promoType")
+    public void createNewPromoCode(String promoType) {
 
        IndexPage index = PageBuilder.buildIndexPage();
        DashboardFacade dashboard = PageBuilder.buildDashboardFacade();
 
        index.openUrl(Config.indexShirteeUrl);
-       index.setLocale("de");
-       index.login(false);
-
+       index.login(false, "auto2");
 
        dashboard.openUrl(Config.dashboardPromoPageUrl);
 
        dashboard.promoPage.generateRandomPromoCodeId();
-       dashboard.promoPage.selectPromoCodeType("percent");
-       dashboard.promoPage.setDiscountAmount(5);
-     //  dashboard.promoPage.pushAddCodeBtn();
+       dashboard.promoPage.selectPromoCodeType(promoType);
+       dashboard.promoPage.setDiscountAmount(testDiscountValue);
+       dashboard.promoPage.pushAddCodeBtn();
 
-       System.out.println(       dashboard.promoPage.getAllPromoCodes().size() );
+       PopupHelper.waitLoadingPromoPopup();
 
-      dashboard.promoPage.getAllPromoCodes().get(2).deletePromoCode();
+       softAssert.assertEquals(dashboard.promoPage.getAllPromoCodes().size(), 1, "There is more than 1 promocode");
+
+       if(promoType.contains("amount")) {
+           softAssert.assertTrue( dashboard.promoPage.getAllPromoCodes().get(0).getCodeType().contains("Amount in €") ||
+                   dashboard.promoPage.getAllPromoCodes().get(0).getCodeType().contains("Betrag in €"), "Wrong promo type");
+       } else if(promoType.contains("percent")) {
+           softAssert.assertTrue( dashboard.promoPage.getAllPromoCodes().get(0).getCodeType().contains("Percent") ||
+                   dashboard.promoPage.getAllPromoCodes().get(0).getCodeType().contains("Prozent"), "Wrong promo type");
+       }
+
+       softAssert.assertEquals(dashboard.promoPage.getAllPromoCodes().get(0).getDiscountValue(), testDiscountValue, "Wrong discount value" );
+       softAssert.assertAll();
+
+       dashboard.promoPage.getAllPromoCodes().get(0).deletePromoCode();
+       //PopupHelper.waitLoadingPromoPopup();
    }
 
    @Test
@@ -39,22 +63,22 @@ public class PromotionsTests extends AbstractTestNoLogin {
       DashboardFacade dashboard = PageBuilder.buildDashboardFacade();
 
       index.openUrl(Config.indexShirteeUrl);
-      index.setLocale("de");
-      index.login(false);
-
-
+      index.login(false, "auto2");
       dashboard.openUrl(Config.dashboardPromoPageUrl);
 
       dashboard.promoPage.generateRandomPromoCodeId();
       dashboard.promoPage.selectPromoCodeType("percent");
-      dashboard.promoPage.setDiscountAmount(5);
+      dashboard.promoPage.setDiscountAmount(testDiscountValue);
       dashboard.promoPage.pushAddCodeBtn();
 
+      PopupHelper.waitLoadingPromoPopup();
+
       softAssert.assertEquals(dashboard.promoPage.getAllPromoCodes().size(), 1);
-
       dashboard.promoPage.getAllPromoCodes().get(0).deletePromoCode();
-
+      PopupHelper.waitLoadingPromoPopup();
       softAssert.assertEquals(dashboard.promoPage.getAllPromoCodes().size(), 0);
+
+      softAssert.assertAll();
    }
 
 }
