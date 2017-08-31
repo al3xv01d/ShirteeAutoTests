@@ -1,7 +1,9 @@
 package abstraction;
 
 //mvn test -Dsurefire.suiteXmlFiles=general.xml -Dbrowser="chrome" -Dserver="live" -Ddomain="de" -DisLogged="no"
+//mvn test -Dsurefire.suiteXmlFiles=promo_creation.xml -Dbrowser="chrome" -Dserver="live" -Ddomain="de" -DisLogged="no"
 //mvn clean install -Dsurefire.suiteXmlFiles=testng.xml -Dbrowser="chrome" -Dserver="dev" -Ddomain="de" -DisLogged="no"
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -54,7 +56,7 @@ public class AbstractTest {
 
     @AfterMethod
     public void cleanUp(){
-       Driver.getDriver().manage().deleteAllCookies();
+        Driver.getDriver().manage().deleteAllCookies();
         System.out.println("AFTER");
     }
 
@@ -63,3 +65,4 @@ public class AbstractTest {
      //  Driver.destroy();
     }
 }
+

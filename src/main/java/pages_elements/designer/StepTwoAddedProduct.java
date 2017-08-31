@@ -71,7 +71,7 @@ public class StepTwoAddedProduct extends AbstractPageElement {
     }
 
     public void selectAllColors() {
-
+        scrollToTop();
         openColorsSelector();
         List<WebElement> allColors = productColorBlock.findElements(By.xpath(color_lo));
 

@@ -3,6 +3,7 @@
     <test name="Method Test Cases" >
         <classes>
             <class name="designer.StepOneMinimalPriceTests"/>
+            <class name="designer.ValidationTests"/>
         </classes>
     </test>
 </suite>

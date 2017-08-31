@@ -70,6 +70,9 @@ public class ValidationTests extends AbstractTestNoLogin {
                 {99}
         };
     }
+    public ValidationTests() {
+        clearCacheAfterTest = true;
+    }
 
     @Test(dataProvider = "tooBigPercentDiscount")
     public void checkDiscountPercentValueValidation(double code) {

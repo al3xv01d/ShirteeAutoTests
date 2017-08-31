@@ -44,6 +44,7 @@ public class Config {
     public static String checkoutUrl;
 
     public static String testProductUrl_1;
+    public static String testProductUrl_2;
 
     public static String dashboardPromoPageUrl;
     public static String dashboardOrdersPage;
@@ -72,14 +73,15 @@ public class Config {
 
         if( Config.server.equals("live") ) {
 
-            Config.indexShirteeUrl = "https://www.shirtee." + Config.domain;
-            Config.shopUrl = "https://shirtee." + Config.domain + "/shop";
-            Config.designerUrl = "https://www.shirtee." + Config.domain + "/designer/?id=1140/";
-            Config.checkoutUrl = "https://www.shirtee." + Config.domain + "/checkout/onepage/";
+            Config.indexShirteeUrl = "https://www.shirtee.com";
+            Config.shopUrl = "https://shirtee.com/shop";
+            Config.designerUrl = "https://www.shirtee.com/designer/?id=1140/";
+            Config.checkoutUrl = "https://www.shirtee.com/checkout/onepage/";
 
-            Config.testProductUrl_1 = "https://www.shirtee." + Config.domain + "/auto-test-company-1/";
+            Config.testProductUrl_1 = "https://www.shirtee.com/auto-test-company-1/";
+            Config.testProductUrl_2 = "https://www.shirtee.com/auto-test-company-2/";
 
-            Config.dashboardOrdersPage = "https://www.shirtee.de/customdashboard/order/history/";
+            Config.dashboardOrdersPage = "https://www.shirtee.com/customdashboard/order/history/";
             Config.dashboardPromoPageUrl = "https://www.shirtee.com/promotion/dashboard/index/";
 
             Config.adminLoginPage = "https://shirtee.de/index.php/ffadmin";
@@ -89,18 +91,18 @@ public class Config {
 
         } else if( Config.server.equals("dev") ) {
 
-            Config.indexShirteeUrl = "https://dev.shirtee.de";
-            Config.shopUrl = "https://dev.shirtee.de/shop";
-            Config.designerUrl = "https://dev.shirtee.com/de/designer/?id=1140/";
-            Config.checkoutUrl = "https://dev.shirtee.de/checkout/onepage/";
+            Config.indexShirteeUrl = "https://dev.shirtee.com";
+            Config.shopUrl = "https://dev.shirtee.com/" + Config.domain + "/shop";
+            Config.designerUrl = "https://dev.shirtee.com/" + Config.domain + "/designer/?id=1140/";
+            Config.checkoutUrl = "https://dev.shirtee.com/" + Config.domain + "checkout/onepage/";
 
-            Config.testProductUrl_1 = "https://dev.shirtee.de/auto-test-company-1/";
+            Config.testProductUrl_1 = "https://dev.shirtee.com/auto-test-company-1/";
 
-            Config.dashboardOrdersPage = "https://dev.shirtee.de/customdashboard/order/history/";
-            Config.dashboardPromoPageUrl = "https://dev.shirtee.de/promotion/dashboard/index/";
+            Config.dashboardOrdersPage = "https://dev.shirtee.com/customdashboard/order/history/";
+            Config.dashboardPromoPageUrl = "https://dev.shirtee.com/promotion/dashboard/index/";
 
-            Config.adminLoginPage = "https://dev.shirtee.de/index.php/ffadmin";
-            Config.adminOrdersPageUrl = "https://dev.shirtee.de/index.php/ffadmin/sales_order/";
+            Config.adminLoginPage = "https://dev.shirtee.com/index.php/ffadmin";
+            Config.adminOrdersPageUrl = "https://dev.shirtee.com/index.php/ffadmin/sales_order/";
 
 
 

@@ -7,9 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import tools.PriceHelper;
-import tools.RandomData;
-import tools.Wait;
+import tools.*;
 
 import java.util.List;
 import java.util.regex.Matcher;
@@ -115,22 +113,47 @@ public class ProductPage extends AbstractShirteePage {
     }
 
     public void pressAddToCartBtn() {
-        addToCartBtn.click();
+
+        try {
+            addToCartBtn.click();
+        } catch (Exception e) {
+            Wait.seconds(1);
+            addToCartBtn.click();
+        }
+
     }
 
     public void addToCartAndGoToCheckout() {
-        addToCartBtn.click();
+        pressAddToCartBtn();
         Wait.visibility(gotoCheckoutBtn);
-        Wait.clickable(gotoCheckoutBtn);
+       // Wait.clickable(gotoCheckoutBtn);
         gotoCheckoutBtn.click();
     }
 
     public void addToCartAndStay() {
-        addToCartBtn.click();
-        Wait.visibility(continueShoppingBtn);
-        Wait.clickable(continueShoppingBtn);
-        continueShoppingBtn.click();
-        Wait.invisibility(continueShoppingBtn_lo);
+        String currentUrl = driver.getCurrentUrl();
+        pressAddToCartBtn();
+        Wait.seconds(3);
+        openUrl(currentUrl);
+//        WebElement continueShoppingBtn2 = Driver.find("continueShoppingBtn_lo");
+//
+//        Wait.visibility(continueShoppingBtn2);
+//        Wait.clickable(continueShoppingBtn2);
+//
+//        try {
+//            continueShoppingBtn2.click();
+//        } catch (Exception e) {
+//            Wait.seconds(1);
+//            continueShoppingBtn2 = Driver.find("continueShoppingBtn_lo");
+//            continueShoppingBtn2.click();
+//        }
+//
+//
+//        Wait.seconds(1);
+//        try {
+//            Wait.stalenessOf(driver.findElement(By.xpath("//*[@id='complete_placeholder']")));
+//        } catch (Exception e) {}
+
     }
 
     public String setRandomSizeAndGetSelected() {

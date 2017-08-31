@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 
 public class AbstractTestNoLogin {
 
+    protected boolean clearCacheAfterTest = false;
+
     protected WebDriver driver = Driver.getDriver();
     protected SoftAssert softAssert = new SoftAssert();
 
@@ -28,15 +30,18 @@ public class AbstractTestNoLogin {
 
     @AfterMethod
     public void setEnv(){
-       // driver.get(Config.indexShirteeUrl);
+
         try {
             Wait.seconds(2);
             driver.switchTo().alert().accept();
         } catch (NoAlertPresentException e) {
 
         }
+        if(clearCacheAfterTest) {
+            Driver.getDriver().manage().deleteAllCookies();
+            System.out.println("WTF!!!!");
+        }
 
-        Driver.getDriver().manage().deleteAllCookies();
     }
 
 

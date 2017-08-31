@@ -28,6 +28,8 @@ public class OrderReviewBlock extends AbstractPageElement {
     private final String shippingPrice_lo =  "//*[@id=\"checkout-review-table\"]/tfoot/tr[2]//span";
     private final String discountValue_lo = "//span[@class=\"discount-value\"]/span";
 
+    private final String appliedPromoCode_lo = "//div[@class=\"discount-applied\"]/ul/li/div[1]";
+
 
     //******************* WEBDRIVER ELEMENTS ********************//
 
@@ -101,6 +103,11 @@ public class OrderReviewBlock extends AbstractPageElement {
         this.couponField.clear();
         this.couponField.sendKeys(coupon);
         this.applyCouponButton.click();
+    }
+
+    public boolean isThereAppliedPromoCodes() {
+        List<WebElement> appliedPromoCodes = driver.findElements(By.xpath(appliedPromoCode_lo));
+        return appliedPromoCodes.size() > 0;
     }
 
 }

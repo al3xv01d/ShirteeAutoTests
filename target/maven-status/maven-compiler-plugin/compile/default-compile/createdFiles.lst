@@ -3,6 +3,7 @@ pages_elements\checkout\BillingBlock.class
 tools\PopupHelper.class
 pages_elements\designer\StepOneBlock.class
 pages\ShopPage.class
+pages_elements\designer\DesignerValidation.class
 pages\dashboard\DashboardFinancePage.class
 pages\dashboard\DashboardSettingsPage.class
 pages\dashboard\DashboardFacade.class
@@ -14,6 +15,7 @@ pages\CheckoutPage.class
 pages\DesignerPage.class
 tools\ImageComparer.class
 pages\magento_admin\AdminOrdersPage.class
+tools\PaymentHelper.class
 pages\dashboard\DashboardOrdersPage.class
 pages_elements\checkout\ValidationElements.class
 pages_elements\checkout\OrderReviewBlock.class
@@ -27,6 +29,7 @@ pages\dashboard\DashboardShopsPage.class
 pages_elements\dashboard_campaigns\CampaignLine.class
 abstraction\AbstractPage.class
 pages\OrderSuccessPage.class
+pages_elements\dashboard_promo\PromoValidation.class
 pages\ProductPage.class
 pages_elements\designer\StepTwoAddedProduct.class
 pages_elements\admin\OrderLine.class

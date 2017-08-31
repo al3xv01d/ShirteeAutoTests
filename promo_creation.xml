@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="1" >
+    <test name="Method Test Cases" >
+        <classes>
+            <class name="dashboard_promo.PromotionsTests"/>
+            <class name="dashboard_promo.ValidationTests"/>
+        </classes>
+    </test>
+</suite>

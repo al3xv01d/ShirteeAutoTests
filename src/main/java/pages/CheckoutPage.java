@@ -67,4 +67,5 @@ public class CheckoutPage extends AbstractPage {
         waitLoadingPopUp();
     }
 
+
 }

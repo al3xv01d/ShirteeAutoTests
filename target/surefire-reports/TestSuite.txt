@@ -1,60 +1,71 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 35, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 410.812 s <<< FAILURE! - in TestSuite
-logout(index.IndexPageTests)  Time elapsed: 39.753 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href,"/account/logout/")]"}
-  (Session info: chrome=60.0.3112.90)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
-*** Element info: {Using=xpath, value=//a[contains(@href,"/account/logout/")]}
-	at index.IndexPageTests.logout(IndexPageTests.java:34)
-
-priceAreEqualOnShopPageAndOnProductsPage(shop.ShopPageTests)  Time elapsed: 47.465 s  <<< FAILURE!
+Tests run: 35, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 384.23 s <<< FAILURE! - in TestSuite
+priceAreEqualOnShopPageAndOnProductsPage(shop.ShopPageTests)  Time elapsed: 28.533 s  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="w-block-head"]"}
-  (Session info: chrome=60.0.3112.90)
+  (Session info: chrome=60.0.3112.113)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.02 seconds
+Command duration or timeout: 15.01 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11248_9418}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7e1c19b1d62de469d1dd4683ee78dc49
 *** Element info: {Using=xpath, value=//div[@class="w-block-head"]}
 	at shop.ShopPageTests.priceAreEqualOnShopPageAndOnProductsPage(ShopPageTests.java:80)
 
-addToCartProductWithAmountDiscount(checkout.PromoCodesTests)  Time elapsed: 5.994 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-unknown error: Element <span onclick="changeColor(this)" class="color-btn active" color_id="1102" title="Gold" id="1102" style="background-color: #f5d902; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1152, 815). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
-  (Session info: chrome=60.0.3112.90)
+addProductTwiceWithDifferentColor(product_page.AddToCartTests)  Time elapsed: 53.149 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"id","selector":"go_to_checkout"}
+  (Session info: chrome=60.0.3112.113)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 47 milliseconds
+Command duration or timeout: 15.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
-	at checkout.PromoCodesTests.addToCartProductWithAmountDiscount(PromoCodesTests.java:51)
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11248_9418}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7e1c19b1d62de469d1dd4683ee78dc49
+*** Element info: {Using=id, value=go_to_checkout}
+	at product_page.AddToCartTests.addProductTwiceWithDifferentColor(AddToCartTests.java:131)
 
-increaseProductsWithAmountDiscountQty(checkout.PromoCodesTests)  Time elapsed: 8.035 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-unknown error: Element <span onclick="changeColor(this)" class="color-btn" color_id="1216" title="Sorbet" id="1216" style="background-color: #ab0017; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1249, 815). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
-  (Session info: chrome=60.0.3112.90)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 48 milliseconds
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
-	at checkout.PromoCodesTests.increaseProductsWithAmountDiscountQty(PromoCodesTests.java:75)
+checkShippingPrice(checkout.CheckoutPageTests)  Time elapsed: 4.484 s  <<< FAILURE!
+java.lang.AssertionError: expected [4.5] but found [4.95]
+	at checkout.CheckoutPageTests.checkShippingPrice(CheckoutPageTests.java:26)
+
+addToCartProductWithAmountDiscount(checkout.PromoCodesTests)  Time elapsed: 6.36 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9]
+	at checkout.PromoCodesTests.addToCartProductWithAmountDiscount(PromoCodesTests.java:64)
+
+addToCartProductWithPercentDiscount(checkout.PromoCodesTests)  Time elapsed: 6.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9],
+	WRONG TOTAL PRICE expected [20.56] but found [21.01]
+	at checkout.PromoCodesTests.addToCartProductWithPercentDiscount(PromoCodesTests.java:39)
+
+increaseProductsWithAmountDiscountQty(checkout.PromoCodesTests)  Time elapsed: 8.088 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9],
+	WRONG TOTAL PRICE expected [20.56] but found [21.01],
+	Wrong total price expected [36.4] but found [36.85],
+	Wrong total price expected [52.35] but found [52.8]
+	at checkout.PromoCodesTests.increaseProductsWithAmountDiscountQty(PromoCodesTests.java:96)
+
+increaseProductsWithPercentDiscountQty(checkout.PromoCodesTests)  Time elapsed: 7.889 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9],
+	WRONG TOTAL PRICE expected [20.56] but found [21.01],
+	Wrong total price expected [36.4] but found [36.85],
+	Wrong total price expected [52.35] but found [52.8],
+	expected [36.63] but found [37.08],
+	expected [52.69] but found [53.14]
+	at checkout.PromoCodesTests.increaseProductsWithPercentDiscountQty(PromoCodesTests.java:133)
 

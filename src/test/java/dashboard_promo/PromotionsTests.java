@@ -12,7 +12,7 @@ import tools.PopupHelper;
 
 public class PromotionsTests extends AbstractTestNoLogin {
 
-    public double testDiscountValue = 5;
+    private double testDiscountValue = 5;
 
     @DataProvider
     public Object[][] promoType() {
@@ -20,6 +20,9 @@ public class PromotionsTests extends AbstractTestNoLogin {
                 {"amount"},
                 {"percent"}
         };
+    }
+    public PromotionsTests() {
+        clearCacheAfterTest = true;
     }
 
    @Test(dataProvider = "promoType")
@@ -51,10 +54,11 @@ public class PromotionsTests extends AbstractTestNoLogin {
        }
 
        softAssert.assertEquals(dashboard.promoPage.getAllPromoCodes().get(0).getDiscountValue(), testDiscountValue, "Wrong discount value" );
-       softAssert.assertAll();
 
        dashboard.promoPage.getAllPromoCodes().get(0).deletePromoCode();
-       //PopupHelper.waitLoadingPromoPopup();
+       PopupHelper.waitLoadingPromoPopup();
+
+       softAssert.assertAll();
    }
 
    @Test

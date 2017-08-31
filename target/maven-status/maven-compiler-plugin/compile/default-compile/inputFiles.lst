@@ -32,12 +32,14 @@ D:\ShirteeAutoTests\src\main\java\abstraction\AbstractPage.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\designer\StepOneBlock.java
 D:\ShirteeAutoTests\src\main\java\pages\dashboard\AbstractDashboardPage.java
 D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardPromotionPage.java
+D:\ShirteeAutoTests\src\main\java\pages_elements\dashboard_promo\PromoValidation.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\checkout\OrderReviewBlock.java
 D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardAffiliatePage.java
 D:\ShirteeAutoTests\src\main\java\pages\dashboard\DashboardFacade.java
 D:\ShirteeAutoTests\src\main\java\tools\Driver.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\checkout\OrderedItem.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\dashboard_campaigns\CampaignLine.java
+D:\ShirteeAutoTests\src\main\java\tools\PaymentHelper.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\checkout\BillingBlock.java
 D:\ShirteeAutoTests\src\main\java\tools\RandomData.java
 D:\ShirteeAutoTests\src\main\java\pages_elements\designer\DesignerStepThreeLoginForm.java

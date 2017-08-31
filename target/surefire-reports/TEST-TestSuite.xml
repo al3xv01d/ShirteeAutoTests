@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="410.812" tests="35" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="384.23" tests="35" errors="0" skipped="0" failures="7">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -67,103 +67,124 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="loginAndRedirectToDashboardPage" classname="index.IndexPageTests" time="10.162"/>
-  <testcase name="logout" classname="index.IndexPageTests" time="39.753">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(@href,&quot;/account/logout/&quot;)]&quot;}&#10;  (Session info: chrome=60.0.3112.90)&#10;  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 15.05 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 5a32e740a6be125623d89bb0d8bafcb1&#10;*** Element info: {Using=xpath, value=//a[contains(@href,&quot;/account/logout/&quot;)]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href,"/account/logout/")]"}
-  (Session info: chrome=60.0.3112.90)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
-*** Element info: {Using=xpath, value=//a[contains(@href,"/account/logout/")]}
-	at index.IndexPageTests.logout(IndexPageTests.java:34)
-</failure>
-    <system-out><![CDATA[AFTER
-]]></system-out>
-  </testcase>
-  <testcase name="searchFromIndexPage" classname="index.IndexPageTests" time="8.444"/>
-  <testcase name="checkFirstQtyOnPageSetting" classname="shop.ShopPageTests" time="8.899"/>
-  <testcase name="checkPagination" classname="shop.ShopPageTests" time="13.749"/>
-  <testcase name="checkSecondQtyOnPageSetting" classname="shop.ShopPageTests" time="5.67"/>
-  <testcase name="checkThirdQtyOnPageSetting" classname="shop.ShopPageTests" time="4.864"/>
-  <testcase name="leftSidebarSearch" classname="shop.ShopPageTests" time="6.294"/>
-  <testcase name="priceAreEqualOnShopPageAndOnProductsPage" classname="shop.ShopPageTests" time="47.465">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;w-block-head&quot;]&quot;}&#10;  (Session info: chrome=60.0.3112.90)&#10;  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 15.02 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 5a32e740a6be125623d89bb0d8bafcb1&#10;*** Element info: {Using=xpath, value=//div[@class=&quot;w-block-head&quot;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+  <testcase name="loginAndRedirectToDashboardPage" classname="index.IndexPageTests" time="13.196"/>
+  <testcase name="logout" classname="index.IndexPageTests" time="8.517"/>
+  <testcase name="searchFromIndexPage" classname="index.IndexPageTests" time="7.378"/>
+  <testcase name="checkFirstQtyOnPageSetting" classname="shop.ShopPageTests" time="6.795"/>
+  <testcase name="checkPagination" classname="shop.ShopPageTests" time="12.811"/>
+  <testcase name="checkSecondQtyOnPageSetting" classname="shop.ShopPageTests" time="3.75"/>
+  <testcase name="checkThirdQtyOnPageSetting" classname="shop.ShopPageTests" time="3.798"/>
+  <testcase name="leftSidebarSearch" classname="shop.ShopPageTests" time="3.487"/>
+  <testcase name="priceAreEqualOnShopPageAndOnProductsPage" classname="shop.ShopPageTests" time="28.533">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;w-block-head&quot;]&quot;}&#10;  (Session info: chrome=60.0.3112.113)&#10;  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 15.01 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11248_9418}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 7e1c19b1d62de469d1dd4683ee78dc49&#10;*** Element info: {Using=xpath, value=//div[@class=&quot;w-block-head&quot;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="w-block-head"]"}
-  (Session info: chrome=60.0.3112.90)
+  (Session info: chrome=60.0.3112.113)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.02 seconds
+Command duration or timeout: 15.01 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11248_9418}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7e1c19b1d62de469d1dd4683ee78dc49
 *** Element info: {Using=xpath, value=//div[@class="w-block-head"]}
 	at shop.ShopPageTests.priceAreEqualOnShopPageAndOnProductsPage(ShopPageTests.java:80)
 </failure>
     <system-out><![CDATA[AFTER
 ]]></system-out>
   </testcase>
-  <testcase name="qtySortingSavesOnOthersPages" classname="shop.ShopPageTests" time="25.137"/>
-  <testcase name="topSearch" classname="shop.ShopPageTests" time="6.335"/>
-  <testcase name="addToCartAndCheckCartCounter" classname="product_page.ProductPageTests" time="31.992"/>
-  <testcase name="addToCartAndContinueShopping" classname="product_page.ProductPageTests" time="16.413"/>
-  <testcase name="addProductTwiceAndCheckQtyAndPrice" classname="product_page.AddToCartTests" time="17.186"/>
-  <testcase name="addProductTwiceWithDifferentColor" classname="product_page.AddToCartTests" time="17.014"/>
-  <testcase name="addProductTwiceWithDifferentSize" classname="product_page.AddToCartTests" time="15.927"/>
-  <testcase name="addToCart" classname="product_page.AddToCartTests" time="4.887"/>
-  <testcase name="addTwoDifferentProductsWithSameSizeAndColor" classname="product_page.AddToCartTests" time="2.189"/>
-  <testcase name="checkPriceSizeAndColor" classname="product_page.AddToCartTests" time="4.785"/>
-  <testcase name="amountPromoPopupAppearsEveryTime" classname="product_page.ProductsWithPromoTests" time="8.158"/>
-  <testcase name="amountPromoValueInPopup" classname="product_page.ProductsWithPromoTests" time="2.089"/>
-  <testcase name="percentPromoPopupAppearsEveryTime" classname="product_page.ProductsWithPromoTests" time="9.536"/>
-  <testcase name="percentPromoValueInPopup" classname="product_page.ProductsWithPromoTests" time="2.015"/>
-  <testcase name="promoPopupIsPossibleToClose" classname="product_page.ProductsWithPromoTests" time="4.063"/>
-  <testcase name="missingProductSizeValidation" classname="product_page.ValidationTests" time="2.392"/>
-  <testcase name="backToStore" classname="checkout.CheckoutPageTests" time="6.388"/>
-  <testcase name="checkShippingPrice" classname="checkout.CheckoutPageTests" time="5.576"/>
-  <testcase name="addToCartProductWithAmountDiscount" classname="checkout.PromoCodesTests" time="5.994">
-    <failure message="unknown error: Element &lt;span onclick=&quot;changeColor(this)&quot; class=&quot;color-btn active&quot; color_id=&quot;1102&quot; title=&quot;Gold&quot; id=&quot;1102&quot; style=&quot;background-color: #f5d902; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat&quot;&gt;...&lt;/span&gt; is not clickable at point (1152, 815). Other element would receive the click: &lt;div class=&quot;event-popup-placeholder&quot; style=&quot;opacity: 0.6;&quot;&gt;&lt;/div&gt;&#10;  (Session info: chrome=60.0.3112.90)&#10;  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 47 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 5a32e740a6be125623d89bb0d8bafcb1" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
-unknown error: Element <span onclick="changeColor(this)" class="color-btn active" color_id="1102" title="Gold" id="1102" style="background-color: #f5d902; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1152, 815). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
-  (Session info: chrome=60.0.3112.90)
+  <testcase name="qtySortingSavesOnOthersPages" classname="shop.ShopPageTests" time="20.895"/>
+  <testcase name="topSearch" classname="shop.ShopPageTests" time="2.989"/>
+  <testcase name="addToCartAndCheckCartCounter" classname="product_page.ProductPageTests" time="18.171"/>
+  <testcase name="addToCartAndContinueShopping" classname="product_page.ProductPageTests" time="7.624"/>
+  <testcase name="addProductTwiceAndCheckQtyAndPrice" classname="product_page.AddToCartTests" time="11.361"/>
+  <testcase name="addProductTwiceWithDifferentColor" classname="product_page.AddToCartTests" time="53.149">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;go_to_checkout&quot;}&#10;  (Session info: chrome=60.0.3112.113)&#10;  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 15.03 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11248_9418}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 7e1c19b1d62de469d1dd4683ee78dc49&#10;*** Element info: {Using=id, value=go_to_checkout}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"id","selector":"go_to_checkout"}
+  (Session info: chrome=60.0.3112.113)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 47 milliseconds
+Command duration or timeout: 15.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
-	at checkout.PromoCodesTests.addToCartProductWithAmountDiscount(PromoCodesTests.java:51)
-]]></failure>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11248_9418}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7e1c19b1d62de469d1dd4683ee78dc49
+*** Element info: {Using=id, value=go_to_checkout}
+	at product_page.AddToCartTests.addProductTwiceWithDifferentColor(AddToCartTests.java:131)
+</failure>
     <system-out><![CDATA[AFTER
 ]]></system-out>
   </testcase>
-  <testcase name="addToCartProductWithPercentDiscount" classname="checkout.PromoCodesTests" time="7.158"/>
-  <testcase name="increaseProductsWithAmountDiscountQty" classname="checkout.PromoCodesTests" time="8.035">
-    <failure message="unknown error: Element &lt;span onclick=&quot;changeColor(this)&quot; class=&quot;color-btn&quot; color_id=&quot;1216&quot; title=&quot;Sorbet&quot; id=&quot;1216&quot; style=&quot;background-color: #ab0017; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat&quot;&gt;...&lt;/span&gt; is not clickable at point (1249, 815). Other element would receive the click: &lt;div class=&quot;event-popup-placeholder&quot; style=&quot;opacity: 0.6;&quot;&gt;&lt;/div&gt;&#10;  (Session info: chrome=60.0.3112.90)&#10;  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 48 milliseconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;WIN-UJSDDQRV49J&apos;, ip: &apos;192.168.10.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 5a32e740a6be125623d89bb0d8bafcb1" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
-unknown error: Element <span onclick="changeColor(this)" class="color-btn" color_id="1216" title="Sorbet" id="1216" style="background-color: #ab0017; background-image: url(https://www.shirtee.com/media/option_image/); background-position: 50% 50%; background-repeat: no-repeat no-repeat">...</span> is not clickable at point (1249, 815). Other element would receive the click: <div class="event-popup-placeholder" style="opacity: 0.6;"></div>
-  (Session info: chrome=60.0.3112.90)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 48 milliseconds
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'WIN-UJSDDQRV49J', ip: '192.168.10.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir11376_3650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5a32e740a6be125623d89bb0d8bafcb1
-	at checkout.PromoCodesTests.increaseProductsWithAmountDiscountQty(PromoCodesTests.java:75)
-]]></failure>
+  <testcase name="addProductTwiceWithDifferentSize" classname="product_page.AddToCartTests" time="10.877"/>
+  <testcase name="addToCart" classname="product_page.AddToCartTests" time="4.855"/>
+  <testcase name="addTwoDifferentProductsWithSameSizeAndColor" classname="product_page.AddToCartTests" time="2.481"/>
+  <testcase name="checkPriceSizeAndColor" classname="product_page.AddToCartTests" time="5.402"/>
+  <testcase name="amountPromoPopupAppearsEveryTime" classname="product_page.ProductsWithPromoTests" time="6.207"/>
+  <testcase name="amountPromoValueInPopup" classname="product_page.ProductsWithPromoTests" time="3.013"/>
+  <testcase name="percentPromoPopupAppearsEveryTime" classname="product_page.ProductsWithPromoTests" time="63.232"/>
+  <testcase name="percentPromoValueInPopup" classname="product_page.ProductsWithPromoTests" time="2.388"/>
+  <testcase name="promoPopupIsPossibleToClose" classname="product_page.ProductsWithPromoTests" time="2.834"/>
+  <testcase name="missingProductSizeValidation" classname="product_page.ValidationTests" time="1.802"/>
+  <testcase name="backToStore" classname="checkout.CheckoutPageTests" time="5.783"/>
+  <testcase name="checkShippingPrice" classname="checkout.CheckoutPageTests" time="4.484">
+    <failure message="expected [4.5] but found [4.95]" type="java.lang.AssertionError">java.lang.AssertionError: expected [4.5] but found [4.95]
+	at checkout.CheckoutPageTests.checkShippingPrice(CheckoutPageTests.java:26)
+</failure>
     <system-out><![CDATA[AFTER
 ]]></system-out>
   </testcase>
-  <testcase name="increaseProductsWithPercentDiscountQty" classname="checkout.PromoCodesTests" time="10.012"/>
-  <testcase name="addTwoProductsAndDeleteOne" classname="checkout.OrderedItemsTests" time="17.797"/>
-  <testcase name="decreaseItemQty" classname="checkout.OrderedItemsTests" time="12.504"/>
-  <testcase name="increaseItemQty" classname="checkout.OrderedItemsTests" time="9.03"/>
-  <testcase name="emptyEmailField" classname="checkout.ValidationTests" time="6.539"/>
+  <testcase name="addToCartProductWithAmountDiscount" classname="checkout.PromoCodesTests" time="6.36">
+    <failure message="The following asserts failed:&#10;	WRONG TOTAL PRICE expected [20.45] but found [20.9]" type="java.lang.AssertionError">java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9]
+	at checkout.PromoCodesTests.addToCartProductWithAmountDiscount(PromoCodesTests.java:64)
+</failure>
+    <system-out><![CDATA[AFTER
+]]></system-out>
+  </testcase>
+  <testcase name="addToCartProductWithPercentDiscount" classname="checkout.PromoCodesTests" time="6.029">
+    <failure message="The following asserts failed:&#10;	WRONG TOTAL PRICE expected [20.45] but found [20.9],&#10;	WRONG TOTAL PRICE expected [20.56] but found [21.01]" type="java.lang.AssertionError">java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9],
+	WRONG TOTAL PRICE expected [20.56] but found [21.01]
+	at checkout.PromoCodesTests.addToCartProductWithPercentDiscount(PromoCodesTests.java:39)
+</failure>
+    <system-out><![CDATA[AFTER
+]]></system-out>
+  </testcase>
+  <testcase name="increaseProductsWithAmountDiscountQty" classname="checkout.PromoCodesTests" time="8.088">
+    <failure message="The following asserts failed:&#10;	WRONG TOTAL PRICE expected [20.45] but found [20.9],&#10;	WRONG TOTAL PRICE expected [20.56] but found [21.01],&#10;	Wrong total price expected [36.4] but found [36.85],&#10;	Wrong total price expected [52.35] but found [52.8]" type="java.lang.AssertionError">java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9],
+	WRONG TOTAL PRICE expected [20.56] but found [21.01],
+	Wrong total price expected [36.4] but found [36.85],
+	Wrong total price expected [52.35] but found [52.8]
+	at checkout.PromoCodesTests.increaseProductsWithAmountDiscountQty(PromoCodesTests.java:96)
+</failure>
+    <system-out><![CDATA[AFTER
+POPUP HIDES
+POPUP HIDES
+]]></system-out>
+  </testcase>
+  <testcase name="increaseProductsWithPercentDiscountQty" classname="checkout.PromoCodesTests" time="7.889">
+    <failure message="The following asserts failed:&#10;	WRONG TOTAL PRICE expected [20.45] but found [20.9],&#10;	WRONG TOTAL PRICE expected [20.56] but found [21.01],&#10;	Wrong total price expected [36.4] but found [36.85],&#10;	Wrong total price expected [52.35] but found [52.8],&#10;	expected [36.63] but found [37.08],&#10;	expected [52.69] but found [53.14]" type="java.lang.AssertionError">java.lang.AssertionError: 
+The following asserts failed:
+	WRONG TOTAL PRICE expected [20.45] but found [20.9],
+	WRONG TOTAL PRICE expected [20.56] but found [21.01],
+	Wrong total price expected [36.4] but found [36.85],
+	Wrong total price expected [52.35] but found [52.8],
+	expected [36.63] but found [37.08],
+	expected [52.69] but found [53.14]
+	at checkout.PromoCodesTests.increaseProductsWithPercentDiscountQty(PromoCodesTests.java:133)
+</failure>
+    <system-out><![CDATA[AFTER
+POPUP HIDES
+POPUP HIDES
+]]></system-out>
+  </testcase>
+  <testcase name="addTwoProductsAndDeleteOne" classname="checkout.OrderedItemsTests" time="10.091"/>
+  <testcase name="decreaseItemQty" classname="checkout.OrderedItemsTests" time="11.027"/>
+  <testcase name="increaseItemQty" classname="checkout.OrderedItemsTests" time="8.375"/>
+  <testcase name="emptyEmailField" classname="checkout.ValidationTests" time="4.529"/>
 </testsuite>

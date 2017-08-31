@@ -11,6 +11,10 @@ import java.util.List;
 
 public class DesignerTest extends AbstractTestNoLogin {
 
+    public DesignerTest() {
+
+    }
+
     @Test
     public void step1() {
 
@@ -21,8 +25,9 @@ public class DesignerTest extends AbstractTestNoLogin {
         //dp.setLocale("de");
         dp.openUrl("https://dev.shirtee.de/designer/?id=1140/");
 
-//https://dev.shirtee.de/designer/?id=1140/
- //https://stage.shirtee.de/designer/?id=1140/
+
+        //https://dev.shirtee.de/designer/?id=1140/
+        //https://stage.shirtee.de/designer/?id=1140/
         //https://www.shirtee.com/designer/?id=1140/
 
         dp.step1.fillProductText("TEST");
@@ -35,7 +40,6 @@ public class DesignerTest extends AbstractTestNoLogin {
         dp.step2.addAllColorsToEachProduct();
 
 
-//        allProducts.get(0).selectAllColors();
 
 
 
@@ -86,12 +90,14 @@ public class DesignerTest extends AbstractTestNoLogin {
     @Test
     public void test3(){
         ProductPage productPage = PageBuilder.buildProductPage();
-        productPage.openUrl("https://stage.shirtee.de/ffffffffffuuuuuuullllllll");
+        productPage.openUrl("https://www.shirtee.de/amazon-130");
+        productPage.setRandomSizeAndGetSelected();
+        productPage.addToCartAndStay();
 
         for(int i = 1; i < productPage.getOtherProducts().size(); i++) {
+            Driver.scrollToTop();
             productPage.getOtherProducts().get(i).click();
             PopupHelper.waitProductPagePopupLoading();
-            Wait.seconds(2);
             productPage.setRandomSizeAndGetSelected();
             productPage.addToCartAndStay();
         }
